@@ -6,7 +6,7 @@ const MOCK_DATA = [
     contactTitle: 'Manager',
     contactNum: '+1 778 248 9383',
     contactEmail: 'luca@instock.com',
-    categories: 'Industrial, Electronics'
+    categories: 'Industrial, Electronics, and other things too!'
   },
   {
     warehouseName: 'Warehouse of Wonders 1',
@@ -24,7 +24,7 @@ const MOCK_DATA = [
     contactTitle: 'Manager',
     contactNum: '+1 778 248 9383',
     contactEmail: 'luca@instock.com',
-    categories: 'Industrial, Electronics'
+    categories: 'Industrial, Electronics, Mechanical Body Parts, Staplers, Eco Tools, Sun Hats'
   },
   {
     warehouseName: 'Warehouse of Wonders 1',

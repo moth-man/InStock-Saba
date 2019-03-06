@@ -127,7 +127,7 @@ body {
   display: none;
 }
 
-@media (min-width: 750px) {
+@media (min-width: 650px) {
   .WarehouseList {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -247,7 +247,7 @@ body {
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 900px) {
   .WarehouseList {
     width: 75%;
     margin: 0 12%;
@@ -301,6 +301,7 @@ body {
         -ms-flex-align: space-around;
             align-items: space-around;
     width: 95%;
+    text-align: start;
   }
   .WarehouseList__table .table__header {
     display: -webkit-box;
@@ -313,15 +314,27 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    margin: 0;
     color: #e1e1e1;
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
   .WarehouseList__table .table__header th {
-    margin: 0 0 0 0%;
+    margin-left: 5%;
   }
   .WarehouseList__table .table__header th:nth-of-type(1) {
     margin-left: 0;
+    padding-left: 0;
+  }
+  .WarehouseList__table .table__header th:nth-of-type(2) {
+    margin-left: -8%;
+    padding-left: 17%;
+  }
+  .WarehouseList__table .table__header th:nth-of-type(3) {
+    margin-left: 0;
+    padding-left: 12%;
+  }
+  .WarehouseList__table .table__header th:nth-of-type(4) {
+    margin-left: 0;
+    padding-right: 7%;
   }
   .WarehouseList__table tbody .table__row {
     display: -webkit-box;
@@ -357,7 +370,8 @@ body {
         -ms-flex-align: start;
             align-items: flex-start;
     font-size: 0.9rem;
-    margin: 0% 0 0 0;
+    margin: 0 0 0 0;
+    width: 20%;
   }
   .WarehouseList__table tbody .table__row div .warehouseName {
     font-weight: bold;
@@ -369,12 +383,14 @@ body {
   .WarehouseList__table tbody .table__row div .arrow-mobile {
     display: none;
   }
+  .WarehouseList__table tbody .table__row div:nth-of-type(n + 3) {
+    margin: 0 0 0 0;
+  }
   .WarehouseList__table tbody .table__row div .arrow-desktop {
     display: block;
     position: relative;
-  }
-  .WarehouseList__table tbody .table__row div:nth-of-type(n + 3) {
-    margin: 0 0 0 0;
+    right: -220px;
+    bottom: 10px;
   }
   .WarehouseList__table tbody .table__row .warehouseMainInfo {
     display: -webkit-box;
@@ -385,15 +401,6 @@ body {
         -ms-flex-flow: column nowrap;
             flex-flow: column nowrap;
     margin: 0 0 0 0;
-  }
-  .WarehouseList__table tbody .table__row .categoryInfo {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .WarehouseList__table tbody .table__row .categoryInfo .arrow-desktop {
-    position: relative;
-    left: 50px;
   }
 }
 /*# sourceMappingURL=warehouse.css.map */
