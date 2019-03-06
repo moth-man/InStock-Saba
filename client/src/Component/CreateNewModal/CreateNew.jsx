@@ -1,11 +1,22 @@
 import React, { Component } from "react";
 import "./CreateNewModal.css";
+import Switch from "react-switch";
 class CreateNew extends Component {
+  constructor() {
+    super();
+    this.state = { checked: false };
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(checked) {
+    this.setState({ checked });
+  }
+
   render() {
     return (
       <div className='modal'>
-        <h3>Create New</h3>
         <form className='modal-content'>
+          <h3>Create New</h3>
           <div className='flex-column'>
             <h5>Product</h5>
             <input type='text' placeholder='Item Name' />
@@ -33,16 +44,20 @@ class CreateNew extends Component {
               <h5>Status</h5>
               <div className='flex-row spacebetween'>
                 <p>In Stock</p>
-                <label className='switch'>
-                  <input type='checkbox' />
-                  <span className='slider round' />
-                </label>
+                <Switch
+                  onChange={this.handleChange}
+                  checked={this.state.checked}
+                  className='react-switch'
+                  uncheckedIcon={false}
+                  checkedIcon={false}
+                  onColor='#79AD3B'
+                />
               </div>
             </div>
           </div>
           <div className='flex-column'>
             <h5>Item Description</h5>
-            <input type='text' />
+            <input type='textbox' className='special' />
             <div className='flex-column'>
               <button>Save</button>
               <button>Cancel</button>
