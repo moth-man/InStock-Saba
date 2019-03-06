@@ -1,16 +1,45 @@
 import React, { Component } from "react";
 import "./CreateNewModal.css";
 import Switch from "react-switch";
+import axios from "axios";
+const url = "blah.ca";
+
 class CreateNew extends Component {
   constructor() {
     super();
-    this.state = { checked: false };
+    this.state = {
+      instock: false,
+      item_name: "",
+      date: "",
+      city: "",
+      country: "",
+      quantity_items: "",
+      item_description: ""
+    };
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(checked) {
-    this.setState({ checked });
+  post = () => {
+    axios.post(url, {
+      instock: this.state.instock,
+      item_name: this.state.item_name,
+      date: this.state.date,
+      city: this.state.city,
+      country: this.state.country,
+      quantity_items: this.state.quantity_items,
+      item_description: this.state.item_description
+    });
+  };
+
+  handleChange(instock) {
+    this.setState({ instock });
   }
+
+  update_input_state = event => {
+    this.setState({
+      [event.target.name]: event.target.value
+    });
+  };
 
   render() {
     return (
@@ -18,49 +47,75 @@ class CreateNew extends Component {
         <form className='modal-content'>
           <h3>Create New</h3>
           <div className='flex-column'>
-            <h5>Product</h5>
-            <input type='text' placeholder='Item Name' />
+            <h5>PRODUCT</h5>
+            <input
+              type='text'
+              placeholder='Item Name'
+              name='item_name'
+              onChange={this.update_input_state}
+            />
           </div>
           <div className='flex-column'>
-            <h5>Last Ordered</h5>
-            <input type='text' placeholder='yyyy-mm-dd' />
+            <h5>LAST ORDERED</h5>
+            <input
+              type='text'
+              placeholder='yyyy-mm-dd'
+              name='date'
+              onChange={this.update_input_state}
+            />
           </div>
           <div className='flex-column'>
-            <h5>City</h5>
-            <input type='text' placeholder='City' />
+            <h5>CITY</h5>
+            <input
+              type='text'
+              placeholder='City'
+              name='city'
+              onChange={this.update_input_state}
+            />
           </div>
           <div className='flex-column'>
-            <h5>Country</h5>
-            <select name='country'>
+            <h5>COUNTRY</h5>
+            <select name='country' onChange={this.update_input_state}>
               <option value='Canada'>Canada</option>
             </select>
           </div>
           <div className='flex-column'>
-            <h5>Quantity</h5>
-            <input type='text' name='' id='' />
+            <h5>QUANTITY</h5>
+            <input
+              type='text'
+              name='quantity_items'
+              id=''
+              placeholder='0'
+              onChange={this.update_input_state}
+            />
           </div>
           <div className=''>
             <div className='flex-column'>
-              <h5>Status</h5>
+              <h5>STATUS</h5>
               <div className='flex-row spacebetween'>
                 <p>In Stock</p>
                 <Switch
                   onChange={this.handleChange}
-                  checked={this.state.checked}
+                  checked={this.state.instock}
                   className='react-switch'
                   uncheckedIcon={false}
                   checkedIcon={false}
-                  onColor='#79AD3B'
+                  onColor='#6aae2b'
                 />
               </div>
             </div>
           </div>
           <div className='flex-column'>
-            <h5>Item Description</h5>
-            <input type='textbox' className='special' />
+            <h5>ITEM DESCRIPTION</h5>
+            <textarea
+              name='item_description'
+              id=''
+              placeholder='(Optional)'
+              onChange={this.update_input_state}
+            />
             <div className='flex-column'>
-              <button>Save</button>
-              <button>Cancel</button>
+              <button onClick={this.post}>SAVE</button>
+              <button className='cancel'>CANCEL</button>
             </div>
           </div>
         </form>

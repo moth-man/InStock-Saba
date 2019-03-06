@@ -1,12 +1,29 @@
+/*Variables*/
+@font-face {
+  font-family: "AvenirRegular";
+  src: url(../../GlobalFont/AvenirNextProLT/Linotype-AvenirNextLTPro-Regular.otf) format("oft");
+}
+
+@font-face {
+  font-family: "AvenirBold";
+  src: url(../../GlobalFont/AvenirNextProLT/Linotype-AvenirNextLTPro-Bold.otf) format("oft");
+}
+
+@font-face {
+  font-family: "AvenirThin";
+  src: url(../../GlobalFont/AvenirNextProLT/Linotype-AvenirNextLTPro-Thin.otf);
+}
+
 /*Modal Container*/
 .modal-content {
   margin-right: auto;
   margin-left: auto;
+  max-width: 220px;
 }
 
 .modal {
   width: 100%;
-  background-color: cornflowerblue;
+  background-color: cornsilk;
   position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -19,8 +36,20 @@
           flex-direction: column;
 }
 
+.modal :-webkit-input-placeholder {
+  font-family: Helvetica, sans-serif;
+  font-size: 0.75em;
+}
+
+.modal select {
+  font-size: 1.3em;
+  margin-bottom: 24px;
+  border: none;
+  padding-right: 16px;
+}
+
 .modal input {
-  width: 220px;
+  width: 100%;
   height: 48px;
   padding-left: 10px;
   padding-top: 0px;
@@ -32,33 +61,65 @@
   border: none;
 }
 
-.modal .special {
+.modal textarea {
   height: 80px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
+  border: none;
+  margin-bottom: 32px;
+  font-size: 18px;
 }
 
 .modal .flex-column button {
   height: 48px;
-  width: 220px;
+  width: 100%;
   border-radius: 4px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  background-color: #002f5f;
+  border: none;
+  color: white;
+  font-size: 15px;
+}
+
+.modal button.cancel {
+  background-color: white;
+  color: #002f5f;
+  border: none;
 }
 
 .modal select {
-  width: 220px;
+  width: 100%;
   height: 48px;
 }
 
 .modal h5 {
   width: auto;
   margin-top: 0px;
-  margin-bottom: 0px;
+  margin-bottom: 8px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+}
+
+.modal h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  font-size: 20px;
+}
+
+.modal input {
+  margin-bottom: 24px;
 }
 
 .flex-column {
@@ -81,17 +142,16 @@
           flex-direction: row;
 }
 
-.space-betweem {
+.spacebetween {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-h3 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-line-pack: start;
-      align-content: flex-start;
+.react-switch {
+  margin-right: 15px;
 }
 /*# sourceMappingURL=CreateNewModal.css.map */
