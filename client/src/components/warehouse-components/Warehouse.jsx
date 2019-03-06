@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import arrow from '../../assets/logos/Icon-arrow-right.svg';
 
 class Warehouse extends Component {
   render() {
@@ -6,9 +7,12 @@ class Warehouse extends Component {
     return (
       <div>
         <tr className="table__row">
-          <div>
+          <div className="warehouseMainInfo">
             <td className="warehouseName">{data.warehouseName}</td>
-            <td>{data.address}</td>
+            <td>
+              {data.address}
+              <img src={arrow} className="arrow" alt="link" />
+            </td>
           </div>
           <div>
             <td>{data.contact}</td>
