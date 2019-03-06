@@ -19,17 +19,30 @@
 $bold: AvenirBold;
 $regularfont: AvenirRegular;
 $thin: AvenirThin;
+/*Global*/
 
+body {
+  margin: 0;
+  font-family: Helvetica;
+  background-color: grey;
+}
+.App {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+}
 /*Modal Container*/
 
-.modal-content {
+.modal {
+  top: 0px;
+  align-self: center;
   margin-right: auto;
   margin-left: auto;
-  max-width: 220px;
-}
-.modal {
-  width: 100%;
-  background-color: cornsilk;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 400px;
+  background-color: white;
   position: fixed;
   display: flex;
   align-content: flex-start;
@@ -62,6 +75,7 @@ $thin: AvenirThin;
     height: 80px;
     width: 100%;
     box-sizing: border-box;
+    background-color: rgb(248, 248, 248);
     border-radius: 4px;
     border: none;
     margin-bottom: 32px;
@@ -105,6 +119,7 @@ $thin: AvenirThin;
   }
   input {
     margin-bottom: 24px;
+    background-color: rgb(248, 248, 248);
   }
 }
 .flex-column {
@@ -124,4 +139,33 @@ $thin: AvenirThin;
 
 .react-switch {
   margin-right: 15px;
+}
+
+/*Media Query*/
+
+@media (min-width: 500px) {
+  .modal {
+    width: 500px;
+    border-radius: 4px;
+    top: 25%;
+    input {
+      width: 245px;
+    }
+    .flex-column {
+      width: 245px;
+    }
+    .flex-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .flex-column .button {
+      flex-direction: row-reverse;
+      padding-bottom: 15px;
+    }
+    .movedatbutton {
+      margin-left: 250px;
+    }
+  }
 }
