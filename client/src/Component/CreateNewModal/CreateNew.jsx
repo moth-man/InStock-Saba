@@ -31,6 +31,10 @@ class CreateNew extends Component {
     });
   };
 
+  cancel = () => {
+    document.getElementsByClassName("modal").style.display = "none";
+  };
+
   handleChange(instock) {
     this.setState({ instock });
   }
@@ -115,7 +119,9 @@ class CreateNew extends Component {
             />
             <div className='flex-column'>
               <button onClick={this.post}>SAVE</button>
-              <button className='cancel'>CANCEL</button>
+              <button onClick={this.cancel} className='cancel'>
+                CANCEL
+              </button>
             </div>
           </div>
         </form>
