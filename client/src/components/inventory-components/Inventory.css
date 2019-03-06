@@ -1,0 +1,13 @@
+.inventoryList__container {
+  background-color: white;
+}
+
+.inventoryList__container .inventoryList__title {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.inventoryList__container .inventoryItem__container {
+  background-color: white;
+}
+/*# sourceMappingURL=Inventory.css.map */
