@@ -4,7 +4,7 @@ import './styles/warehouse.css'
 
 const MOCK_DATA = [
   {
-    warehouseName: 'Warehouse 1',
+    warehouseName: 'Warehouse of Wonders 1',
     address: '102 W. 1st Ave, Vancouver, BC',
     contact: 'Luca Emmett',
     contactTitle: 'Manager',
@@ -13,7 +13,7 @@ const MOCK_DATA = [
     categories: 'Industrial, Electronics'
   },
   {
-    warehouseName: 'Warehouse 1',
+    warehouseName: 'Warehouse of Wonders 1',
     address: '102 W. 1st Ave, Vancouver, BC',
     contact: 'Luca Emmett',
     contactTitle: 'Manager',
@@ -22,7 +22,7 @@ const MOCK_DATA = [
     categories: 'Industrial, Electronics'
   },
   {
-    warehouseName: 'Warehouse 1',
+    warehouseName: 'Warehouse of Wonders 1',
     address: '102 W. 1st Ave, Vancouver, BC',
     contact: 'Luca Emmett',
     contactTitle: 'Manager',
@@ -31,16 +31,7 @@ const MOCK_DATA = [
     categories: 'Industrial, Electronics'
   },
   {
-    warehouseName: 'Warehouse 1',
-    address: '102 W. 1st Ave, Vancouver, BC',
-    contact: 'Luca Emmett',
-    contactTitle: 'Manager',
-    contactNum: '+1 778 248 9383',
-    contactEmail: 'luca@instock.com',
-    categories: 'Industrial, Electronics'
-  },
-  {
-    warehouseName: 'Warehouse 1',
+    warehouseName: 'Warehouse of Wonders 1',
     address: '102 W. 1st Ave, Vancouver, BC',
     contact: 'Luca Emmett',
     contactTitle: 'Manager',
@@ -60,8 +51,8 @@ class WarehouseList extends Component {
     return (
       <div className='WarehouseList'>
         <div className='WarehouseList__header'>
-          <h1>Locations</h1>
-          <input type='text' placeholder='search' />
+          <h1 className='header__h1'>Locations</h1>
+          <input className='header__search' type='text' placeholder='Search' />
         </div>
 
         <table className='WarehouseList__table'>

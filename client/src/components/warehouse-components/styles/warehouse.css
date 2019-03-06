@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'AvenirRegular';
+  src: url("../../../assets/fonts/regular.otf") format("oft");
+}
+
+body {
+  margin: 0;
+  color: #323232;
+}
+
 .WarehouseList {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7,7 +17,7 @@
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
   width: 70%;
-  margin: 0 10%;
+  margin: 0 6%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -17,19 +27,40 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
-.WarehouseList .WarehouseList__table {
+.WarehouseList .WarehouseList__header .header__h1 {
+  font-size: 1.9rem;
+  margin: 10% 0;
+}
+
+.WarehouseList .WarehouseList__header .header__search {
+  background-image: url("../../../assets/logos/Icon-search.svg");
+  background-color: #fafafa;
+  background-size: 10%;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-position-x: 15px;
+  margin: 0 0 10% 0;
+  height: 40px;
+  width: 200px;
+  padding: 2.5% 7%;
+  outline: none;
+  border: 2px solid #e1e1e1;
+  border-radius: 3px;
+  text-indent: 30px;
+  font-size: 16px;
+  color: #323232;
+}
+
+.WarehouseList__table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -39,17 +70,49 @@
           flex-flow: column nowrap;
 }
 
-.WarehouseList .WarehouseList__table .table__header {
+.WarehouseList__table .table__header {
+  display: none;
   margin-right: 5%;
 }
 
-.WarehouseList .WarehouseList__table tbody .table__row {
-  font-size: .8rem;
-  margin: 2% 0;
-  border-bottom: 1px solid gray;
+.WarehouseList__table tbody .table__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-size: 0.8rem;
+  margin: 2% 0 8% 0;
+  padding-bottom: 8%;
+  border-bottom: 2px solid #fafafa;
 }
 
-.WarehouseList .WarehouseList__table tbody .table__row tr {
-  width: 100%;
+.WarehouseList__table tbody .table__row div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-size: .9rem;
+  margin: 4%;
+}
+
+.WarehouseList__table tbody .table__row div .warehouseName {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.WarehouseList__table tbody .table__row div .contact {
+  font-style: italic;
 }
 /*# sourceMappingURL=warehouse.css.map */

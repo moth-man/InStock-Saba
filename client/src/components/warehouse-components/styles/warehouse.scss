@@ -1,15 +1,57 @@
+//VARIABLES
+$regularfont: 'AvenirRegular';
+$black:  #323232;
+$white: #E1E1E1;
+$alabaster: #fafafa;
+$mercury: #e1e1e1;
+
+@font-face {
+  font-family: 'AvenirRegular';
+  src: url('../../../assets/fonts/regular.otf') format('oft');
+}
+
+
+body {
+  margin: 0;
+  color: $black;
+}
+
 .WarehouseList {
   display: flex;
   flex-flow: column nowrap;
   width: 70%;
-  margin: 0 10%;
+  margin: 0 6%;
   justify-content: center;
 
   .WarehouseList__header {
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center
+    flex-flow: column nowrap;
+    align-items: flex-start;
+
+    .header__h1 {
+      font-size: 1.9rem;
+      margin: 10% 0;
+    }
+
+    .header__search {
+      background-image: url('../../../assets/logos/Icon-search.svg');
+      background-color: $alabaster;
+      background-size: 10%;
+      background-repeat: no-repeat;
+      background-position: left;
+      background-position-x: 15px;
+      margin: 0 0 10% 0;
+      height: 40px;
+      width: 200px;
+      padding: 2.5% 7%;
+      outline: none;
+      border: 2px solid $mercury;
+      border-radius: 3px;
+      text-indent: 30px;
+      font-size: 16px;
+      color: $black;
+    }
+    }
   }
 
   .WarehouseList__table {
@@ -17,23 +59,39 @@
     flex-flow: column nowrap;
 
     .table__header {
+      display: none;
       margin-right: 5%;
     }
 
     tbody {
       .table__row {
-        font-size: .8rem;
-        margin: 2% 0;
-        border-bottom: 1px solid gray;
-  
-        tr {
-          width: 100%
-          
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: flex-start;
+        font-size: 0.8rem;
+        margin: 2% 0 8% 0;
+        padding-bottom: 8%;
+        border-bottom: 2px solid $alabaster;
+
+        div {
+          display: flex;
+          flex-flow: column nowrap;
+          align-items: flex-start;
+          font-size: .9rem;
+          margin: 4%;
+
+          .warehouseName {
+            font-weight: bold;
+            font-size: 1rem;
+          }
+
+          .contact {
+            font-style: italic;
+          }
+
         }
-  
+
+
       }
     }
-
-   
   }
-}
