@@ -11,7 +11,7 @@ class Warehouse extends Component {
             <td className="warehouseName">{data.warehouseName}</td>
             <td>
               {data.address}
-              <img src={arrow} className="arrow" alt="link" />
+              <img src={arrow} className="arrow-mobile" alt="link" />
             </td>
           </div>
           <div>
@@ -23,7 +23,10 @@ class Warehouse extends Component {
             <td>{data.contactEmail}</td>
           </div>
           <div>
-            <td>{data.categories}</td>
+            <td className="categoryInfo">
+            {data.categories}
+            <img src={arrow} className="arrow-desktop" alt="link" />
+            </td>
           </div>
         </tr>
       </div>

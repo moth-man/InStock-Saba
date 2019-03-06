@@ -1,45 +1,7 @@
 import React, { Component } from 'react';
 import Warehouse from './Warehouse';
 import './styles/warehouse.css';
-
-const MOCK_DATA = [
-  {
-    warehouseName: 'Warehouse of Wonders 1',
-    address: '102 W. 1st Ave, Vancouver, BC',
-    contact: 'Luca Emmett',
-    contactTitle: 'Manager',
-    contactNum: '+1 778 248 9383',
-    contactEmail: 'luca@instock.com',
-    categories: 'Industrial, Electronics'
-  },
-  {
-    warehouseName: 'Warehouse of Wonders 1',
-    address: '102 W. 1st Ave, Vancouver, BC',
-    contact: 'Luca Emmett',
-    contactTitle: 'Manager',
-    contactNum: '+1 778 248 9383',
-    contactEmail: 'luca@instock.com',
-    categories: 'Industrial, Electronics'
-  },
-  {
-    warehouseName: 'Warehouse of Wonders 1',
-    address: '102 W. 1st Ave, Vancouver, BC',
-    contact: 'Luca Emmett',
-    contactTitle: 'Manager',
-    contactNum: '+1 778 248 9383',
-    contactEmail: 'luca@instock.com',
-    categories: 'Industrial, Electronics'
-  },
-  {
-    warehouseName: 'Warehouse of Wonders 1',
-    address: '102 W. 1st Ave, Vancouver, BC',
-    contact: 'Luca Emmett',
-    contactTitle: 'Manager',
-    contactNum: '+1 778 248 9383',
-    contactEmail: 'luca@instock.com',
-    categories: 'Industrial, Electronics'
-  }
-];
+import MOCK_DATA from './MOCK_DATA';
 
 class WarehouseList extends Component {
   render() {
@@ -57,10 +19,10 @@ class WarehouseList extends Component {
         <table className="WarehouseList__table">
           <thead>
             <tr className="table__header">
-              <th>Warehouse</th>
-              <th>Contact</th>
-              <th>Contact Information</th>
-              <th>Categories</th>
+              <th>WAREHOUSE</th>
+              <th>CONTACT</th>
+              <th>CONTACT INFORMATION</th>
+              <th>CATEGORIES</th>
             </tr>
           </thead>
           <tbody>{warehouseList}</tbody>

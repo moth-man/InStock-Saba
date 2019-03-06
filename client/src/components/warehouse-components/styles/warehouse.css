@@ -117,13 +117,17 @@ body {
   font-style: italic;
 }
 
-.WarehouseList__table tbody .table__row div .arrow {
+.WarehouseList__table tbody .table__row div .arrow-mobile {
   position: relative;
   left: 80px;
   bottom: 20px;
 }
 
-@media (max-width: 786px) {
+.WarehouseList__table tbody .table__row div .arrow-desktop {
+  display: none;
+}
+
+@media (min-width: 750px) {
   .WarehouseList {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -152,10 +156,10 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin: 5% 0;
+    margin: 4% 0;
   }
   .WarehouseList .WarehouseList__header .header__h1 {
-    font-size: 1.9rem;
+    font-size: 2.3rem;
     margin: 0;
   }
   .WarehouseList .WarehouseList__header .header__search {
@@ -202,8 +206,8 @@ body {
             align-items: flex-start;
     width: 100%;
     font-size: 0.8rem;
-    margin: 2% 0 4% 0;
-    padding-bottom: 4%;
+    margin: 2% 0 2% 0;
+    padding-bottom: 2%;
     border-bottom: 2px solid #fafafa;
   }
   .WarehouseList__table tbody .table__row div {
@@ -227,16 +231,169 @@ body {
   .WarehouseList__table tbody .table__row div .contact {
     font-style: italic;
   }
-  .WarehouseList__table tbody .table__row div .arrow {
+  .WarehouseList__table tbody .table__row div .arrow-mobile {
     position: relative;
     left: 500px;
     bottom: 20px;
+  }
+  .WarehouseList__table tbody .table__row div .arrow-desktop {
+    display: none;
   }
   .WarehouseList__table tbody .table__row div:nth-of-type(n + 3) {
     margin-left: 20%;
   }
   .WarehouseList__table tbody .table__row .warehouseMainInfo {
     margin: 0 65% 0 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .WarehouseList {
+    width: 75%;
+    margin: 0 12%;
+  }
+  .WarehouseList .WarehouseList__header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 4% 0;
+  }
+  .WarehouseList .WarehouseList__header .header__h1 {
+    font-size: 2.3rem;
+    margin: 0;
+  }
+  .WarehouseList .WarehouseList__header .header__search {
+    background-image: url("../../../assets/logos/Icon-search.svg");
+    background-color: #fafafa;
+    background-size: 8%;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-position-x: 15px;
+    margin: 0;
+    width: 180px;
+    padding: 1.5% 4%;
+    outline: none;
+    border: 2px solid #e1e1e1;
+    border-radius: 3px;
+    text-indent: 0px;
+    font-size: 15px;
+    color: #323232;
+  }
+  .WarehouseList__table {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-align: space-around;
+        -ms-flex-align: space-around;
+            align-items: space-around;
+    width: 95%;
+  }
+  .WarehouseList__table .table__header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0;
+    color: #e1e1e1;
+    font-size: .9rem;
+  }
+  .WarehouseList__table .table__header th {
+    margin: 0 0 0 0%;
+  }
+  .WarehouseList__table .table__header th:nth-of-type(1) {
+    margin-left: 0;
+  }
+  .WarehouseList__table tbody .table__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    font-size: 0.8rem;
+    margin: 2% 0 2% 0;
+    padding-bottom: 2%;
+    border-bottom: 2px solid #fafafa;
+  }
+  .WarehouseList__table tbody .table__row div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    font-size: 0.9rem;
+    margin: 0% 0 0 0;
+  }
+  .WarehouseList__table tbody .table__row div .warehouseName {
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  .WarehouseList__table tbody .table__row div .contact {
+    font-style: italic;
+  }
+  .WarehouseList__table tbody .table__row div .arrow-mobile {
+    display: none;
+  }
+  .WarehouseList__table tbody .table__row div .arrow-desktop {
+    display: block;
+    position: relative;
+  }
+  .WarehouseList__table tbody .table__row div:nth-of-type(n + 3) {
+    margin: 0 0 0 0;
+  }
+  .WarehouseList__table tbody .table__row .warehouseMainInfo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    margin: 0 0 0 0;
+  }
+  .WarehouseList__table tbody .table__row .categoryInfo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .WarehouseList__table tbody .table__row .categoryInfo .arrow-desktop {
+    position: relative;
+    left: 50px;
   }
 }
 /*# sourceMappingURL=warehouse.css.map */
