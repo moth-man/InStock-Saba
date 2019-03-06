@@ -1,0 +1,29 @@
+.WarehouseList {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 70%;
+  margin: 0 10%;
+  justify-content: center;
+
+  .WarehouseList__header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center
+  }
+
+  .WarehouseList__table {
+    display: flex;
+    flex-flow: column nowrap;
+
+    .table__header {
+      margin-right: 5%;
+    }
+
+    .table__row {
+      font-size: .8rem;
+      margin: 2% 0;
+      border-bottom: .5px solid lightgray;
+    }
+  }
+}
