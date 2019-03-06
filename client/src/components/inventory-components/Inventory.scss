@@ -1,28 +1,30 @@
 
 .inventoryList__container {
-  
+  color: #323232;
   background-color: white;
+  margin: 0px 16px;
   
   .inventoryList__title {
-    font-size: 24px;
+    font-size: 32px;
     line-height: 32px;
   }
 
   .searchBar__container {
-    padding: 0px 16px;
+    padding: 0px 0px;
 
     .searchBar {
         width: 288px;
 
         .searchBar__input {
             height: 48px;
-            width: 288px;
+            width: 240px;
             font-size: 15px;
             background-image: url("../../assets/icons/Icon-search.svg");
             background-repeat: no-repeat;
             background-origin: content-box;
             background-color: #FAFAFA;
             text-indent: 25px;
+            float: left;
             
             border-radius: 4px;
             box-sizing: border-box;
@@ -34,7 +36,92 @@
 }
 
   .inventoryItem__container {
-
+    display: inline-block;
     background-color: white;
+    border-bottom: 1px solid #E1E1E1;
+
+
+    .item__title {
+      color: #AFAFAF;
+      float: left;
+    }
+
+    .remove__item__button {
+      background-image: url("../../assets/icons/Icon-kebab-default.svg");
+      background-repeat: no-repeat;
+      background-color: white;
+      border: none;
+      height: 30px;
+      float: right;
+      margin-top: 12px;
+
+    }
+
+    .item__name {
+      font-size: 18px;
+      line-height: 24px;
+      clear: both;
+      text-align: left;
+      
+    }
+
+    .item__description {
+      font-size: 16px;
+      line-height: 20px;
+      text-align: left;
+     
+    }
+
+    .item__lastOrdered {
+      color: #AFAFAF;
+      text-align: left;
+    
+    }
+
+    .lastOrdered__date {
+      text-align: left;
+    }
+
+    .item__locationTitle {
+      color: #AFAFAF;
+      text-align: left;
+    }
+
+    .item__location {
+      text-align: left;
+    }
+
+    .item__quantityTitle {
+      color: #AFAFAF;
+      text-align: left;
+    }
+
+    .item__quantity {
+      text-align: left;
+    }
+
+    .item__statusTitle {
+      color: #AFAFAF;
+      text-align: left;
+    }
+
+    .item__status {
+      text-align: left;
+    }
+  }
+
+  .add__inventoryItem__button__container {
+    position: fixed;
+    right: 0;
+    top: 0;
+    margin: 400px 16px 0px 0px;
+    background-color: darkblue;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    background-image: url("../../assets/icons/Icon-add.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    float: right;
   }
 }

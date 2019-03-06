@@ -5,6 +5,7 @@ const InventoryItem = ({ name, description, ordered, location, quantity, status 
   return (
     <div className="inventoryItem__container">
       <p className="item__title">ITEM</p>
+      <button className="remove__item__button"></button>
       <h3 className="item__name">{name}</h3>
       <p className="item__description">{description}</p>
       <p className="item__lastOrdered">LAST ORDERED</p>
@@ -41,3 +42,4 @@ const InventoryItem = ({ name, description, ordered, location, quantity, status 
 // }
 
 export default InventoryItem
+

@@ -30,6 +30,10 @@ class InventoryList extends Component {
 
   }
 
+  addInventory = () => {
+    console.log("clicked")
+  }
+
   componentDidMount() {
     const { inventory } = this.props
     setTimeout(
@@ -47,9 +51,9 @@ class InventoryList extends Component {
             <input className="searchBar__input" type="text" placeholder="Search"></input>
           </form>
         </div>
-        {/* <InventoryItem name={this.props.inventory.inventory[2].name} /> */}
         {this.state.inventoryList}
-      </div>
+        <button className="add__inventoryItem__button" onClick={() => this.addInventory()}><div className="add__inventoryItem__button__container"></div></button>
+      </div >
     )
   }
 }
