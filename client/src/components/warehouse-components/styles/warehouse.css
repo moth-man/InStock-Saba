@@ -43,9 +43,13 @@
   margin-right: 5%;
 }
 
-.WarehouseList .WarehouseList__table .table__row {
+.WarehouseList .WarehouseList__table tbody .table__row {
   font-size: .8rem;
   margin: 2% 0;
-  border-bottom: .5px solid lightgray;
+  border-bottom: 1px solid gray;
+}
+
+.WarehouseList .WarehouseList__table tbody .table__row tr {
+  width: 100%;
 }
 /*# sourceMappingURL=warehouse.css.map */

@@ -11,7 +11,7 @@
     justify-content: space-between;
     align-items: center
   }
-  
+
   .WarehouseList__table {
     display: flex;
     flex-flow: column nowrap;
@@ -20,10 +20,20 @@
       margin-right: 5%;
     }
 
-    .table__row {
-      font-size: .8rem;
-      margin: 2% 0;
-      border-bottom: .5px solid lightgray;
+    tbody {
+      .table__row {
+        font-size: .8rem;
+        margin: 2% 0;
+        border-bottom: 1px solid gray;
+  
+        tr {
+          width: 100%
+          
+        }
+  
+      }
     }
+
+   
   }
 }
