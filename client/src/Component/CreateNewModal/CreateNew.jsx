@@ -16,10 +16,20 @@ class CreateNew extends Component {
       quantity_items: "",
       item_description: ""
     };
-    this.handleChange = this.handleChange.bind(this);
+    // this.handleChange = this.handleChange.bind(this);
   }
 
-  post = () => {
+  post = onClick => {
+    if (
+      !this.state.item_name ||
+      !this.state.date ||
+      !this.state.city ||
+      !this.state.country ||
+      !this.state.quantity_items
+    ) {
+      onClick.preventDefault();
+      return alert("Please enter all required input fields");
+    }
     axios.post(url, {
       instock: this.state.instock,
       item_name: this.state.item_name,
@@ -31,8 +41,9 @@ class CreateNew extends Component {
     });
   };
 
-  cancel = () => {
-    document.getElementsByClassName("modal").style.display = "none";
+  cancel = onClick => {
+    onClick.preventDefault();
+    document.getElementById("modal").style.display = "none";
   };
 
   handleChange(instock) {
@@ -47,7 +58,7 @@ class CreateNew extends Component {
 
   render() {
     return (
-      <div className='modal'>
+      <div className='modal' id='modal'>
         <form className='modal-content'>
           <h3>Create New</h3>
           <div className='flex-column'>
