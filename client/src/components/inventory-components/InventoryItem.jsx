@@ -27,22 +27,6 @@ class InventoryItem extends Component {
       pop = null
     }
     return (
-      // <div className="inventoryItem__container">
-      //   <p className="item__title">ITEM</p>
-      //   <button className="remove__item__button" onClick={() => this.togglePopUp()}></button>
-      //   {pop}
-      //   <h3 className="item__name">{name}</h3>
-      //   <p className="item__description">{description}</p>
-      //   <p className="item__lastOrdered">LAST ORDERED</p>
-      //   <p className="lastOrdered__date">{ordered}</p>
-      //   <p className="item__locationTitle">LOCATION</p>
-      //   <p className="item__location">{location}</p>
-      //   <p className="item__quantityTitle">QUANTITY</p>
-      //   <p className="item__quantity">{quantity}</p>
-      //   <p className="item__statusTitle">STATUS</p>
-      //   <p className="item__status">{status}</p>
-      // </div>
-
       <div className="inventoryItem__container">
         {/* <button className="remove__item__button" onClick={() => this.togglePopUp()}></button> */}
         <tr className="inventoryItem__tableRow">
@@ -57,7 +41,7 @@ class InventoryItem extends Component {
           <td className="item__quantity">{quantity}</td>
           <td className="item__statusTitle">STATUS</td>
           <td className="item__status">{status}</td>
-          <button className="remove__item__button" onClick={() => this.togglePopUp()}></button>
+          <button className="remove__item__button" onClick={() => this.togglePopUp()} id ="remove-button"></button>
           {pop}
         </tr>
       </div>
@@ -77,3 +61,20 @@ class Popup extends Component {
 
 export default InventoryItem
 
+
+
+    // <div className="inventoryItem__container">
+      //   <p className="item__title">ITEM</p>
+      //   <button className="remove__item__button" onClick={() => this.togglePopUp()}></button>
+      //   {pop}
+      //   <h3 className="item__name">{name}</h3>
+      //   <p className="item__description">{description}</p>
+      //   <p className="item__lastOrdered">LAST ORDERED</p>
+      //   <p className="lastOrdered__date">{ordered}</p>
+      //   <p className="item__locationTitle">LOCATION</p>
+      //   <p className="item__location">{location}</p>
+      //   <p className="item__quantityTitle">QUANTITY</p>
+      //   <p className="item__quantity">{quantity}</p>
+      //   <p className="item__statusTitle">STATUS</p>
+      //   <p className="item__status">{status}</p>
+      // </div>
