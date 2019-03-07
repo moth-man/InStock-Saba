@@ -200,9 +200,10 @@
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
     padding-bottom: 15px;
+    width: 400px;
   }
   .modal-content .movedatbutton {
-    margin-left: 250px;
+    margin-left: 130px;
   }
 }
 /*# sourceMappingURL=CreateNewModal.css.map */
