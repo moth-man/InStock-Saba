@@ -7,6 +7,7 @@
 .inventoryList__container .inventoryList__title {
   font-size: 32px;
   line-height: 32px;
+  text-align: left;
 }
 
 .inventoryList__container .searchBar__container {
@@ -52,6 +53,24 @@
   height: 30px;
   float: right;
   margin-top: 12px;
+}
+
+.inventoryList__container .inventoryItem__container .popup__container {
+  visibility: visible;
+  position: relative;
+  border: 1px solid #E1E1E1;
+  height: 40px;
+  width: 150px;
+  text-align: center;
+  float: left;
+  margin-left: 80px;
+  margin-top: 10px;
+  border-radius: 4px;
+}
+
+.inventoryList__container .inventoryItem__container .popup__container .popup__text {
+  margin: 10px 0px 0px 10px;
+  text-align: left;
 }
 
 .inventoryList__container .inventoryItem__container .item__name {

@@ -11,7 +11,7 @@ const inventory = [
     description: "lkjsdl dfkdkfl lsjdflks dfkjslkfjsf sljdflksjkfjlks dkfjdkfj",
     ordered: new Date("3/25/2018"),
     location: "Orlando, FL",
-    quantity: "3000",
+    quantity: 3000,
     status: true
   },
   {
@@ -19,7 +19,7 @@ const inventory = [
     description: "ldjf fdlkjfksdl lsjdkf lksdlkfj lajsdkfjs lsdjfkj lksjdf",
     ordered: new Date("12/13/2018"),
     location: "Atlanta, GA",
-    quantity: "60000",
+    quantity: 60000,
     status: true
   },
   {
@@ -27,7 +27,7 @@ const inventory = [
     description: "lkdjf lsdjflksjfd ldjfkjsdklf lksjdfksjf lkjdfklsj ",
     ordered: new Date("2/20/2019"),
     location: "Portland, OR",
-    quantity: "34442",
+    quantity: 34442,
     status: false
   },
   {
@@ -35,7 +35,7 @@ const inventory = [
     description: "lkjsdl dfkdkfl lsjdflks dfkjslkfjsf sljdflksjkfjlks dkfjdkfj",
     ordered: new Date("3/25/2018"),
     location: "Orlando, FL",
-    quantity: "3000",
+    quantity: 3000,
     status: true
   },
   {
@@ -43,7 +43,7 @@ const inventory = [
     description: "ldjf fdlkjfksdl lsjdkf lksdlkfj lajsdkfjs lsdjfkj lksjdf",
     ordered: new Date("12/13/2018"),
     location: "Atlanta, GA",
-    quantity: "60000",
+    quantity: 60000,
     status: true
   },
   {
@@ -51,7 +51,7 @@ const inventory = [
     description: "lkdjf lsdjflksjfd ldjfkjsdklf lksjdfksjf lkjdfklsj ",
     ordered: new Date("2/20/2019"),
     location: "Portland, OR",
-    quantity: "34442",
+    quantity: 34442,
     status: false
   }
 
