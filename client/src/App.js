@@ -12,7 +12,12 @@ class App extends Component {
         <Switch>
           <Route path="/" exact component={WarehouseList} />
           <Route path="/inventory" render={(routeProps) => (<InventoryList {...routeProps}
-            inventory={this.props}
+
+          />)}
+          />
+          <Route path="/warehouse/:id" render={(routeProps) => (<InventoryList {...routeProps}
+
+            id={this.props.match}
           />)}
           />
         </Switch>
