@@ -1,11 +1,12 @@
-import React, { Component } from "react";
-import CreateNewModal from "./Component/CreateNewModal/CreateNew";
-
+import React, { Component } from 'react';
+import Navbar from './components/Navbar/Navbar';
+import CreateNew from './components/CreateNewModal/CreateNew'
 class App extends Component {
   render() {
     return (
-      <div className='App'>
-        <CreateNewModal />
+      <div className="App">
+        <Navbar />
+        <CreateNew />
       </div>
     );
   }

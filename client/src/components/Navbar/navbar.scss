@@ -1,0 +1,71 @@
+/*NAV BAR*/
+@import '../../styles/variables';
+
+.navbar {
+  background-color: $default-black;
+  font-family: $regularfont, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__logo {
+    padding: 16px 0;
+    text-align: center;
+  }
+
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+      
+      span {
+      margin: 0;
+      width: 160px; 
+      line-height: 22px;
+      font-weight: bold;
+      color: $text-lightgrey; 
+      padding-bottom: 16px;
+      }
+
+      span:hover {
+        border-bottom: 4px solid white;
+        color:$text-white;
+      }
+    }
+}
+
+/*TABLET QUERIES*/
+@media (min-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    height: 80px;
+    align-items: center;
+
+      &__logo {
+        padding: 0 24px;
+      }
+
+      &__links {
+        justify-content: flex-start;
+          span {
+            padding: 0;
+          }
+      }
+  }
+
+  span:hover {
+    padding: 30px 0px;
+    border-bottom: 4px solid white;
+  }
+}
+
+@media (min-width: 1440px) {
+  .navbar{
+    &__logo {
+      padding: 0 56px 0 180px ;
+    }
+    
+  }
+}
