@@ -11,7 +11,7 @@
   {
     "warehouseName": "Ze Warehouse",
     "address": "102 W. 1st Ave, Vancouver, BC",
-    "contact": "Bri Amous",
+    "contact": "Bri Amos",
     "contactTitle": "Manager",
     "contactNum": "+1 778 331 9435",
     "contactEmail": "b@instock.com",
@@ -19,11 +19,11 @@
   },
   {
     "warehouseName": "Warehouse of Sun Hats",
-    "address": "110 W. 1st Ave, Vancouver, BC",
-    "contact": "Luca Emmett",
+    "address": "666 Commercial Dr, Vancouver, BC",
+    "contact": "Denise Bluth",
     "contactTitle": "Manager",
-    "contactNum": "+1 778 248 9383",
-    "contactEmail": "luca@instock.com",
+    "contactNum": "+1 778 603 3504",
+    "contactEmail": "didi@instock.com",
     "categories": "Industrial, Electronics, Mechanical Body Parts, Staplers, Eco Tools, Sun Hats"
   },
   {
