@@ -1,0 +1,101 @@
+@media (min-width: 700px) and (max-width: 889px) {
+  .WarehouseList {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 93%;
+    margin: 0 4%;
+    justify-content: center;
+
+    .WarehouseList__header {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      margin: 4% 0;
+
+      .header__h1 {
+        font-size: 2.3rem;
+        margin: 0;
+      }
+
+      .header__search {
+        background-image: url('../../../assets/logos/Icon-search.svg');
+        background-color: $default-alabaster;
+        background-size: 8%;
+        background-repeat: no-repeat;
+        background-position: left;
+        background-position-x: 15px;
+        margin: 0;
+        height: 15px;
+        width: 150px;
+        padding: 2.5% 7%;
+        outline: none;
+        border: 2px solid $text-grey;
+        border-radius: 3px;
+        text-indent: 0px;
+        font-size: 15px;
+        color: $default-black;
+      }
+    }
+
+    .WarehouseList__table {
+      display: flex;
+      flex-flow: column nowrap;
+
+      .table__header {
+        display: none;
+        margin-right: 5%;
+      }
+
+      tbody {
+        .table__row {
+          display: flex;
+          flex-flow: row wrap;
+          align-items: flex-start;
+          width: 92%;
+          font-size: 0.8rem;
+          margin: 2% 0 2% 0;
+          padding-bottom: 2%;
+          border-bottom: 2px solid $default-alabaster;
+
+          div {
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: flex-start;
+            font-size: 0.9rem;
+            margin: 4% 0 0 0;
+
+            .warehouseName {
+              font-weight: bold;
+              font-size: 1rem;
+            }
+
+            .contact {
+              font-style: italic;
+            }
+
+            .arrow-mobile {
+              position: relative;
+              left: 450px;
+              bottom: 20px;
+            }
+
+            &:nth-of-type(n + 3) {
+              margin-left: 20%;
+            }
+          }
+          .warehouseMainInfo {
+            margin: 0 65% 0 0;
+          }
+          .categoryInfo {
+            width: 25%;
+
+            .arrow-desktop {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import './App.css';
-import InventoryList from './components/inventory-components/InventoryList'
-import './components/Navbar/Navbar';
-import Navbar from './components/Navbar/Navbar'
+import Navbar from './components/Navbar/Navbar';
+import WarehouseList from './components/warehouse-components/WarehouseList';
+import InventoryList from './components/inventory-components/InventoryList';
 
 class App extends Component {
   render() {
@@ -10,6 +9,7 @@ class App extends Component {
       <div className="App">
         <Navbar />
         <InventoryList inventory={this.props} />
+        <WarehouseList />
       </div>
     );
   }

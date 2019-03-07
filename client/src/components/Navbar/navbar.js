@@ -2,7 +2,6 @@ import React from 'react';
 import logo from '../../assets/logos/Logo-instock.svg';
 import './navbar.css';
 
-
 class Navbar extends React.Component {
 	render() {
 		return (
