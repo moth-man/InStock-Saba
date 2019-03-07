@@ -46,6 +46,8 @@ class CreateNew extends Component {
       quantity_items: this.state.quantity_items,
       item_description: this.state.item_description
     });
+    onClick.preventDefault();
+    document.getElementById("modal").style.display = "none";
   };
 
   cancel = onClick => {
