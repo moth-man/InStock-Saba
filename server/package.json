@@ -16,6 +16,7 @@
     "express": "^4.16.4",
     "express-router": "0.0.1",
     "fs": "0.0.1-security",
-    "prettier": "^1.16.4"
+    "prettier": "^1.16.4",
+    "randomatic": "^3.1.1"
   }
 }

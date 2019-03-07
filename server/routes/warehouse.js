@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const fs = require("fs");
+const randomize = require("randomatic");
 const DATA = require("../data/warehouse.json");
 
 router
@@ -9,6 +10,7 @@ router
         res.json(DATA);
     })
     .post((req, res) => {
+        const id = randomize("a0", 12);
         const newWarehouse = ({
             warehouseName,
             address,
@@ -16,8 +18,10 @@ router
             contactTitle,
             contactNum,
             contactEmail,
-            categories,
+            categories
         } = req.body);
+        
+        newWarehouse.id = id;
 
         const updatedList = [...DATA, newWarehouse];
         fs.writeFileSync("./data/warehouse.json", JSON.stringify(updatedList));
