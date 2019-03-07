@@ -14,6 +14,7 @@
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",
     "express": "^4.16.4",
-    "express-router": "0.0.1"
+    "express-router": "0.0.1",
+    "fs": "0.0.1-security"
   }
 }
