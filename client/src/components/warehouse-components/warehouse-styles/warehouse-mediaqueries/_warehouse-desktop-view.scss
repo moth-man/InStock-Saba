@@ -18,11 +18,11 @@
       .header__search {
         margin: 0;
         width: 180px;
-        padding: 0.5% 4%;
+        padding: 0.5% 5%;
         outline: none;
         border-radius: 3px;
         text-indent: 0px;
-        font-size: 15px;
+        font-size: 17px;
       }
     }
 
@@ -38,6 +38,8 @@
         flex-flow: row nowrap;
         justify-content: space-between;
         font-size: 0.9rem;
+        font-family: 'AvenierBold';
+        color: $text-grey;
 
         th {
           margin-left: 5%;
@@ -68,8 +70,9 @@
           align-items: center;
           justify-content: space-between;
           font-size: 0.8rem;
-          width: 94%;
+          width: 105%;
           margin: 2% 0 2% 0;
+          padding-bottom: 2%;
           
           div {
             display: flex;
@@ -106,10 +109,13 @@
           }
 
           .categoryInfo {
+
+            padding-top: 1.5%;
+            
             .arrow-desktop {
               display: block;
               position: relative;
-              right: -120px;
+              right: -235px;
               bottom: 20px;
             }
           }

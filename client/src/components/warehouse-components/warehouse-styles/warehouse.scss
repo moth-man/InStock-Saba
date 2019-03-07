@@ -5,6 +5,17 @@
   src: url('../../../assets/fonts/regular.otf');
 }
 
+@font-face {
+  font-family: 'AvenierBold';
+  src: url('../../../assets/fonts/bold.otf');
+}
+
+@font-face {
+  font-family: 'AvenierDemi';
+  src: url('../../../assets/fonts/demibold.otf');
+}
+
+
 body {
   margin: 0;
   color: $default-black;
@@ -23,6 +34,7 @@ body {
       align-items: flex-start;
 
       .header__h1 {
+        font-family: 'AvenierBold';
         font-size: 1.9rem;
         margin: 10% 0;
       }
