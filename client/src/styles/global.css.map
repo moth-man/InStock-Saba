@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "ACAA,SAAS;AACT,UAAU;EACR,WAAW,EAAE,eAAe;EAC5B,GAAG,EAAE,gCAAgC,CAAC,aAAa;;;AAErD,UAAU;EACR,WAAW,EAAE,YAAY;EACzB,GAAG,EAAE,6BAA6B,CAAC,aAAa;;;AAElD,UAAU;EACR,WAAW,EAAE,YAAY;EACzB,GAAG,EAAE,iCAAiC,CAAC,aAAa;;;ACXtD,aAAa;AFGb,AAAA,IAAI,CAAC;EACJ,MAAM,EAAE,CAAC;CACT",
+    "sources": [
+        "global.scss",
+        "_fonts.scss",
+        "_variables.scss"
+    ],
+    "names": [],
+    "file": "global.css"
+}

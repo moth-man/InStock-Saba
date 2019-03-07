@@ -1,14 +1,8 @@
 /*NAV BAR*/
-/*variables*/
-@font-face {
-  font-family: "AvenirRegular";
-  src: url(../../assets/fonts/regular.otf) format("oft");
-}
-
+/*VARIABLES*/
 .navbar {
   background-color: #323232;
   font-family: AvenirRegular, sans-serif;
-  margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,6 +17,7 @@
 
 .navbar__logo {
   padding: 16px 0;
+  text-align: center;
 }
 
 .navbar__links {
@@ -35,6 +30,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
   width: 100%;
 }
 
