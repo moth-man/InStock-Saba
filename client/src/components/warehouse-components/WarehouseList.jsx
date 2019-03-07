@@ -18,7 +18,7 @@ class WarehouseList extends Component {
 
         <table className="WarehouseList__table">
           <thead>
-            <tr className="table__header">
+            <tr className="table_header">
               <th>WAREHOUSE</th>
               <th>CONTACT</th>
               <th>CONTACT INFORMATION</th>

@@ -307,12 +307,11 @@ body {
           .arrow-mobile {
             display: none;
           }
-        
 
           &:nth-of-type(n + 3) {
             margin: 0 0 0 0;
           }
- 
+
           .arrow-desktop {
             display: block;
             position: relative;
@@ -320,7 +319,7 @@ body {
             bottom: 10px;
           }
         }
-        
+
         .warehouseMainInfo {
           display: flex;
           flex-flow: column nowrap;
