@@ -8,7 +8,7 @@ import { BrowserRouter } from 'react-router-dom'
 const inventory = [
   {
     name: "AT4040 Condensor Mic",
-    description: "lkjsdl dfkdkfl lsjdflks dfkjslkfjsf sljdflksjkfjlks dkfjdkfj",
+    description: "Here is a very brief description of the item...",
     ordered: new Date("3/25/2018"),
     location: "Orlando, FL",
     quantity: 3000,
@@ -16,7 +16,7 @@ const inventory = [
   },
   {
     name: "Focusrite 2i2 Audio Interface",
-    description: "ldjf fdlkjfksdl lsjdkf lksdlkfj lajsdkfjs lsdjfkj lksjdf",
+    description: "Here is a very brief description of the item...",
     ordered: new Date("12/13/2018"),
     location: "Atlanta, GA",
     quantity: 60000,
@@ -24,7 +24,7 @@ const inventory = [
   },
   {
     name: "Lego NXT Robotics Kit",
-    description: "lkdjf lsdjflksjfd ldjfkjsdklf lksjdfksjf lkjdfklsj ",
+    description: "Here is a very brief description of the item...",
     ordered: new Date("2/20/2019"),
     location: "Portland, OR",
     quantity: 34442,
@@ -32,7 +32,7 @@ const inventory = [
   },
   {
     name: "AT4040 Condensor Mic",
-    description: "lkjsdl dfkdkfl lsjdflks dfkjslkfjsf sljdflksjkfjlks dkfjdkfj",
+    description: "Here is a very brief description of the item...",
     ordered: new Date("3/25/2018"),
     location: "Orlando, FL",
     quantity: 3000,
@@ -40,7 +40,7 @@ const inventory = [
   },
   {
     name: "Focusrite 2i2 Audio Interface",
-    description: "ldjf fdlkjfksdl lsjdkf lksdlkfj lajsdkfjs lsdjfkj lksjdf",
+    description: "Here is a very brief description of the item...",
     ordered: new Date("12/13/2018"),
     location: "Atlanta, GA",
     quantity: 60000,
@@ -48,7 +48,7 @@ const inventory = [
   },
   {
     name: "Lego NXT Robotics Kit",
-    description: "lkdjf lsdjflksjfd ldjfkjsdklf lksjdfksjf lkjdfklsj ",
+    description: "Here is a very brief description of the item...",
     ordered: new Date("2/20/2019"),
     location: "Portland, OR",
     quantity: 34442,

@@ -44,6 +44,17 @@ class InventoryList extends Component {
 
   render() {
     return (
+      // <div className="inventoryList__container">
+      //   <h1 className="inventoryList__title">Inventory</h1>
+      //   <div className="searchBar__container">
+      //     <form className="searchBar">
+      //       <input className="searchBar__input" type="text" placeholder="Search"></input>
+      //     </form>
+      //   </div>
+      //   {this.state.inventoryList}
+      //   <button className="add__inventoryItem__button" onClick={() => this.addInventory()}><div className="add__inventoryItem__button__container"></div></button>
+      // </div >
+
       <div className="inventoryList__container">
         <h1 className="inventoryList__title">Inventory</h1>
         <div className="searchBar__container">
@@ -51,9 +62,20 @@ class InventoryList extends Component {
             <input className="searchBar__input" type="text" placeholder="Search"></input>
           </form>
         </div>
-        {this.state.inventoryList}
+        <table className="inventoryList__table">
+          <thead className="table__head">
+            <tr className="table__head__row">
+              <th className="inventoryList__th item">ITEM</th>
+              <th className="inventoryList__th">LAST ORDERED</th>
+              <th className="inventoryList__th">LOCATION</th>
+              <th className="inventoryList__th">QUANTITY</th>
+              <th className="inventoryList__th">STATUS</th>
+            </tr>
+          </thead>
+          <tbody>{this.state.inventoryList}</tbody>
+        </table>
         <button className="add__inventoryItem__button" onClick={() => this.addInventory()}><div className="add__inventoryItem__button__container"></div></button>
-      </div >
+      </div>
     )
   }
 }
