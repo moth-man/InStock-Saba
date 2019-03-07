@@ -47,12 +47,12 @@ class CreateNew extends Component {
       item_description: this.state.item_description
     });
     onClick.preventDefault();
-    document.getElementById("modal").style.display = "none";
+    this.refs.modal.style.display = "none";
   };
 
   cancel = onClick => {
     onClick.preventDefault();
-    document.getElementById("modal").style.display = "none";
+    this.refs.modal.style.display = "none";
   };
 
   handleChange(instock) {
@@ -67,7 +67,7 @@ class CreateNew extends Component {
 
   render() {
     return (
-      <div className='modal' id='modal'>
+      <div className='modal' ref='modal'>
         <form className='modal-content'>
           <h3>Create New</h3>
           <div className='flex-wrap'>
