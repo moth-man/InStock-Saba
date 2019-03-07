@@ -8,7 +8,7 @@ class App extends Component {
     return (
       <div className="App">
         <Navbar />
-        <InventoryList inventory={this.props} />
+        {/* <InventoryList inventory={this.props} /> */}
         <WarehouseList />
       </div>
     );

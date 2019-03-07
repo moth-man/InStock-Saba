@@ -9,25 +9,19 @@ router
         res.json(DATA);
     })
     .post((req, res) => {
-        const {
+        const newWarehouse = ({
             warehouseName,
             address,
             contact,
             contactTitle,
             contactNum,
             contactEmail,
-            categories
-        } = req.body;
+            categories,
+        } = req.body);
 
-        const newWarehouse = {
-            warehouseName,
-            address,
-            contact,
-            contactTitle,
-            contactNum,
-            contactEmail,
-            categories
-        };
+        const updatedList = [...DATA, newWarehouse];
+        fs.writeFileSync("./data/warehouse.json", JSON.stringify(updatedList));
+
         res.send(newWarehouse);
     });
 
