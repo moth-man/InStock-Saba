@@ -1,8 +1,9 @@
 /*Global*/
-body {
-  margin: 0;
+.overlay {
   font-family: Helvetica;
   background-color: grey;
+  width: 100%;
+  height: 1000px;
 }
 
 .modal {
