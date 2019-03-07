@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../../assets/logos/Logo-instock.svg';
 import './navbar.css';
+import { Link } from 'react-router-dom'
 
 class Navbar extends React.Component {
 	render() {
@@ -12,8 +13,12 @@ class Navbar extends React.Component {
 					{/* ADD REACT ROUTER 'LINK' HERE */}
 				</div>
 				<div className='navbar__links'>
-					<span className='navbar__link'>Inventory</span>
-					<span className='navbar__link'>Locations</span>
+					<Link className="link" to='/inventory'>
+						<span className='navbar__link'>Inventory</span>
+					</Link>
+					<Link className="link" to='/'>
+						<span className='navbar__link'>Locations</span>
+					</Link>
 				</div>
 			</section>
 		);
