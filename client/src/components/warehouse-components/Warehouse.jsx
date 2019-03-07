@@ -22,8 +22,8 @@ class Warehouse extends Component {
             <td>{data.contactNum}</td>
             <td>{data.contactEmail}</td>
           </div>
-          <div>
-            <td className="categoryInfo">
+          <div className="categoryInfo">
+            <td className="category__td">
             {data.categories}
             <img src={arrow} className="arrow-desktop" alt="link" />
             </td>

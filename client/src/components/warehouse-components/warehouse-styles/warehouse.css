@@ -1,11 +1,13 @@
+/*VARIABLES*/
 @font-face {
-  font-family: 'AvenirRegular';
-  src: url("../../../assets/fonts/regular.otf") format("oft");
+  font-family: 'AvenierRegular';
+  src: url("../../../assets/fonts/regular.otf");
 }
 
 body {
   margin: 0;
   color: #323232;
+  font-family: 'AvenierRegular';
 }
 
 .WarehouseList {
@@ -43,7 +45,7 @@ body {
 
 .WarehouseList .WarehouseList__header .header__search {
   background-image: url("../../../assets/logos/Icon-search.svg");
-  background-color: #fafafa;
+  background-color: #FAFAFA;
   background-size: 10%;
   background-repeat: no-repeat;
   background-position: left;
@@ -53,14 +55,14 @@ body {
   width: 200px;
   padding: 2.5% 7%;
   outline: none;
-  border: 2px solid #e1e1e1;
+  border: 2px solid #E1E1E1;
   border-radius: 3px;
   text-indent: 30px;
   font-size: 16px;
   color: #323232;
 }
 
-.WarehouseList__table {
+.WarehouseList .WarehouseList__table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -70,11 +72,11 @@ body {
           flex-flow: column nowrap;
 }
 
-.WarehouseList__table .table__header {
+.WarehouseList .WarehouseList__table .table__header {
   display: none;
 }
 
-.WarehouseList__table tbody .table__row {
+.WarehouseList .WarehouseList__table tbody .table__row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -89,10 +91,10 @@ body {
   font-size: 0.8rem;
   margin: 2% 0 8% 0;
   padding-bottom: 8%;
-  border-bottom: 2px solid #fafafa;
+  border-bottom: 2px solid #FAFAFA;
 }
 
-.WarehouseList__table tbody .table__row div {
+.WarehouseList .WarehouseList__table tbody .table__row div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -107,26 +109,26 @@ body {
   margin: 3% 0%;
 }
 
-.WarehouseList__table tbody .table__row div .warehouseName {
+.WarehouseList .WarehouseList__table tbody .table__row div .warehouseName {
   font-weight: bold;
   font-size: 0.9rem;
 }
 
-.WarehouseList__table tbody .table__row div .contact {
+.WarehouseList .WarehouseList__table tbody .table__row div .contact {
   font-style: italic;
 }
 
-.WarehouseList__table tbody .table__row div .arrow-mobile {
+.WarehouseList .WarehouseList__table tbody .table__row div .arrow-mobile {
   position: relative;
   left: 80px;
   bottom: 20px;
 }
 
-.WarehouseList__table tbody .table__row div .arrow-desktop {
+.WarehouseList .WarehouseList__table tbody .table__row div .arrow-desktop {
   display: none;
 }
 
-@media (min-width: 650px) {
+@media (min-width: 700px) and (max-width: 889px) {
   .WarehouseList {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -163,7 +165,7 @@ body {
   }
   .WarehouseList .WarehouseList__header .header__search {
     background-image: url("../../../assets/logos/Icon-search.svg");
-    background-color: #fafafa;
+    background-color: #FAFAFA;
     background-size: 8%;
     background-repeat: no-repeat;
     background-position: left;
@@ -173,13 +175,13 @@ body {
     width: 150px;
     padding: 2.5% 7%;
     outline: none;
-    border: 2px solid #e1e1e1;
+    border: 2px solid #AFAFAF;
     border-radius: 3px;
     text-indent: 0px;
     font-size: 15px;
     color: #323232;
   }
-  .WarehouseList__table {
+  .WarehouseList .WarehouseList__table {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -188,11 +190,11 @@ body {
         -ms-flex-flow: column nowrap;
             flex-flow: column nowrap;
   }
-  .WarehouseList__table .table__header {
+  .WarehouseList .WarehouseList__table .table__header {
     display: none;
     margin-right: 5%;
   }
-  .WarehouseList__table tbody .table__row {
+  .WarehouseList .WarehouseList__table tbody .table__row {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -203,13 +205,13 @@ body {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    width: 100%;
+    width: 92%;
     font-size: 0.8rem;
     margin: 2% 0 2% 0;
     padding-bottom: 2%;
-    border-bottom: 2px solid #fafafa;
+    border-bottom: 2px solid #FAFAFA;
   }
-  .WarehouseList__table tbody .table__row div {
+  .WarehouseList .WarehouseList__table tbody .table__row div {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -223,26 +225,29 @@ body {
     font-size: 0.9rem;
     margin: 4% 0 0 0;
   }
-  .WarehouseList__table tbody .table__row div .warehouseName {
+  .WarehouseList .WarehouseList__table tbody .table__row div .warehouseName {
     font-weight: bold;
     font-size: 1rem;
   }
-  .WarehouseList__table tbody .table__row div .contact {
+  .WarehouseList .WarehouseList__table tbody .table__row div .contact {
     font-style: italic;
   }
-  .WarehouseList__table tbody .table__row div .arrow-mobile {
+  .WarehouseList .WarehouseList__table tbody .table__row div .arrow-mobile {
     position: relative;
-    left: 500px;
+    left: 450px;
     bottom: 20px;
   }
-  .WarehouseList__table tbody .table__row div .arrow-desktop {
-    display: none;
-  }
-  .WarehouseList__table tbody .table__row div:nth-of-type(n + 3) {
+  .WarehouseList .WarehouseList__table tbody .table__row div:nth-of-type(n + 3) {
     margin-left: 20%;
   }
-  .WarehouseList__table tbody .table__row .warehouseMainInfo {
+  .WarehouseList .WarehouseList__table tbody .table__row .warehouseMainInfo {
     margin: 0 65% 0 0;
+  }
+  .WarehouseList .WarehouseList__table tbody .table__row .categoryInfo {
+    width: 25%;
+  }
+  .WarehouseList .WarehouseList__table tbody .table__row .categoryInfo .arrow-desktop {
+    display: none;
   }
 }
 
@@ -272,23 +277,15 @@ body {
     margin: 0;
   }
   .WarehouseList .WarehouseList__header .header__search {
-    background-image: url("../../../assets/logos/Icon-search.svg");
-    background-color: #fafafa;
-    background-size: 8%;
-    background-repeat: no-repeat;
-    background-position: left;
-    background-position-x: 15px;
     margin: 0;
     width: 180px;
-    padding: 1.5% 4%;
+    padding: 0.5% 4%;
     outline: none;
-    border: 2px solid #e1e1e1;
     border-radius: 3px;
     text-indent: 0px;
     font-size: 15px;
-    color: #323232;
   }
-  .WarehouseList__table {
+  .WarehouseList .WarehouseList__table {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -302,7 +299,7 @@ body {
     width: 95%;
     text-align: start;
   }
-  .WarehouseList__table .table__header {
+  .WarehouseList .WarehouseList__table .table__header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -313,29 +310,28 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    color: #e1e1e1;
     font-size: 0.9rem;
   }
-  .WarehouseList__table .table__header th {
+  .WarehouseList .WarehouseList__table .table__header th {
     margin-left: 5%;
   }
-  .WarehouseList__table .table__header th:nth-of-type(1) {
+  .WarehouseList .WarehouseList__table .table__header th:nth-of-type(1) {
     margin-left: 0;
     padding-left: 0;
   }
-  .WarehouseList__table .table__header th:nth-of-type(2) {
+  .WarehouseList .WarehouseList__table .table__header th:nth-of-type(2) {
     margin-left: -8%;
     padding-left: 17%;
   }
-  .WarehouseList__table .table__header th:nth-of-type(3) {
+  .WarehouseList .WarehouseList__table .table__header th:nth-of-type(3) {
     margin-left: 0;
     padding-left: 12%;
   }
-  .WarehouseList__table .table__header th:nth-of-type(4) {
+  .WarehouseList .WarehouseList__table .table__header th:nth-of-type(4) {
     margin-left: 0;
     padding-right: 7%;
   }
-  .WarehouseList__table tbody .table__row {
+  .WarehouseList .WarehouseList__table tbody .table__row {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -350,11 +346,10 @@ body {
         -ms-flex-pack: justify;
             justify-content: space-between;
     font-size: 0.8rem;
+    width: 94%;
     margin: 2% 0 2% 0;
-    padding-bottom: 2%;
-    border-bottom: 2px solid #fafafa;
   }
-  .WarehouseList__table tbody .table__row div {
+  .WarehouseList .WarehouseList__table tbody .table__row div {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -372,26 +367,20 @@ body {
     margin: 0 0 0 0;
     width: 20%;
   }
-  .WarehouseList__table tbody .table__row div .warehouseName {
+  .WarehouseList .WarehouseList__table tbody .table__row div .warehouseName {
     font-weight: bold;
     font-size: 1rem;
   }
-  .WarehouseList__table tbody .table__row div .contact {
+  .WarehouseList .WarehouseList__table tbody .table__row div .contact {
     font-style: italic;
   }
-  .WarehouseList__table tbody .table__row div .arrow-mobile {
+  .WarehouseList .WarehouseList__table tbody .table__row div .arrow-mobile {
     display: none;
   }
-  .WarehouseList__table tbody .table__row div:nth-of-type(n + 3) {
+  .WarehouseList .WarehouseList__table tbody .table__row div:nth-of-type(n + 3) {
     margin: 0 0 0 0;
   }
-  .WarehouseList__table tbody .table__row div .arrow-desktop {
-    display: block;
-    position: relative;
-    right: -220px;
-    bottom: 10px;
-  }
-  .WarehouseList__table tbody .table__row .warehouseMainInfo {
+  .WarehouseList .WarehouseList__table tbody .table__row .warehouseMainInfo {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -400,6 +389,12 @@ body {
         -ms-flex-flow: column nowrap;
             flex-flow: column nowrap;
     margin: 0 0 0 0;
+  }
+  .WarehouseList .WarehouseList__table tbody .table__row .categoryInfo .arrow-desktop {
+    display: block;
+    position: relative;
+    right: -120px;
+    bottom: 20px;
   }
 }
 /*# sourceMappingURL=warehouse.css.map */

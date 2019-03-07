@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Warehouse from './Warehouse';
-import './styles/warehouse.css';
+import './warehouse-styles/warehouse.css';
 import MOCK_DATA from './MOCK_DATA';
 
 class WarehouseList extends Component {
