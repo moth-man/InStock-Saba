@@ -1,44 +1,37 @@
 /*NAV BAR*/
-
-/*variables*/
-$regularfont: AvenirRegular;
-@font-face {
-  font-family: "AvenirRegular";
-  src: url(../../assets/fonts/regular.otf) format('oft');
-}
-
+@import '../../styles/variables';
 
 .navbar {
-  background-color: #323232;
+  background-color: $default-black;
   font-family: $regularfont, sans-serif;
-  margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
   &__logo {
     padding: 16px 0;
+    text-align: center;
   }
 
   &__links {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
     width: 100%;
       
       span {
       margin: 0;
       width: 160px; 
-      // font-size: 14px;
       line-height: 22px;
       font-weight: bold;
-      color: #E1E1E1;
+      color: $text-lightgrey; 
       padding-bottom: 16px;
       }
 
       span:hover {
         border-bottom: 4px solid white;
-        color:#FFFFFF;
+        color:$text-white;
       }
     }
 }
@@ -75,6 +68,4 @@ $regularfont: AvenirRegular;
     }
     
   }
-
-
 }
