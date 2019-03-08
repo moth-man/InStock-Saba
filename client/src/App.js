@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import WarehouseList from "./components/warehouse-components/WarehouseList";
 import InventoryList from "./components/inventory-components/InventoryList";
-import WarehouseModal from "./components/WarehouseModal/warehouseModal";
 import { Switch, Route, Link } from "react-router-dom";
 
 class App extends Component {
@@ -22,8 +21,6 @@ class App extends Component {
           />)}
           />
         </Switch>
-        <WarehouseModal />
-        {/* <InventoryList inventory={this.props} /> */}
       </div>
     );
   }

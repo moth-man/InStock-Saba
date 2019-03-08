@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import InventoryItem from './InventoryItem'
+import WarehouseModal from '../WarehouseModal/warehouseModal'
 import './Inventory.css'
 
 class InventoryList extends Component {
@@ -8,7 +9,8 @@ class InventoryList extends Component {
     super(props)
     this.state = {
       inventoryList: [],
-      data: []
+      data: [],
+      modal: false
     }
   }
 
@@ -37,6 +39,7 @@ class InventoryList extends Component {
 
   addInventory = () => {
     console.log("clicked")
+
   }
 
   componentDidMount() {
