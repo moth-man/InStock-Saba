@@ -81,7 +81,7 @@ class Warehouse extends Component {
                   onChange={this.update_input_state}
                 />
               </div>
-              <div className='flex-wrap'>
+              <div className='flex-column'>
                 <div className='flex-column'>
                   <h5>CONTACT NAME</h5>
                   <input
