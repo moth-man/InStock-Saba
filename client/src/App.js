@@ -10,7 +10,7 @@ class App extends Component {
     return (
       <div className="App">
         <Navbar />
-        <ProductModal />
+        {/* <ProductModal /> */}
         <Switch>
           <Route path="/" exact component={WarehouseList} />
           <Route path="/inventory" render={(routeProps) => (<InventoryList {...routeProps}
