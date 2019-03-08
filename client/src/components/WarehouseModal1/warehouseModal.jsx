@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Warehouse.css";
-import Switch from "react-switch";
+
 import axios from "axios";
 const url = "blah.ca";
 
@@ -8,13 +8,12 @@ class Warehouse extends Component {
   constructor() {
     super();
     this.state = {
-      instock: false,
-      item_name: "",
-      date: "",
-      city: "",
-      country: "",
-      quantity_items: "",
-      item_description: ""
+      warehouseName: "",
+      address: "",
+      contact: "",
+      contactNum: "",
+      contactEmail: "",
+      categories: ""
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -31,23 +30,24 @@ class Warehouse extends Component {
 
   post = onClick => {
     if (
-      !this.state.item_name ||
-      !this.state.date ||
-      !this.state.city ||
-      !this.state.country ||
-      !this.state.quantity_items
+      !this.state.warehouseName ||
+      !this.state.address ||
+      !this.state.contact ||
+      !this.state.contactNum ||
+      !this.state.contactEmail ||
+      !this.state.categories
     ) {
       onClick.preventDefault();
       return alert("Please enter all required input fields");
     }
     axios.post(url, {
-      instock: this.state.instock,
-      item_name: this.state.item_name,
-      date: this.state.date,
-      city: this.state.city,
-      country: this.state.country,
-      quantity_items: this.state.quantity_items,
-      item_description: this.state.item_description
+      warehouseName: this.state.warehouseName,
+      address: this.state.address,
+      contact: this.state.contact,
+      contactTitle: "Manager",
+      contactNum: this.state.contactNum,
+      contactEmail: this.state.contactEmail,
+      categories: this.state.categories
     });
     onClick.preventDefault();
     this.refs.modal.style.display = "none";
@@ -68,73 +68,64 @@ class Warehouse extends Component {
             <h3>Create New</h3>
             <div className='flex-wrap'>
               <div className='flex-column'>
-                <h5>PRODUCT</h5>
+                <h5>WAREHOUSE NAME</h5>
                 <input
                   type='text'
-                  placeholder='Item Name'
-                  name='item_name'
+                  placeholder='Warehouse Name'
+                  name='warehouseName'
                   onChange={this.update_input_state}
                 />
               </div>
+
               <div className='flex-column'>
-                <h5>LAST ORDERED</h5>
+                <h5>ADDRESS</h5>
                 <input
                   type='text'
-                  placeholder='yyyy-mm-dd'
-                  name='date'
+                  placeholder='123 Mullet Ave, Portland, OR'
+                  name='address'
                   onChange={this.update_input_state}
                 />
               </div>
-              <div className='flex-column'>
-                <h5>CITY</h5>
-                <input
-                  type='text'
-                  placeholder='City'
-                  name='city'
-                  onChange={this.update_input_state}
-                />
-              </div>
-              <div className='flex-column'>
-                <h5>COUNTRY</h5>
-                <select name='country' onChange={this.update_input_state}>
-                  <option value='' />
-                  <option value='Canada'>Canada</option>
-                </select>
-              </div>
-              <div className='flex-column'>
-                <h5>QUANTITY</h5>
-                <input
-                  type='text'
-                  name='quantity_items'
-                  id=''
-                  placeholder='0'
-                  onChange={this.update_input_state}
-                />
-              </div>
-              <div className=''>
+              <div className='flex-wrap'>
                 <div className='flex-column'>
-                  <h5>STATUS</h5>
-                  <div className='flex-row spacebetween'>
-                    <p>In Stock</p>
-                    <Switch
-                      onChange={this.handleChange}
-                      checked={this.state.instock}
-                      className='react-switch'
-                      uncheckedIcon={false}
-                      checkedIcon={false}
-                      onColor='#6aae2b'
-                    />
-                  </div>
+                  <h5>CONTACT NAME</h5>
+                  <input
+                    type='text'
+                    placeholder='Joe Smith'
+                    name='contact'
+                    onChange={this.update_input_state}
+                  />
                 </div>
               </div>
+              <div className='flex-column'>
+                <h5>CONTACT NUMBER</h5>
+                <input
+                  type='text'
+                  placeholder='123-232-2222'
+                  name='contactNum'
+                  onChange={this.update_input_state}
+                />
+              </div>
+              <div className='flex-column'>
+                <h5>EMAIL</h5>
+                <input
+                  type='text'
+                  name='contactEmail'
+                  id=''
+                  placeholder='123@instock.com'
+                  onChange={this.update_input_state}
+                />
+              </div>
+              <div className='flex-column'>
+                <h5>CATEGORIES</h5>
+                <input
+                  type='text'
+                  placeholder='Industrial, Electronics, Human Hair'
+                  name='categories'
+                  onChange={this.update_input_state}
+                />
+              </div>
             </div>
-            <h5>ITEM DESCRIPTION</h5>
-            <textarea
-              name='item_description'
-              id=''
-              placeholder='(Optional)'
-              onChange={this.update_input_state}
-            />
             <div className='flex-column movedatbutton'>
               <div className='flex-column button'>
                 <button onClick={this.post}>SAVE</button>
