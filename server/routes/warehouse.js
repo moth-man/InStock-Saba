@@ -18,15 +18,22 @@ router
             contactTitle,
             contactNum,
             contactEmail,
-            categories
+            categories,
         } = req.body);
-        
+
         newWarehouse.id = id;
-
         const updatedList = [...DATA, newWarehouse];
-        fs.writeFileSync("./data/warehouse.json", JSON.stringify(updatedList));
 
-        res.send(newWarehouse);
+        //Checks if input from req.body contains any missing info
+        Object.values(newWarehouse).forEach(warehouse => {
+            if (warehouse == "" || undefined) {
+                res.status(400).send("Error! Missing fields!");
+                return;
+            }
+        });
+
+        fs.writeFileSync("./data/warehouse.json", JSON.stringify(updatedList));
+        res.json(DATA);
     });
 
 module.exports = router;
