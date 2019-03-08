@@ -7,12 +7,11 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  margin: 10% 0;
+  margin: 40px 0;
+}
+
+.productDetails img {
+  padding-right: 15px;
 }
 
 .productDetails .header__h1 {
@@ -21,22 +20,90 @@
   margin: 0;
 }
 
-.green-button {
+.productDetails__details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.green-button:disabled {
   background-color: #6aae2b;
   color: #FFFFFF;
   border-color: #6aae2b;
   border-radius: 4px;
-  padding: 0 20px;
+  padding: 0 10px;
+  margin-left: 30px;
 }
 
 h4 {
   color: #AFAFAF;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-family: AvenirBold, sans-serif;
-  margin: 10px 0;
+  margin-bottom: 10px;
 }
 
 span {
   font-size: 0.8rem;
+}
+
+.blue-button {
+  background-color: #004892;
+  border-color: #004892;
+  border-radius: 4px;
+  padding: 20px 0px;
+  text-align: center;
+  margin-top: 48px;
+  width: 288px;
+  float: right;
+}
+
+.blue-button h4 {
+  margin: 0;
+  color: white;
+}
+
+/*TABLET*/
+@media (min-width: 500px) {
+  .productDetails__details {
+    width: 500px;
+  }
+  .category-name {
+    width: 500px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .productDetails .header__h1 {
+    font-size: 1.9rem;
+  }
+  .grey-border {
+    padding: 20px 0;
+    border-top: 1px solid #E1E1E1;
+    border-bottom: 1px solid #E1E1E1;
+  }
+}
+
+@media (min-width: 1440px) {
+  .productDetails {
+    padding: 0 180px;
+  }
+  .productDetails__description {
+    width: 50%;
+  }
+  .productDetails__details {
+    width: 400px;
+  }
+  .grey-border {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 /*# sourceMappingURL=productmodal.css.map */
