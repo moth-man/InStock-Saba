@@ -6,7 +6,8 @@
     "contactTitle": "Manager",
     "contactNum": "+1 778 248 9383",
     "contactEmail": "luca@instock.com",
-    "categories": "Industrial, Electronics, and other things too!"
+    "categories": "Industrial, Electronics, and other things too!",
+    "id": "adkin39dj09u"
   },
   {
     "warehouseName": "Ze Warehouse",
@@ -15,7 +16,8 @@
     "contactTitle": "Manager",
     "contactNum": "+1 778 331 9435",
     "contactEmail": "b@instock.com",
-    "categories": "Industrial, Electronics"
+    "categories": "Industrial, Electronics",
+    "id": "xe86dwpj7ulv"
   },
   {
     "warehouseName": "Warehouse of Sun Hats",
@@ -24,7 +26,8 @@
     "contactTitle": "Manager",
     "contactNum": "+1 778 603 3504",
     "contactEmail": "didi@instock.com",
-    "categories": "Industrial, Electronics, Mechanical Body Parts, Staplers, Eco Tools, Sun Hats"
+    "categories": "Industrial, Electronics, Mechanical Body Parts, Staplers, Eco Tools, Sun Hats",
+    "id": "4586dw6j77lv"
   },
   {
     "warehouseName": "Large Warehouse",
@@ -33,7 +36,8 @@
     "contactTitle": "Manager",
     "contactNum": "+1 604 248 9992",
     "contactEmail": "Enrico@instock.com",
-    "categories": "Industrial, Electronics, Mechanical Body Parts, Staplers, Eco Tools, Sun Hats"
+    "categories": "Industrial, Electronics, Mechanical Body Parts, Staplers, Eco Tools, Sun Hats",
+    "id": "05863w6jd7lv"
   },
   {
     "warehouseName": "Warehouse of Small Wonders",
@@ -42,7 +46,8 @@
     "contactTitle": "Manager",
     "contactNum": "+1 323 248 5574",
     "contactEmail": "f@instock.com",
-    "categories": "Industrial, Electronics"
+    "categories": "Industrial, Electronics",
+    "id": "3dki435dj09d"
   },
   {
     "warehouseName": "The House of Wares",
@@ -51,7 +56,8 @@
     "contactTitle": "Manager",
     "contactNum": "+1 308 335 5383",
     "contactEmail": "JJ@instock.com",
-    "categories": "Industrial, Electronics, Toys, Candy, Wares"
+    "categories": "Industrial, Electronics, Toys, Candy, Wares",
+    "id": "02365w6j37lv"
   },
   {
     "warehouseName": "Little Warehouse",
@@ -60,7 +66,8 @@
     "contactTitle": "Manager",
     "contactNum": "+1 308 248 4423",
     "contactEmail": "x@instock.com",
-    "categories": "Industrial, Electronics"
+    "categories": "Industrial, Electronics",
+    "id": "ad4i46dd74ha"
   },
   {
     "warehouseName": "Warehouse of Mystery",
@@ -69,6 +76,7 @@
     "contactTitle": "Manager",
     "contactNum": "+1 205 248 3678",
     "contactEmail": "bloom@instock.com",
-    "categories": "Industrial, Electronics, Human Hair"
+    "categories": "Industrial, Electronics, Human Hair",
+    "id": "bd3id6db73h"
   }
 ]

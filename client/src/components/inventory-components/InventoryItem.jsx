@@ -9,6 +9,7 @@ class InventoryItem extends Component {
     }
   }
 
+
   togglePopUp = () => {
     const popup = document.querySelector("popup")
     this.setState({
@@ -52,7 +53,7 @@ class InventoryItem extends Component {
 class Popup extends Component {
   render() {
     return (
-      <div className="popup__container"><p className="popup__text">Remove</p></div>
+      <button className="popup__container" onClick={this.props.deleteItem} ><p className="popup__text">Remove</p></button>
     )
   }
 }
