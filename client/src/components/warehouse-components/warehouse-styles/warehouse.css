@@ -139,6 +139,21 @@ body {
   display: none;
 }
 
+.WarehouseList .add__inventoryItem__button__container {
+  position: fixed;
+  right: 0;
+  top: 0;
+  margin: 400px 16px 0px 0px;
+  background-color: darkblue;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  background-image: url("../../../assets/icons/Icon-add.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  float: right;
+}
+
 @media (min-width: 700px) and (max-width: 889px) {
   .WarehouseList {
     display: -webkit-box;

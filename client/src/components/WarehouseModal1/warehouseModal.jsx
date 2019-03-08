@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./Warehouse.css";
 
 import axios from "axios";
-const url = "blah.ca";
+const url = 'http://localhost:8080/warehouses';
 
 class Warehouse extends Component {
   constructor() {
@@ -16,8 +16,6 @@ class Warehouse extends Component {
       categories: ""
     };
   }
-
-
 
   update_input_state = event => {
     this.setState({
@@ -78,7 +76,7 @@ class Warehouse extends Component {
                 <h5>ADDRESS</h5>
                 <input
                   type='text'
-                  placeholder='123 Mullet Ave, Portland, OR'
+                  placeholder='123 1st Ave, Vancouver, BC'
                   name='address'
                   onChange={this.update_input_state}
                 />
@@ -88,7 +86,7 @@ class Warehouse extends Component {
                   <h5>CONTACT NAME</h5>
                   <input
                     type='text'
-                    placeholder='Joe Smith'
+                    placeholder='Joan Smith'
                     name='contact'
                     onChange={this.update_input_state}
                   />
@@ -117,7 +115,7 @@ class Warehouse extends Component {
                 <h5>CATEGORIES</h5>
                 <input
                   type='text'
-                  placeholder='Industrial, Electronics, Human Hair'
+                  placeholder='Industrial, Electronics'
                   name='categories'
                   onChange={this.update_input_state}
                 />
