@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Navbar from './components/Navbar/Navbar';
 import WarehouseList from './components/warehouse-components/WarehouseList';
 import InventoryList from './components/inventory-components/InventoryList';
+import SingleWarehouse from './components/warehouse-components/SingleWarehouse';
 import { Switch, Route } from 'react-router-dom'
 import axios from 'axios';
 
@@ -30,7 +31,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.warehouses, this.state.inventory)
     return (
       <div className="App">
         <Navbar />
@@ -40,9 +40,13 @@ class App extends Component {
           <Route path="/inventory" render={(routeProps) => (<InventoryList {...routeProps}/>
           )}
           />
-          <Route path="/warehouse/:id" render={(routeProps) => (<InventoryList {...routeProps}
+          <Route path="/warehouse/:id" render={(routeProps) => (
+            // <SingleWarehouse {...routeProps} inventory={this.state.inventory} warehouses={this.state.warehouses}/>
+          <InventoryList {...routeProps}
           id={this.props.match}
-          />)}
+          warehouses={this.state.warehouses}
+          />
+          )}
           />
         </Switch>
       </div>

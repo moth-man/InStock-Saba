@@ -3,14 +3,13 @@ import axios from 'axios'
 import InventoryItem from './InventoryItem'
 import './Inventory.css'
 
-
-
 class InventoryList extends Component {
   constructor(props) {
     super(props)
     this.state = {
       inventoryList: [],
-      data: []
+      data: [],
+      warehouse: {}
     }
   }
 
@@ -37,33 +36,28 @@ class InventoryList extends Component {
   //   console.log("clicked")
   // }
 
-
-
   componentDidMount() {
     axios
       .get("http://localhost:8080/inventory")
       .then(({ data }) => {
-        this.setState({
-          data
-        }, () => this.iList(data))
+        let currentWarehouse = this.props.warehouses.find(warehouse => { 
+              return warehouse.id === this.props.match.params.id
+            });
+            this.setState({
+          data,
+          warehouse: currentWarehouse
+        }, () => this.iList(data)
+            )
       })
   }
 
-  // componentDidUpdate() {
-  //   let currentWarehouse = this.props.warehouses.find(warehouse => { 
-  //     return warehouse.id === this.props.match.params.id
-  //   });
-  //   if(this.state.currentWarehouse === []) {
-  //     this.setState({
-  //       currentWarehouse
-  //     })
-  //   }
-  // }
-
   render() {
+    if (this.state.warehouse === {} || undefined) return 'Loading...';
+
+    console.log(this.state.warehouse)
     return (
       <div className="inventoryList__container">
-        <h1 className="inventoryList__title">Inventory</h1>
+        {/* <h1 className="inventoryList__title">{this.state.warehouse.warehouseName}</h1> */}
         <div className="searchBar__container">
           {/* <form className="searchBar">
             <input className="searchBar__input" type="text" placeholder="Search"></input>
