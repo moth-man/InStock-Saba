@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 import arrow from '../../assets/logos/Icon-arrow-right.svg';
 
 class Warehouse extends Component {
   render() {
     const { ...data } = this.props;
+    const link = `/warehouse/${data.id}`
     return (
       <div>
         <tr className="table__row">
@@ -11,7 +13,9 @@ class Warehouse extends Component {
             <td className="warehouseName">{data.warehouseName}</td>
             <td>
               {data.address}
-              <img src={arrow} className="arrow-mobile" alt="link" />
+              <Link to={link}>
+                <img src={arrow} className="arrow-mobile" alt="link" />
+              </Link>
             </td>
           </div>
           <div>
@@ -24,8 +28,8 @@ class Warehouse extends Component {
           </div>
           <div className="categoryInfo">
             <td className="category__td">
-            {data.categories}
-            <img src={arrow} className="arrow-desktop" alt="link" />
+              {data.categories}
+              <img src={arrow} className="arrow-desktop" alt="link" />
             </td>
           </div>
         </tr>

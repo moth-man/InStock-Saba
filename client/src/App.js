@@ -11,12 +11,24 @@ class App extends Component {
       <div className='App'>
         <Navbar />
         <Switch>
+<<<<<<< HEAD
           <Route path='/' exact component={WarehouseList} />
           <Route
             path='/inventory'
             render={routeProps => (
               <InventoryList {...routeProps} inventory={this.props} />
             )}
+=======
+          <Route path="/" exact component={WarehouseList} />
+          <Route path="/inventory" render={(routeProps) => (<InventoryList {...routeProps}
+
+          />)}
+          />
+          <Route path="/warehouse/:id" render={(routeProps) => (<InventoryList {...routeProps}
+
+            id={this.props.match}
+          />)}
+>>>>>>> 47e43ffb21c73ca5b739fb74961db441833c674c
           />
         </Switch>
         <Warehouse />
