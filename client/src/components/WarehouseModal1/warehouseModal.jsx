@@ -15,12 +15,9 @@ class Warehouse extends Component {
       contactEmail: "",
       categories: ""
     };
-    this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(instock) {
-    this.setState({ instock });
-  }
+
 
   update_input_state = event => {
     this.setState({
