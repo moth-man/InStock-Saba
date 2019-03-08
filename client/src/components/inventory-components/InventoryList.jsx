@@ -3,6 +3,8 @@ import axios from 'axios'
 import InventoryItem from './InventoryItem'
 import './Inventory.css'
 
+
+
 class InventoryList extends Component {
   constructor(props) {
     super(props)
@@ -17,8 +19,8 @@ class InventoryList extends Component {
       const warehouseInventory = inventory.find((iv, i) => {
         return this.props.match.params.id === iv[0].id
       })
-      var wh = warehouseInventory.slice(1)
-      var list = wh.map(i => {
+      let wh = warehouseInventory.slice(1)
+      let list = wh.map(i => {
         if (i.status === false) i.status = "Not In-Stock"
         else { i.status = "In-Stock" }
         return (
@@ -28,37 +30,44 @@ class InventoryList extends Component {
       this.setState({
         inventoryList: list,
       }, () => list = this.state.inventoryList)
-      console.log("list: ", list)
-      console.log(this.state)
-
     }
-
   }
 
-  addInventory = () => {
-    console.log("clicked")
-  }
+  // addInventory = () => {
+  //   console.log("clicked")
+  // }
+
+
 
   componentDidMount() {
-    console.log(this.props.match.params.id)
     axios
       .get("http://localhost:8080/inventory")
       .then(({ data }) => {
         this.setState({
-          data: data
+          data
         }, () => this.iList(data))
       })
   }
 
+  // componentDidUpdate() {
+  //   let currentWarehouse = this.props.warehouses.find(warehouse => { 
+  //     return warehouse.id === this.props.match.params.id
+  //   });
+  //   if(this.state.currentWarehouse === []) {
+  //     this.setState({
+  //       currentWarehouse
+  //     })
+  //   }
+  // }
+
   render() {
     return (
-
       <div className="inventoryList__container">
         <h1 className="inventoryList__title">Inventory</h1>
         <div className="searchBar__container">
-          <form className="searchBar">
+          {/* <form className="searchBar">
             <input className="searchBar__input" type="text" placeholder="Search"></input>
-          </form>
+          </form> */}
         </div>
         <table className="inventoryList__table">
           <thead className="table__head">

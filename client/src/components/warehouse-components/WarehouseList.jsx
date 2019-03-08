@@ -1,24 +1,11 @@
 import React, { Component } from 'react';
 import Warehouse from './Warehouse';
 import './warehouse-styles/warehouse.css';
-import axios from 'axios';
-const URL = `http://localhost:8080/warehouses`;
 
 class WarehouseList extends Component {
-  state = {
-    warehouses: []
-  };
-
-  componentDidMount() {
-    axios.get(URL).then(res => {
-      this.setState({
-        warehouses: res.data
-      });
-    });
-  }
 
   render() {
-    const warehouseList = this.state.warehouses.map((warehouse, i) => {
+    const warehouseList = this.props.warehouses.map((warehouse, i) => {
       return <Warehouse {...warehouse} key={i} />;
     });
 
