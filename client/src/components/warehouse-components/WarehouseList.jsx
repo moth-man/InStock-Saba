@@ -7,14 +7,13 @@ const URL = `http://localhost:8080/warehouses`;
 
 class WarehouseList extends Component {
   constructor() {
-    super()
+    super();
     this.state = {
       warehouses: [],
       showModal: false
     };
-  
   }
-  
+
   componentDidMount() {
     axios.get(URL).then(res => {
       this.setState({
@@ -23,10 +22,12 @@ class WarehouseList extends Component {
     });
   }
 
+  componentDidUpdate() {}
+
   modalToggle = () => {
     this.setState({
       showModal: !this.state.showModal
-    })
+    });
   };
 
   render() {
