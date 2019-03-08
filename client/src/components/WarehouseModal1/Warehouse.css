@@ -1,0 +1,211 @@
+/*Global*/
+.overlay {
+  font-family: Helvetica;
+  background-color: rgba(128, 128, 128, 0.3);
+  position: fixed;
+  top: -10px;
+  width: 100%;
+  height: 100%;
+}
+
+.modal {
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/*Modal Container*/
+.modal-content {
+  top: 80px;
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 370px;
+  background-color: white;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.modal-content :-webkit-input-placeholder {
+  font-family: Helvetica, sans-serif;
+  font-size: 0.75em;
+}
+
+.modal-content select {
+  font-size: 1.3em;
+  margin-bottom: 24px;
+  border: none;
+  padding-right: 16px;
+}
+
+.modal-content input {
+  width: 100%;
+  height: 48px;
+  padding-left: 10px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  font-size: 1.3em;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: none;
+}
+
+.modal-content textarea {
+  height: 80px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #f8f8f8;
+  border-radius: 4px;
+  border: none;
+  margin-bottom: 32px;
+  font-size: 18px;
+}
+
+.modal-content .flex-column button {
+  height: 48px;
+  width: 100%;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #002f5f;
+  border: none;
+  color: white;
+  font-size: 15px;
+}
+
+.modal-content button.cancel {
+  background-color: white;
+  color: #002f5f;
+  border: none;
+}
+
+.modal-content select {
+  width: 100%;
+  height: 48px;
+}
+
+.modal-content h5 {
+  width: auto;
+  margin-top: 0px;
+  margin-bottom: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  color: lightgrey;
+  font-size: 12px;
+}
+
+.modal-content h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  font-size: 30px;
+  color: #2a3439;
+}
+
+.modal-content input {
+  margin-bottom: 24px;
+  background-color: #f8f8f8;
+}
+
+.flex-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.spacebetween {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.react-switch {
+  margin-right: 15px;
+}
+
+/*Media Query*/
+@media (min-width: 500px) {
+  .modal-content {
+    width: 525px;
+    border-radius: 4px;
+    top: 25%;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 30px;
+  }
+  .modal-content input {
+    width: 245px;
+  }
+  .modal-content .flex-column {
+    width: 245px;
+  }
+  .modal-content .flex-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .modal-content .flex-column .button {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    padding-bottom: 15px;
+    width: 400px;
+  }
+  .modal-content .movedatbutton {
+    margin-left: 130px;
+  }
+}
+/*# sourceMappingURL=Warehouse.css.map */
