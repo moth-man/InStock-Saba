@@ -148,6 +148,7 @@ body {
   margin: 810px 16px 0px 0px;
   background-color: darkblue;
   border-radius: 50%;
+  border: none;
   height: 60px;
   width: 60px;
   background-image: url("../../../assets/icons/Icon-add.svg");
