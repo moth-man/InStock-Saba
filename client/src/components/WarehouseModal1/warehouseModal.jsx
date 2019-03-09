@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./Warehouse.css";
 
 import axios from "axios";
-const url = 'http://localhost:8080/warehouses';
+const url = "http://localhost:8080/warehouses";
 
 class Warehouse extends Component {
   constructor() {
