@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Navbar from './components/Navbar/Navbar';
 import WarehouseList from './components/warehouse-components/WarehouseList';
 import InventoryList from './components/inventory-components/InventoryList';
-import { Switch, Route, Link } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 import axios from 'axios'
 
 const warehouseURL = `http://localhost:8080/warehouses`;
@@ -38,10 +38,8 @@ class App extends Component {
 
   render() {
     if (this.state.inventory.length === 0 || !this.state.warehouses.length === 0) {
-      console.log("@", this.state)
       return <h1>Loading</h1>
     } else {
-      console.log("!", this.state)
       return (
         <div className="App">
           <Navbar />
