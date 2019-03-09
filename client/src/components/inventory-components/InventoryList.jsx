@@ -15,7 +15,7 @@ class InventoryList extends Component {
 
   iList = (inventory) => {
     if (inventory) {
-      const warehouseInventory = inventory.find((iv, i) => {
+      const warehouseInventory = inventory.find(iv => {
         return this.props.match.params.id === iv[0].id
       })
       var wh = warehouseInventory.slice(1)
@@ -30,7 +30,7 @@ class InventoryList extends Component {
       })
       this.setState({
         inventoryList: list,
-      }, () => list = this.state.inventoryList)
+      })
 
     }
 
@@ -41,11 +41,6 @@ class InventoryList extends Component {
       const currentWarehouse = warehouses.find(warehouse => {
         return this.props.match.params.id === warehouse.id
       })
-      // var cw = currentWarehouse.map(w => {
-      //   return (
-      //     <CurrentWarehouse {...w} />
-      //   )
-      // })
       this.setState({
         currentWarehouse: <CurrentWarehouse {...currentWarehouse} />
       }, () => console.log(this.state.currentWarehouse))
@@ -67,13 +62,6 @@ class InventoryList extends Component {
     return (
 
       <div className="inventoryList__container">
-        <div>{this.state.currentWarehouse}</div>
-        {/* <h1 className="inventoryList__title">Inventory</h1>
-        <div className="searchBar__container">
-          <form className="searchBar">
-            <input className="searchBar__input" type="text" placeholder="Search"></input>
-          </form>
-        </div> */}
         <table className="inventoryList__table">
           <thead className="table__head">
             <tr className="table__head__row">
