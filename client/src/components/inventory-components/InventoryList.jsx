@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import InventoryItem from './InventoryItem'
+import CurrentWarehouse from '../warehouse-components/CurrentWarehouse'
 import './Inventory.css'
 
 class InventoryList extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      inventoryList: [],
-      data: []
+      currentWarehouse: [],
+      inventoryList: []
     }
   }
 
@@ -22,17 +23,33 @@ class InventoryList extends Component {
         if (i.status === false) i.status = "Not In-Stock"
         else { i.status = "In-Stock" }
         return (
+
           <InventoryItem {...i} />
+
         )
       })
       this.setState({
         inventoryList: list,
       }, () => list = this.state.inventoryList)
-      console.log("list: ", list)
-      console.log(this.state)
 
     }
 
+  }
+
+  iWarehouse = (warehouses) => {
+    if (warehouses) {
+      const currentWarehouse = warehouses.find(warehouse => {
+        return this.props.match.params.id === warehouse.id
+      })
+      // var cw = currentWarehouse.map(w => {
+      //   return (
+      //     <CurrentWarehouse {...w} />
+      //   )
+      // })
+      this.setState({
+        currentWarehouse: <CurrentWarehouse {...currentWarehouse} />
+      }, () => console.log(this.state.currentWarehouse))
+    }
   }
 
   addInventory = () => {
@@ -40,26 +57,23 @@ class InventoryList extends Component {
   }
 
   componentDidMount() {
-    console.log(this.props.match.params.id)
-    axios
-      .get("http://localhost:8080/inventory")
-      .then(({ data }) => {
-        this.setState({
-          data: data
-        }, () => this.iList(data))
-      })
+    const { inventory, warehouses } = this.props
+    this.iList(inventory)
+    this.iWarehouse(warehouses)
   }
 
   render() {
+
     return (
 
       <div className="inventoryList__container">
-        <h1 className="inventoryList__title">Inventory</h1>
+        <div>{this.state.currentWarehouse}</div>
+        {/* <h1 className="inventoryList__title">Inventory</h1>
         <div className="searchBar__container">
           <form className="searchBar">
             <input className="searchBar__input" type="text" placeholder="Search"></input>
           </form>
-        </div>
+        </div> */}
         <table className="inventoryList__table">
           <thead className="table__head">
             <tr className="table__head__row">
