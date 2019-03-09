@@ -11,35 +11,12 @@ class InventoryList extends Component {
   }
 
   iList = (inventory) => {
-    // if (inventory) {
-    //   let allIV = []
-    //   let comp
-    //   var list = inventory.map(i => {
-    //     console.log(i.slice(1))
-    //     i.slice(1).map(iv => {
-    //       console.log("IV", iv)
-    //       if (iv.status === false) iv.status = "Not In-Stock"
-    //       else { iv.status = "In-Stock" }
-    //       console.log(allIV)
-    //       return (
-    //         allIV += <InventoryItem name={iv.name} description={iv.description} />
-    //       )
-    //     })
-    //   })
-
-    //   this.setState({
-    //     inventoryList: list
-    //   }, () => list = this.state.inventoryList)
-
-    // }
     if (inventory) {
       let list = []
       inventory.map(i => {
-        //console.log(i.slice(1))
         i.slice(1).map(iv => {
           list.push(iv)
         })
-        //list.push(i.slice(1))
       })
       let iList = list.map(item => {
         if (item.status === true) {
