@@ -80,13 +80,13 @@
     "id": "bd3id6db73h"
   },
   {
-    "warehouseName": "Test",
-    "address": "102 Mullet Ave, Portland, OR",
-    "contact": "Xavier Bloom",
+    "warehouseName": "Warehouse-test",
+    "address": "1232",
+    "contact": "Mara Jones",
     "contactTitle": "Manager",
-    "contactNum": "+1 205 248 3678",
-    "contactEmail": "bloom@instock.com",
-    "categories": "Industrial, Electronics, Human Hair",
-    "id": "vo86pwpj7ulv"
+    "contactNum": "8083948293",
+    "contactEmail": "l@g.com",
+    "categories": "Industrial, Electronic",
+    "id": "avz83onsw2x2"
   }
 ]

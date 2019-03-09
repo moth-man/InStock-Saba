@@ -6,7 +6,6 @@ import backButton from '../../assets/icons/SVG/Icon-back-arrow.svg'
 //dynamic with axios call : SPAN TAGS, the product name
 //not dynamic: h4 tags with the product info
 
-
 class ProductModal extends React.Component {
   render () {
     return (

@@ -8,9 +8,9 @@ import { Switch, Route, Link } from 'react-router-dom'
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div className='App'>
         <Navbar />
-        {/* <ProductModal /> */}
+        <ProductModal />
         <Switch>
           <Route path="/" exact component={WarehouseList} />
           <Route path="/inventory" render={(routeProps) => (<InventoryList {...routeProps}
