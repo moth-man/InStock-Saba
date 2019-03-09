@@ -65,7 +65,7 @@
   border-radius: 4px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: 1px #d3d3d3 solid;
+  border: 1px rgba(128, 128, 128, 0.1) solid;
 }
 
 .modal-content textarea {
