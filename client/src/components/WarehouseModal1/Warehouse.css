@@ -4,7 +4,8 @@
   background-color: rgba(128, 128, 128, 0.3);
   position: fixed;
   top: -10px;
-  width: 100%;
+  left: -60px;
+  width: 110%;
   height: 110%;
 }
 
