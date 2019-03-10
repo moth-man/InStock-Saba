@@ -53,6 +53,7 @@ class InventoryList extends Component {
 
       <div className="inventoryList__container">
         <h1 className="inventoryList__title">Inventory</h1>
+        <button className="add__inventoryItem__button" onClick={() => this.addInventory()}><div className="add__inventoryItem__button__container"></div></button>
         <div className="searchBar__container">
           <form className="searchBar">
             <input className="searchBar__input" type="text" placeholder="Search"></input>
@@ -70,7 +71,7 @@ class InventoryList extends Component {
           </thead>
           <tbody>{this.state.inventoryList}</tbody>
         </table>
-        <button className="add__inventoryItem__button" onClick={() => this.addInventory()}><div className="add__inventoryItem__button__container"></div></button>
+      
       </div>
     )
   }

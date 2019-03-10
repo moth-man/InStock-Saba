@@ -1,140 +1,164 @@
-@media (min-width: 320px) and (max-width: 767px) {
-  .inventoryList__container {
-    color: #323232;
-    background-color: white;
-    margin: 0px 16px;
-  }
-  .inventoryList__container .inventoryList__title {
-    font-size: 32px;
-    line-height: 32px;
-    text-align: left;
-  }
-  .inventoryList__container .searchBar__container {
-    padding: 0px 0px;
-  }
-  .inventoryList__container .searchBar__container .searchBar {
-    width: 288px;
-  }
-  .inventoryList__container .searchBar__container .searchBar .searchBar__input {
-    height: 48px;
-    width: 240px;
-    font-size: 15px;
-    background-image: url("../../assets/icons/Icon-search.svg");
-    background-repeat: no-repeat;
-    background-origin: content-box;
-    background-color: #FAFAFA;
-    text-indent: 25px;
-    float: left;
-    border-radius: 4px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    padding: 10px;
-  }
-  .inventoryList__container .inventoryList__table .inventoryList__th {
-    color: #AFAFAF;
-    display: none;
-  }
-  .inventoryList__container .inventoryList__table .inventoryItem__container {
-    display: inline-block;
-    background-color: white;
-    border-bottom: 1px solid #E1E1E1;
-  }
-  .inventoryList__container .inventoryList__table .inventoryItem__container .inventoryItem__tableRow {
-    vertical-align: middle;
-    display: table-cell;
-  }
-  .inventoryList__container .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .item__title {
-    color: #AFAFAF;
-    float: left;
-  }
-  .inventoryList__container .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .remove__item__button {
-    background-image: url("../../assets/icons/Icon-kebab-default.svg");
-    background-repeat: no-repeat;
-    background-color: white;
-    border: none;
-    height: 30px;
-    float: right;
-    position: relative;
-  }
-  .inventoryList__container .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .popup__container {
-    visibility: visible;
-    position: relative;
-    border: 1px solid #E1E1E1;
-    height: 40px;
-    width: 150px;
-    text-align: center;
-    float: left;
-    margin-left: 80px;
-    margin-top: 10px;
-    border-radius: 4px;
-  }
-  .inventoryList__container .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .popup__container .popup__text {
-    margin: 10px 0px 0px 10px;
-    text-align: left;
-  }
-  .inventoryList__container .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .item__name {
-    font-size: 18px;
-    line-height: 24px;
-    clear: both;
-    text-align: left;
-    display: block;
-  }
-  .inventoryList__container .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .item__description {
-    font-size: 16px;
-    line-height: 20px;
-    text-align: left;
-    display: block;
-  }
-  .inventoryList__container .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .item__lastOrdered {
-    color: #AFAFAF;
-    text-align: left;
-    display: block;
-  }
-  .inventoryList__container .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .lastOrdered__date {
-    text-align: left;
-    display: block;
-  }
-  .inventoryList__container .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .item__locationTitle {
-    color: #AFAFAF;
-    text-align: left;
-    display: block;
-  }
-  .inventoryList__container .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .item__location {
-    text-align: left;
-    display: block;
-  }
-  .inventoryList__container .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .item__quantityTitle {
-    color: #AFAFAF;
-    text-align: left;
-    display: block;
-  }
-  .inventoryList__container .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .item__quantity {
-    text-align: left;
-    display: block;
-  }
-  .inventoryList__container .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .item__statusTitle {
-    color: #AFAFAF;
-    text-align: left;
-    display: block;
-  }
-  .inventoryList__container .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .item__status {
-    text-align: left;
-    display: block;
-  }
-  .inventoryList__container .add__inventoryItem__button__container {
-    position: fixed;
-    right: 0;
-    top: 0;
-    margin: 400px 76px 0px 0px;
-    background-color: darkblue;
-    border-radius: 50%;
-    height: 60px;
-    width: 60px;
-    background-image: url("../../assets/icons/Icon-add.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    float: right;
-  }
+/*VARIABLES*/
+@font-face {
+  font-family: 'AvenierBold';
+  src: url("../../assets/fonts/bold.otf");
+}
+
+.inventoryList__container {
+  color: #323232;
+  margin: 0px 16px;
+}
+
+.inventoryList__title {
+  font-size: 1.9rem;
+  margin-top: 32px;
+  margin-bottom: 16px;
+  font-family: 'AvenierBold';
+}
+
+.searchBar__container .searchBar__input {
+  background-image: url("../../assets/icons/Icon-search.svg");
+  background-color: #FAFAFA;
+  background-size: 10%;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-position-x: 15px;
+  margin: 0 0 20px 0;
+  height: 40px;
+  width: 200px;
+  padding: 2.5% 7%;
+  outline: none;
+  border: 2px solid #E1E1E1;
+  border-radius: 3px;
+  text-indent: 30px;
+  font-size: 16px;
+  color: #323232;
+}
+
+.inventoryList__table .inventoryList__th {
+  color: #AFAFAF;
+  display: none;
+}
+
+.inventoryItem__container {
+  border-bottom: 1px solid #E1E1E1;
+}
+
+.inventoryItem__container .inventoryItem__tableRow {
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.inventoryItem__container .inventoryItem__tableRow .item__title {
+  color: #AFAFAF;
+  float: left;
+  font-family: 'AvenierBold';
+  font-size: 0.8rem;
+}
+
+.inventoryItem__container .inventoryItem__tableRow .remove__item__button {
+  background-image: url("../../assets/icons/Icon-kebab-default.svg");
+  background-repeat: no-repeat;
+  background-color: white;
+  border: none;
+  height: 30px;
+  float: right;
+  position: relative;
+}
+
+.inventoryItem__container .inventoryItem__tableRow .popup__container {
+  visibility: visible;
+  position: absolute;
+  border: 1px solid #E1E1E1;
+  height: 40px;
+  background-color: white;
+  width: 150px;
+  text-align: center;
+  float: left;
+  margin-left: 80px;
+  margin-top: 10px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 5px 1px 1px #E1E1E1;
+          box-shadow: 0px 5px 1px 1px #E1E1E1;
+}
+
+.inventoryItem__container .inventoryItem__tableRow .popup__container .popup__text {
+  margin: 10px 0px 0px 10px;
+  text-align: left;
+}
+
+.inventoryItem__container .inventoryItem__tableRow .item__name {
+  font-size: 18px;
+  line-height: 24px;
+  clear: both;
+  text-align: left;
+  display: block;
+}
+
+.inventoryItem__container .inventoryItem__tableRow .item__description {
+  font-size: 16px;
+  line-height: 20px;
+  text-align: left;
+  display: block;
+}
+
+.inventoryItem__container .inventoryItem__tableRow .item__lastOrdered {
+  color: #AFAFAF;
+  text-align: left;
+  display: block;
+}
+
+.inventoryItem__container .inventoryItem__tableRow .lastOrdered__date {
+  text-align: left;
+  display: block;
+}
+
+.inventoryItem__container .inventoryItem__tableRow .item__locationTitle {
+  color: #AFAFAF;
+  text-align: left;
+  display: block;
+}
+
+.inventoryItem__container .inventoryItem__tableRow .item__location {
+  text-align: left;
+  display: block;
+}
+
+.inventoryItem__container .inventoryItem__tableRow .item__quantityTitle {
+  color: #AFAFAF;
+  text-align: left;
+  display: block;
+}
+
+.inventoryItem__container .inventoryItem__tableRow .item__quantity {
+  text-align: left;
+  display: block;
+}
+
+.inventoryItem__container .inventoryItem__tableRow .item__statusTitle {
+  color: #AFAFAF;
+  text-align: left;
+  display: block;
+}
+
+.inventoryItem__container .inventoryItem__tableRow .item__status {
+  text-align: left;
+  display: block;
+}
+
+.add__inventoryItem__button__container {
+  position: fixed;
+  right: 0;
+  top: 0;
+  margin: 400px 76px 0px 0px;
+  background-color: darkblue;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  background-image: url("../../assets/icons/Icon-add.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  float: right;
 }
 
 @media (min-width: 768px) and (max-width: 1439px) {
