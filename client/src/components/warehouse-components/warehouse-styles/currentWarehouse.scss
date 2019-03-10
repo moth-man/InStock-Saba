@@ -1,32 +1,39 @@
+@import '../../../styles/variables';
+
 .currentWarehouse__container {
- 
   .current__table__row {
     display: flex;
     flex-flow: column nowrap;
     align-items: flex-start;
     width: 125%;
     font-size: 0.8rem;
-    margin: 2% 0 8% 0;
+    margin: 2% 0 0% 0;
     padding-bottom: 8%;
-    //border-bottom: 2px solid $default-alabaster;
     
     .currentWarehouse__title__container {
       display: flex;
       flex-direction: row;
       align-items: center;
-      
 
       .currentWarehouseName {
-        padding-left: 20px;
+        padding-left: 15px;
         padding-bottom: 5px;
+        margin: 0;
+        font-family: 'AvenierBold';
+        font-size: 1.4rem;
       }
 
       .current__arrow__mobile {
         margin-right: 20px;
       }
-      
     }
-    
+
+    .currentWarehouse__address__title,
+    .currentWarehouse__contact__title {
+      color: $text-grey;
+      font-family: 'AvenierBold';
+    }
+
     div {
       display: flex;
       flex-flow: column nowrap;
@@ -43,10 +50,10 @@
         font-style: italic;
       }
 
-      .arrow-mobile {
+      .current__arrow-mobile {
         position: relative;
-        left: 80px;
-        bottom: 20px;
+        left: 0px;
+        bottom: 0px;
       }
 
       .arrow-desktop {

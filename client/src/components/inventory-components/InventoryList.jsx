@@ -57,7 +57,7 @@ class InventoryList extends Component {
   }
 
   render() {
-    if(this.state.currentWarehouse === []) return 'Loading...'
+    // console.log(this.state.currentWarehouse.warehouseName)
     return (
       <div className="inventoryList__container">
       <div>{this.state.currentWarehouse}</div>

@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import arrow from '../../assets/logos/Icon-back-arrow.svg';
 import './warehouse-styles/currentWarehouse.css';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 class CurrentWarehouse extends Component {
   render() {
-    const { ...data } = this.props
+    const { ...data } = this.props;
     return (
       <div className="currentWarehouse__container">
         <tr className="current__table__row">
@@ -17,9 +17,7 @@ class CurrentWarehouse extends Component {
               <h1 className="currentWarehouseName">{data.warehouseName}</h1>
             </div>
             <p className="currentWarehouse__address__title">ADDRESS</p>
-            <td>
-              {data.address}
-            </td>
+            <td>{data.address}</td>
           </div>
           <div>
             <p className="currentWarehouse__contact__title">CONTACT</p>
@@ -30,12 +28,10 @@ class CurrentWarehouse extends Component {
             <td>{data.contactNum}</td>
             <td>{data.contactEmail}</td>
           </div>
-          <div className="categoryInfo">
-
-          </div>
+          <div className="categoryInfo" />
         </tr>
       </div>
-    )
+    );
   }
 }
-export default CurrentWarehouse
+export default CurrentWarehouse;

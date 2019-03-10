@@ -1,3 +1,4 @@
+/*VARIABLES*/
 .currentWarehouse__container .current__table__row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11,7 +12,7 @@
           align-items: flex-start;
   width: 125%;
   font-size: 0.8rem;
-  margin: 2% 0 8% 0;
+  margin: 2% 0 0% 0;
   padding-bottom: 8%;
 }
 
@@ -29,12 +30,21 @@
 }
 
 .currentWarehouse__container .current__table__row .currentWarehouse__title__container .currentWarehouseName {
-  padding-left: 20px;
+  padding-left: 15px;
   padding-bottom: 5px;
+  margin: 0;
+  font-family: 'AvenierBold';
+  font-size: 1.4rem;
 }
 
 .currentWarehouse__container .current__table__row .currentWarehouse__title__container .current__arrow__mobile {
   margin-right: 20px;
+}
+
+.currentWarehouse__container .current__table__row .currentWarehouse__address__title,
+.currentWarehouse__container .current__table__row .currentWarehouse__contact__title {
+  color: #AFAFAF;
+  font-family: 'AvenierBold';
 }
 
 .currentWarehouse__container .current__table__row div {
@@ -61,10 +71,10 @@
   font-style: italic;
 }
 
-.currentWarehouse__container .current__table__row div .arrow-mobile {
+.currentWarehouse__container .current__table__row div .current__arrow-mobile {
   position: relative;
-  left: 80px;
-  bottom: 20px;
+  left: 0px;
+  bottom: 0px;
 }
 
 .currentWarehouse__container .current__table__row div .arrow-desktop {
