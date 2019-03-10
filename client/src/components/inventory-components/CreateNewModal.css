@@ -199,7 +199,7 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
   }
   .modal-content .flex-column .button {
     -webkit-box-orient: horizontal;
