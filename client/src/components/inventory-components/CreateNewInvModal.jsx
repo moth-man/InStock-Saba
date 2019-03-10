@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./CreateNewModal.css";
 import Switch from "react-switch";
 import axios from "axios";
-const url = "blah.ca";
+const url = "http://localhost:8080/inventory";
 
 class CreateNewInvModal extends Component {
   constructor() {
@@ -38,11 +38,10 @@ class CreateNewInvModal extends Component {
       return alert("Please enter all required input fields");
     }
     axios.post(url, {
-      instock: this.state.instock,
-      item_name: this.state.item_name,
-      date: this.state.date,
-      city: this.state.city,
-      country: this.state.country,
+      status: this.state.instock,
+      name: this.state.item_name,
+      ordered: this.state.date,
+      location: this.state.city +', '+ this.state.country,
       quantity_items: this.state.quantity_items,
       item_description: this.state.item_description
     });
@@ -105,7 +104,7 @@ class CreateNewInvModal extends Component {
                 <h5>COUNTRY</h5>
                 <select name='country' onChange={this.update_input_state}>
                   <option value='' />
-                  <option value='Canada'>Canada</option>
+                  <option value='CA'>Canada</option>
                 </select>
               </div>
               <div className='flex-column'>

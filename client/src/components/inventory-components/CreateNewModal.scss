@@ -4,8 +4,6 @@
   font-family: Helvetica;
   background-color: rgba(128, 128, 128, 0.3);
   position: fixed;
-  top: -10px;
-  left: -10px;
   width: 110%;
   height: 110%;
   z-index: 8000;
@@ -21,10 +19,8 @@
 
 .modal-content {
   z-index: 9001;
-  top: 50px;
-  align-self: center;
-  margin-right: auto;
-  margin-left: auto;
+  top: 20px;
+  left: 25px;
   padding-left: 30px;
   padding-right: 30px;
   width: 370px;
@@ -65,7 +61,10 @@
     border-radius: 4px;
     border: none;
     margin-bottom: 32px;
-    font-size: 18px;
+    padding-left: 10px;
+    padding-top: 10px;
+    font-size: 0.75em;
+    font-family: Arial, Helvetica, sans-serif;
   }
 
   .flex-column button {
@@ -135,7 +134,8 @@
   .modal-content {
     width: 470px;
     border-radius: 4px;
-    top: 25%;
+    top: 15%;
+    left: 25%;
     padding-left: 60px;
     padding-right: 60px;
     padding-bottom: 50px;
