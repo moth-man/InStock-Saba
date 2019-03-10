@@ -10,7 +10,8 @@ class WarehouseList extends Component {
     super();
     this.state = {
       warehouses: [],
-      showModal: false
+      showModal: false,
+      formSubmitted: false
     };
   }
 
@@ -21,6 +22,12 @@ class WarehouseList extends Component {
       });
     });
   }
+
+  formSubmit = () => {
+    this.setState({
+      formSubmitted: !this.state.formSubmitted
+    });
+  };
 
   modalToggle = () => {
     this.setState({
@@ -39,7 +46,7 @@ class WarehouseList extends Component {
           <input className='header__search' type='text' placeholder='Search' />
         </div>
 
-        {this.state.showModal && <WarehouseModal />}
+        {this.state.showModal && <WarehouseModal formSubmit={() => this.formSubmit()}/>}
 
         <table className='WarehouseList__table'>
           <thead className='thead'>

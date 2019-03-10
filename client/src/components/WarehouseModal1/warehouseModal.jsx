@@ -44,6 +44,7 @@ class Warehouse extends Component {
       categories: this.state.categories
     });
     onClick.preventDefault();
+    this.props.formSubmit();
     this.refs.modal.style.display = "none";
     this.refs.overlay.style.display = "none";
   };

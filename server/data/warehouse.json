@@ -78,15 +78,5 @@
     "contactEmail": "bloom@instock.com",
     "categories": "Industrial, Electronics, Human Hair",
     "id": "bd3id6db73h"
-  },
-  {
-    "warehouseName": "Warehouse-test",
-    "address": "1232",
-    "contact": "Mara Jones",
-    "contactTitle": "Manager",
-    "contactNum": "8083948293",
-    "contactEmail": "l@g.com",
-    "categories": "Industrial, Electronic",
-    "id": "avz83onsw2x2"
   }
 ]

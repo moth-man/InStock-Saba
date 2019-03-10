@@ -39,10 +39,8 @@ class App extends Component {
 
   render() {
     if (this.state.inventory.length === 0 || !this.state.warehouses.length === 0) {
-      console.log("@", this.state)
       return <h1>Loading</h1>
     } else {
-      console.log("!", this.state)
       return (
         <div className="App">
           <Navbar />
