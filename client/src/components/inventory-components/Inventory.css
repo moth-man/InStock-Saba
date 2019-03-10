@@ -22,7 +22,7 @@
     background-image: url("../../assets/icons/Icon-search.svg");
     background-repeat: no-repeat;
     background-origin: content-box;
-    background-color: #FAFAFA;
+    background-color: #fafafa;
     text-indent: 25px;
     float: left;
     border-radius: 4px;
@@ -31,20 +31,20 @@
     padding: 10px;
   }
   .inventoryList__container .inventoryList__table .inventoryList__th {
-    color: #AFAFAF;
+    color: #afafaf;
     display: none;
   }
   .inventoryList__container .inventoryList__table .inventoryItem__container {
     display: inline-block;
     background-color: white;
-    border-bottom: 1px solid #E1E1E1;
+    border-bottom: 1px solid #e1e1e1;
   }
   .inventoryList__container .inventoryList__table .inventoryItem__container .inventoryItem__tableRow {
     vertical-align: middle;
     display: table-cell;
   }
   .inventoryList__container .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .item__title {
-    color: #AFAFAF;
+    color: #afafaf;
     float: left;
   }
   .inventoryList__container .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .remove__item__button {
@@ -59,7 +59,7 @@
   .inventoryList__container .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .popup__container {
     visibility: visible;
     position: relative;
-    border: 1px solid #E1E1E1;
+    border: 1px solid #e1e1e1;
     height: 40px;
     width: 150px;
     text-align: center;
@@ -86,7 +86,7 @@
     display: block;
   }
   .inventoryList__container .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .item__lastOrdered {
-    color: #AFAFAF;
+    color: #afafaf;
     text-align: left;
     display: block;
   }
@@ -95,7 +95,7 @@
     display: block;
   }
   .inventoryList__container .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .item__locationTitle {
-    color: #AFAFAF;
+    color: #afafaf;
     text-align: left;
     display: block;
   }
@@ -104,7 +104,7 @@
     display: block;
   }
   .inventoryList__container .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .item__quantityTitle {
-    color: #AFAFAF;
+    color: #afafaf;
     text-align: left;
     display: block;
   }
@@ -113,7 +113,7 @@
     display: block;
   }
   .inventoryList__container .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .item__statusTitle {
-    color: #AFAFAF;
+    color: #afafaf;
     text-align: left;
     display: block;
   }
@@ -123,9 +123,10 @@
   }
   .inventoryList__container .add__inventoryItem__button__container {
     position: fixed;
+    z-index: 7000;
     right: 0;
     top: 0;
-    margin: 400px 76px 0px 0px;
+    margin: 810px 16px 0px 0px;
     background-color: darkblue;
     border-radius: 50%;
     height: 60px;
@@ -166,7 +167,7 @@
     background-image: url("../../assets/icons/Icon-search.svg");
     background-repeat: no-repeat;
     background-origin: content-box;
-    background-color: #FAFAFA;
+    background-color: #fafafa;
     text-indent: 25px;
     float: left;
     border-radius: 4px;
@@ -178,7 +179,7 @@
     display: inline-block;
   }
   .inventoryList__container .inventoryList__table .inventoryList__th {
-    color: #AFAFAF;
+    color: #afafaf;
     display: inline-block;
     float: left;
     padding-right: 40px;
@@ -189,11 +190,11 @@
   .inventoryList__container .inventoryList__table .inventoryItem__container {
     display: block;
     background-color: white;
-    border-bottom: 1px solid #E1E1E1;
+    border-bottom: 1px solid #e1e1e1;
     width: 720px;
   }
   .inventoryList__container .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .item__title {
-    color: #AFAFAF;
+    color: #afafaf;
     float: left;
     display: none;
   }
@@ -209,7 +210,7 @@
   .inventoryList__container .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .popup__container {
     visibility: visible;
     position: relative;
-    border: 1px solid #E1E1E1;
+    border: 1px solid #e1e1e1;
     height: 40px;
     width: 150px;
     text-align: center;
@@ -240,7 +241,7 @@
     margin: 0;
   }
   .inventoryList__container .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .item__lastOrdered {
-    color: #AFAFAF;
+    color: #afafaf;
     text-align: left;
     display: none;
   }
@@ -250,7 +251,7 @@
     overflow: hidden;
   }
   .inventoryList__container .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .item__locationTitle {
-    color: #AFAFAF;
+    color: #afafaf;
     text-align: left;
     display: none;
   }
@@ -258,7 +259,7 @@
     text-align: left;
   }
   .inventoryList__container .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .item__quantityTitle {
-    color: #AFAFAF;
+    color: #afafaf;
     text-align: left;
     display: none;
   }
@@ -266,7 +267,7 @@
     text-align: left;
   }
   .inventoryList__container .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .item__statusTitle {
-    color: #AFAFAF;
+    color: #afafaf;
     text-align: left;
     display: none;
   }
@@ -275,9 +276,10 @@
   }
   .inventoryList__container .add__inventoryItem__button__container {
     position: fixed;
+    z-index: 7000;
     right: 0;
     top: 0;
-    margin: 400px 16px 0px 0px;
+    margin: 810px 16px 0px 0px;
     background-color: darkblue;
     border-radius: 50%;
     height: 60px;
@@ -313,7 +315,7 @@
     background-image: url("../../assets/icons/Icon-search.svg");
     background-repeat: no-repeat;
     background-origin: content-box;
-    background-color: #FAFAFA;
+    background-color: #fafafa;
     text-indent: 25px;
     float: left;
     border-radius: 4px;
@@ -325,7 +327,7 @@
     display: inline-block;
   }
   .inventoryList__container .inventoryList__table .inventoryList__th {
-    color: #AFAFAF;
+    color: #afafaf;
     display: inline-block;
     float: left;
     padding-right: 40px;
@@ -336,11 +338,11 @@
   .inventoryList__container .inventoryList__table .inventoryItem__container {
     display: block;
     background-color: white;
-    border-bottom: 1px solid #E1E1E1;
+    border-bottom: 1px solid #e1e1e1;
     width: 720px;
   }
   .inventoryList__container .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .item__title {
-    color: #AFAFAF;
+    color: #afafaf;
     float: left;
     display: none;
   }
@@ -356,7 +358,7 @@
   .inventoryList__container .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .popup__container {
     visibility: visible;
     position: relative;
-    border: 1px solid #E1E1E1;
+    border: 1px solid #e1e1e1;
     height: 40px;
     width: 150px;
     text-align: center;
@@ -387,7 +389,7 @@
     margin: 0;
   }
   .inventoryList__container .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .item__lastOrdered {
-    color: #AFAFAF;
+    color: #afafaf;
     text-align: left;
     display: none;
   }
@@ -397,7 +399,7 @@
     overflow: hidden;
   }
   .inventoryList__container .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .item__locationTitle {
-    color: #AFAFAF;
+    color: #afafaf;
     text-align: left;
     display: none;
   }
@@ -405,7 +407,7 @@
     text-align: left;
   }
   .inventoryList__container .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .item__quantityTitle {
-    color: #AFAFAF;
+    color: #afafaf;
     text-align: left;
     display: none;
   }
@@ -413,7 +415,7 @@
     text-align: left;
   }
   .inventoryList__container .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .item__statusTitle {
-    color: #AFAFAF;
+    color: #afafaf;
     text-align: left;
     display: none;
   }
@@ -422,9 +424,10 @@
   }
   .inventoryList__container .add__inventoryItem__button__container {
     position: fixed;
+    z-index: 7000;
     right: 0;
     top: 0;
-    margin: 400px 16px 0px 0px;
+    margin: 810px 16px 0px 0px;
     background-color: darkblue;
     border-radius: 50%;
     height: 60px;
