@@ -7,14 +7,14 @@ const URL = `http://localhost:8080/warehouses`;
 
 class WarehouseList extends Component {
   constructor() {
-    super()
+    super();
     this.state = {
       warehouses: [],
-      showModal: false
+      showModal: false,
+      formSubmitted: false
     };
-  
   }
-  
+
   componentDidMount() {
     axios.get(URL).then(res => {
       this.setState({
@@ -23,10 +23,16 @@ class WarehouseList extends Component {
     });
   }
 
+  formSubmit = () => {
+    this.setState({
+      formSubmitted: !this.state.formSubmitted
+    });
+  };
+
   modalToggle = () => {
     this.setState({
       showModal: !this.state.showModal
-    })
+    });
   };
 
   render() {
@@ -40,7 +46,7 @@ class WarehouseList extends Component {
           <input className="header__search" type="text" placeholder="Search" />
         </div>
 
-        {this.state.showModal && <WarehouseModal />}
+        {this.state.showModal && <WarehouseModal formSubmit={() => this.formSubmit()}/>}
 
         <table className="WarehouseList__table">
           <thead className="thead">

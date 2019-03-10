@@ -1,17 +1,18 @@
 import React from 'react';
 import './productmodal.css';
 import axios from 'axios';
-import backButton from '../../assets/icons/SVG/Icon-back-arrow.svg'
+import backButton from '../../assets/icons/SVG/Icon-back-arrow.svg';
+
 
 //dynamic with axios call : SPAN TAGS, the product name
 //not dynamic: h4 tags with the product info
 
-const inventoryId = id => `http://localhost:8080/inventory/${id}`
-const inventoryList = 'http://localhost:8080/inventory'
+// const inventoryId = id => `http://localhost:8080/inventory/${id}`
+// const inventoryList = 'http://localhost:8080/inventory'
 
 class ProductModal extends React.Component {
-  constructor () {
-    super ()
+  constructor (props) {
+    super (props)
     this.state = {
       productName: [],
       productDescription: [],
@@ -24,15 +25,15 @@ class ProductModal extends React.Component {
   }
   componentDidMount () {
     axios
-    .get(inventoryList)
+    .get(this.props.inventory)
     .then(response => {
-      console.log(response.data[0])
-      const products = response.data[0].forEach(product => {
-        return 
-      })
+      console.log(response.data)
+      // const products = []
+      //   response.data[0].map(product => {
+      //   product.slice(1).map 
+      // })
     })
   }
-
 
 //   this.setState ({
 //     productName: response.data[0].name,
@@ -44,13 +45,6 @@ class ProductModal extends React.Component {
 // })
      
 
-//EXAMPLE:
-//   axios
-//   .get(`https://images-api.nasa.gov/search?q=` + `search`)
-//   .then(res => res.data.collection.items)
-//   .then(json => {
-//     json.map(obj => this.setState({ allTheValues: Object.values(obj) }))
-//   })
 
   
   
