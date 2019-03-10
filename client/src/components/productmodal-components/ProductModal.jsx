@@ -27,10 +27,9 @@ class ProductModal extends React.Component {
     .get(inventoryList)
     .then(response => {
       console.log(response.data[0])
-      const products = response.data[0].map(product => {
-        return
+      const products = response.data[0].forEach(product => {
+        return 
       })
-      console.log(products)
     })
   }
 
