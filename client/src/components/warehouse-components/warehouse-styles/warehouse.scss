@@ -14,7 +14,13 @@
   font-family: "AvenierDemi";
   src: url("../../../assets/fonts/demibold.otf");
 }
-
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  .arrow-mobile {
+    margin-top: 20px;
+  }
+}
 body {
   margin: 0;
   color: $default-black;

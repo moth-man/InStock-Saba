@@ -14,6 +14,20 @@
   src: url("../../../assets/fonts/demibold.otf");
 }
 
+.flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.flex-row .arrow-mobile {
+  margin-top: 20px;
+}
+
 body {
   margin: 0;
   color: #323232;
@@ -340,7 +354,7 @@ body {
         -ms-flex-pack: justify;
             justify-content: space-between;
     font-size: 0.9rem;
-    font-family: 'AvenierBold';
+    font-family: "AvenierBold";
     color: #AFAFAF;
   }
   .WarehouseList .WarehouseList__table .table__header th {
@@ -425,11 +439,9 @@ body {
   .WarehouseList .WarehouseList__table tbody .table__row .categoryInfo {
     padding-top: 1.5%;
   }
-  .WarehouseList .WarehouseList__table tbody .table__row .categoryInfo .arrow-desktop {
-    display: block;
-    position: relative;
-    right: -235px;
-    bottom: 20px;
+  .WarehouseList .flex-row .arrow-mobile {
+    margin-top: 40px;
+    margin-left: 10px;
   }
   .WarehouseList .add__inventoryItem__button__container {
     position: fixed;

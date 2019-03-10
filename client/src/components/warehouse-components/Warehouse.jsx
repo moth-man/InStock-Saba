@@ -7,16 +7,11 @@ class Warehouse extends Component {
     const { ...data } = this.props;
     const link = `/warehouse/${data.id}`;
     return (
-      <div>
+      <div className='flex-row'>
         <tr className='table__row'>
           <div className='warehouseMainInfo'>
             <td className='warehouseName'>{data.warehouseName}</td>
-            <td>
-              {data.address}
-              <Link to={link}>
-                <img src={arrow} className='arrow-mobile' alt='link' />
-              </Link>
-            </td>
+            <td>{data.address}</td>
           </div>
           <div>
             <td>{data.contact}</td>
@@ -27,12 +22,12 @@ class Warehouse extends Component {
             <td>{data.contactEmail}</td>
           </div>
           <div className='categoryInfo'>
-            <td className='category__td'>
-              {data.categories}
-              <img src={arrow} className='arrow-desktop' alt='link' />
-            </td>
+            <td className='category__td'>{data.categories}</td>
           </div>
         </tr>
+        <Link to={link} className='arrow-mobile'>
+          <img src={arrow} alt='A link' />
+        </Link>
       </div>
     );
   }

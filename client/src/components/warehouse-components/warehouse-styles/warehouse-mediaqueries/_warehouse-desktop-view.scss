@@ -38,7 +38,7 @@
         flex-flow: row nowrap;
         justify-content: space-between;
         font-size: 0.9rem;
-        font-family: 'AvenierBold';
+        font-family: "AvenierBold";
         color: $text-grey;
 
         th {
@@ -73,7 +73,7 @@
           width: 105%;
           margin: 2% 0 2% 0;
           padding-bottom: 2%;
-          
+
           div {
             display: flex;
             flex-flow: column nowrap;
@@ -99,7 +99,6 @@
             &:nth-of-type(n + 3) {
               margin: 0 0 0 0;
             }
-
           }
 
           .warehouseMainInfo {
@@ -109,17 +108,15 @@
           }
 
           .categoryInfo {
-
             padding-top: 1.5%;
-            
-            .arrow-desktop {
-              display: block;
-              position: relative;
-              right: -235px;
-              bottom: 20px;
-            }
           }
         }
+      }
+    }
+    .flex-row {
+      .arrow-mobile {
+        margin-top: 40px;
+        margin-left: 10px;
       }
     }
     .add__inventoryItem__button__container {
