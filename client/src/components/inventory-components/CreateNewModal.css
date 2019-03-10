@@ -47,10 +47,17 @@
 }
 
 .modal-content select {
-  font-size: 1.3em;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-size: 1em;
   margin-bottom: 24px;
   border: none;
   padding-right: 16px;
+  background-image: url("../../assets/icons/Icon-updown.png");
+  background-repeat: no-repeat;
+  background-size: 15px;
+  background-position-x: 95%;
+  background-position-y: 50%;
 }
 
 .modal-content input {
