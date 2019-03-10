@@ -10,8 +10,8 @@ class App extends Component {
     return (
       <div className='App'>
         <Navbar />
-        <ProductModal />
         <Switch>
+          <Route path="/inventory/:id" exact component={ProductModal} />
           <Route path="/" exact component={WarehouseList} />
           <Route path="/inventory" render={(routeProps) => (<InventoryList {...routeProps}
           />)}

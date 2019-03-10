@@ -30,9 +30,7 @@ class InventoryList extends Component {
       }, () => list = this.state.inventoryList)
       console.log("list: ", list)
       console.log(this.state)
-
     }
-
   }
 
   addInventory = () => {
