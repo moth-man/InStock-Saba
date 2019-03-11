@@ -24,21 +24,7 @@ class ProductModal extends React.Component {
       productId: '',
     }
   }
-  componentDidMount () {
-    axios
-    .get(inventoryList)
-    .then(response => {
-      console.log(response.data)
-      let products = [];
-      response.data.map(product => {
-        product.slice(1).map(product2 => {
-          products.push(product2)
-        });
-      });
-      console.log(products)  //outputs array of products
-    })
-   
-  }
+
 
 
 
@@ -60,6 +46,7 @@ class ProductModal extends React.Component {
   
   
   render () {
+      
 
     
 

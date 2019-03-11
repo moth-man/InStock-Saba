@@ -36,6 +36,20 @@ class App extends Component {
               inventory: data
             })
           })
+      }).then (() => {
+        axios
+        .get(inventoryURL)
+        .then(response => {
+          console.log(response.data)
+          let products = [];
+          response.data.map(product => {
+            product.slice(1).map(product2 => {
+              products.push(product2)
+            })
+          })
+          console.log(products) //outputs array of products
+          return products
+        })
       })
   }
 
