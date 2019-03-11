@@ -63,7 +63,7 @@ class InventoryList extends Component {
         <table className="inventoryList__table">
           <thead className="table__head">
             <tr className="table__head__row">
-              <th className="inventoryList__th item">ITEM</th>
+              {/* <th className="inventoryList__th item">ITEM</th> */}
               <th className="inventoryList__th">LAST ORDERED</th>
               <th className="inventoryList__th">LOCATION</th>
               <th className="inventoryList__th">QUANTITY</th>
