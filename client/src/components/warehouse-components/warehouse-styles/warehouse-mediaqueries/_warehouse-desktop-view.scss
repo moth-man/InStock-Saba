@@ -58,7 +58,7 @@
           }
           &:nth-of-type(4) {
             margin-left: 0;
-            padding-right: 7%;
+            padding-right: 13%;
           }
         }
       }
@@ -120,20 +120,8 @@
       }
     }
     .add__inventoryItem__button__container {
-      position: fixed;
-      z-index: 7000;
-      right: 0;
-      top: 0;
-      margin: 550px 40px 0px 0px;
-      background-color: darkblue;
-      border-radius: 50%;
-      border: none;
-      height: 60px;
-      width: 60px;
-      background-image: url("../../../assets/icons/Icon-add.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      float: right;
+      right: 100px;
+      top: 650px;
     }
   }
 }

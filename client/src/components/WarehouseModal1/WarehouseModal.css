@@ -3,6 +3,7 @@
   font-family: Helvetica;
   background-color: rgba(128, 128, 128, 0.3);
   position: absolute;
+  margin-left: -3%;
   top: -10px;
   left: -10px;
   width: 110%;

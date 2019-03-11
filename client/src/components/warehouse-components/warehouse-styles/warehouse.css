@@ -157,8 +157,8 @@ body {
 .WarehouseList .add__inventoryItem__button__container {
   position: fixed;
   z-index: 7000;
-  right: 25%;
-  top: 75%;
+  right: 20px;
+  top: 500px;
   background-color: darkblue;
   border-radius: 50%;
   border: none;
@@ -306,6 +306,10 @@ body {
   .WarehouseList .WarehouseList__table tbody .table__row .categoryInfo .arrow-desktop {
     display: none;
   }
+  .WarehouseList .add__inventoryItem__button__container {
+    right: 50px;
+    top: 460px;
+  }
 }
 
 @media (min-width: 900px) {
@@ -388,7 +392,7 @@ body {
   }
   .WarehouseList .WarehouseList__table .table__header th:nth-of-type(4) {
     margin-left: 0;
-    padding-right: 7%;
+    padding-right: 13%;
   }
   .WarehouseList .WarehouseList__table tbody .table__row {
     display: -webkit-box;
@@ -458,20 +462,8 @@ body {
     margin-left: 10px;
   }
   .WarehouseList .add__inventoryItem__button__container {
-    position: fixed;
-    z-index: 7000;
-    right: 0;
-    top: 0;
-    margin: 550px 40px 0px 0px;
-    background-color: darkblue;
-    border-radius: 50%;
-    border: none;
-    height: 60px;
-    width: 60px;
-    background-image: url("../../../assets/icons/Icon-add.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    float: right;
+    right: 100px;
+    top: 650px;
   }
 }
 /*# sourceMappingURL=warehouse.css.map */

@@ -129,24 +129,23 @@
       font-size: 0.8rem;
       padding: 20px 0 10px 0;
     }
+  .add__inventoryItem__button__container {
+    position: fixed;
+    right: 20px;
+    top: 500px;
+    background-color: darkblue;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    background-image: url("../../assets/icons/Icon-add.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    float: right;
+    z-index: 1;
   }
 }
 
-.add__inventoryItem__button__container {
-  position: fixed;
-  right: 75%;
-  top: 75%;
-  margin-right: 20px;
-  background-color: darkblue;
-  border-radius: 50%;
-  height: 60px;
-  width: 60px;
-  background-image: url("../../assets/icons/Icon-add.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  float: right;
-  z-index: 1;
-}
+
 
 /*TABLET MEDIA QUERIES*/
 
@@ -185,8 +184,8 @@
     width: 100%;
 
     .inventoryList__th {
-      padding-right: 40px;
-      color: #afafaf;
+      padding-right: 37px;
+      color: #AFAFAF;
       text-align: left;
       display: inline-block;
       font-family: "AvenierDemi";
@@ -299,9 +298,9 @@
 
   .add__inventoryItem__button__container {
     position: fixed;
-    right: 0;
-    top: 0;
-    margin: 900px 160px 0px 60px;
+    right: 50px;
+    top: 460px;
+    // margin: 500px 50px 0px 60px;
     background-color: darkblue;
     border-radius: 50%;
     height: 60px;
@@ -317,4 +316,13 @@
   .inventoryList__container {
     margin: 0px 180px;
   }
+
+  .add__inventoryItem__button__container {
+    right: 100px;
+    top: 650px;
+  }
+
+  
+
+}
 }

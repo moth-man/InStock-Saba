@@ -4,13 +4,14 @@
   font-family: Helvetica;
   background-color: rgba(128, 128, 128, 0.3);
   position: fixed;
+  display: flex;
+  justify-content: center;
   width: 110%;
   height: 110%;
   z-index: 8000;
 }
+
 .modal {
-  margin-left: auto;
-  margin-right: auto;
   display: flex;
   justify-content: center;
   z-index: 9000;
@@ -19,7 +20,7 @@
 
 .modal-content {
   z-index: 9001;
-  top: 20px;
+  top: 10%;
   padding-left: 30px;
   padding-right: 30px;
   width: 370px;
@@ -142,8 +143,8 @@
 @media (min-width: 500px) {
   .modal-content {
     width: 470px;
-    top: 25%;
     margin-left: auto;
+    top: 25%;
     margin-right: auto;
     border-radius: 4px;
     padding-left: 60px;
