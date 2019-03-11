@@ -1,4 +1,20 @@
 /*VARIABLES*/
+.currentWarehouse__container {
+  width: 100%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.currentWarehouse__container .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
 .currentWarehouse__container .current__table__row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -10,9 +26,8 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  width: 125%;
+  width: 100%;
   font-size: 0.8rem;
-  margin: 2% 0 0% 0;
   padding-bottom: 8%;
 }
 
@@ -27,40 +42,34 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-bottom: 1px solid #e1e1e1;
 }
 
 .currentWarehouse__container .current__table__row .currentWarehouse__title__container .currentWarehouseName {
   padding-left: 15px;
   padding-bottom: 15px;
   margin: 0;
-  font-family: 'AvenierBold';
+  font-family: "AvenierBold";
   font-size: 1.4rem;
-}
-
-.currentWarehouse__container .current__table__row .currentWarehouse__title__container .divider {
-  display: none;
 }
 
 .currentWarehouse__container .current__table__row .currentWarehouse__address__title,
 .currentWarehouse__container .current__table__row .currentWarehouse__contact__title {
   color: #AFAFAF;
-  font-family: 'AvenierBold';
+  font-family: "AvenierBold";
   margin: 0;
+  margin-top: 20px;
+  font-size: 0.8em;
+}
+
+.currentWarehouse__container .current__table__row .notgrey {
+  color: black;
+  margin-top: 20px;
 }
 
 .currentWarehouse__container .current__table__row div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
   font-size: 0.8rem;
-  margin: 3% 0%;
+  width: 100%;
 }
 
 .currentWarehouse__container .current__table__row div .warehouseName {
@@ -83,6 +92,9 @@
 }
 
 @media (max-width: 768px) {
+  .currentWarehouse__container {
+    margin-top: 10%;
+  }
   .currentWarehouse__container .current__table__row {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -94,10 +106,9 @@
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    width: 125%;
+    width: 100%;
     font-size: 0.8rem;
-    margin: 2% 0 0% 0;
-    padding-bottom: 8%;
+    padding-bottom: 6%;
   }
   .currentWarehouse__container .current__table__row .currentWarehouseMainInfo .currentWarehouse__title__container {
     display: -webkit-box;
@@ -116,20 +127,14 @@
     padding-bottom: 15px;
     width: 92%;
     margin: 0;
-    font-family: 'AvenierBold';
+    font-family: "AvenierBold";
     font-size: 1.4rem;
-  }
-  .currentWarehouse__container .current__table__row .currentWarehouseMainInfo .currentWarehouse__title__container .divider {
-    color: black;
-    border-bottom: 2px solid #FAFAFA;
-    height: 10%;
-    width: 95%;
   }
   .currentWarehouse__container .current__table__row .currentWarehouseMainInfo .currentWarehouse__address__title,
   .currentWarehouse__container .current__table__row .currentWarehouseMainInfo .currentWarehouse__contact__title {
     color: #AFAFAF;
-    font-family: 'AvenierBold';
-    margin: 0;
+    font-family: "AvenierBold";
+    margin-top: 20px;
   }
   .currentWarehouse__container .current__table__row div {
     display: -webkit-box;
@@ -143,7 +148,7 @@
         -ms-flex-align: start;
             align-items: flex-start;
     font-size: 0.8rem;
-    margin: 3% 0%;
+    width: 100%;
   }
   .currentWarehouse__container .current__table__row div .warehouseName {
     font-weight: bold;

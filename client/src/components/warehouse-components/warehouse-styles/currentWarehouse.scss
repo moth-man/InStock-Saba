@@ -1,45 +1,53 @@
-@import '../../../styles/variables';
+@import "../../../styles/variables";
 
 .currentWarehouse__container {
+  width: 100%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  .flex {
+    display: flex;
+    flex-direction: row;
+  }
   .current__table__row {
     display: flex;
     flex-flow: column nowrap;
     align-items: flex-start;
-    width: 125%;
+    width: 100%;
     font-size: 0.8rem;
-    margin: 2% 0 0% 0;
     padding-bottom: 8%;
 
     .currentWarehouse__title__container {
       display: flex;
       flex-direction: row;
       align-items: center;
+      border-bottom: 1px solid #e1e1e1;
 
       .currentWarehouseName {
         padding-left: 15px;
         padding-bottom: 15px;
         margin: 0;
-        font-family: 'AvenierBold';
+        font-family: "AvenierBold";
         font-size: 1.4rem;
-      }
-      .divider {
-        display: none;
       }
     }
 
     .currentWarehouse__address__title,
     .currentWarehouse__contact__title {
       color: $text-grey;
-      font-family: 'AvenierBold';
+      font-family: "AvenierBold";
       margin: 0;
+      margin-top: 20px;
+      font-size: 0.8em;
+    }
+
+    .notgrey {
+      color: black;
+      margin-top: 20px;
     }
 
     div {
-      display: flex;
-      flex-flow: column nowrap;
-      align-items: flex-start;
       font-size: 0.8rem;
-      margin: 3% 0%;
+      width: 100%;
 
       .warehouseName {
         font-weight: bold;
@@ -65,14 +73,14 @@
 
 @media (max-width: 768px) {
   .currentWarehouse__container {
+    margin-top: 10%;
     .current__table__row {
       display: flex;
       flex-flow: column nowrap;
       align-items: flex-start;
-      width: 125%;
+      width: 100%;
       font-size: 0.8rem;
-      margin: 2% 0 0% 0;
-      padding-bottom: 8%;
+      padding-bottom: 6%;
 
       .currentWarehouseMainInfo {
         .currentWarehouse__title__container {
@@ -85,23 +93,16 @@
             padding-bottom: 15px;
             width: 92%;
             margin: 0;
-            font-family: 'AvenierBold';
+            font-family: "AvenierBold";
             font-size: 1.4rem;
-          }
-          
-          .divider {
-            color: black;
-            border-bottom: 2px solid $default-alabaster;
-            height: 10%;
-            width: 95%;
           }
         }
 
         .currentWarehouse__address__title,
         .currentWarehouse__contact__title {
           color: $text-grey;
-          font-family: 'AvenierBold';
-          margin: 0;
+          font-family: "AvenierBold";
+          margin-top: 20px;
         }
       }
 
@@ -110,7 +111,7 @@
         flex-flow: column nowrap;
         align-items: flex-start;
         font-size: 0.8rem;
-        margin: 3% 0%;
+        width: 100%;
 
         .warehouseName {
           font-weight: bold;
