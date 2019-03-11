@@ -72,7 +72,7 @@ class InventoryList extends Component {
           </thead>
           <tbody>{this.state.inventoryList}</tbody>
         </table>
-      
+
       </div>
     );
   }
