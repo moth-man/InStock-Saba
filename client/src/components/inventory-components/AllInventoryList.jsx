@@ -52,11 +52,9 @@ class InventoryList extends Component {
     return (
       <div className='inventoryList__container'>
         <button
-          className='add__inventoryItem__button'
+          className='add__inventoryItem__button add__inventoryItem__button__container'
           onClick={() => this.addInventory()}
-        >
-          <div className='add__inventoryItem__button__container' />
-        </button>
+        />
         <section className='inventory-flex'>
           <h1 className='inventoryList__title'>Inventory</h1>
           <div className='searchBar__container'>
