@@ -1,4 +1,19 @@
 @media (min-width: 700px) and (max-width: 889px) {
+  .add__inventoryItem__button__container {
+    position: fixed;
+    z-index: 7000;
+    right: 25%;
+    top: 75%;
+    background-color: darkblue;
+    border-radius: 50%;
+    border: none;
+    height: 60px;
+    width: 60px;
+    background-image: url("../../../assets/icons/Icon-add.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    float: right;
+  }
   .WarehouseList {
     display: flex;
     flex-flow: column nowrap;
@@ -19,7 +34,7 @@
       }
 
       .header__search {
-        background-image: url('../../../assets/logos/Icon-search.svg');
+        background-image: url("../../../assets/logos/Icon-search.svg");
         background-color: $default-alabaster;
         background-size: 8%;
         background-repeat: no-repeat;
