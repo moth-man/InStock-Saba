@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import Navbar from './components/Navbar/Navbar';
+import Navbar from './components/Navbar/navbar';
 import WarehouseList from './components/warehouse-components/WarehouseList';
 import InventoryList from './components/inventory-components/InventoryList';
-import ProductModal from './components/productmodal-components/ProductModal'
-import { Switch, Route, Link } from 'react-router-dom';
-import axios from 'axios';
+import AllInventoryList from './components/inventory-components/AllInventoryList';
+import ProductModal from './components/productmodal-components/ProductModal';
+import { Switch, Route, Link } from 'react-router-dom'
+import axios from 'axios'
 
 
 const warehouseURL = `http://localhost:8080/warehouses`;
@@ -40,19 +41,17 @@ class App extends Component {
 
   render() {
     if (this.state.inventory.length === 0 || !this.state.warehouses.length === 0) {
-      console.log("@", this.state)
       return <h1>Loading</h1>
     } else {
-      console.log("!", this.state)
       return (
         <div className="App">
           <Navbar />
           <ProductModal />
           <Switch>
             <Route path="/" exact component={WarehouseList} />
-            <Route path="/inventory" render={(routeProps) => (<InventoryList {...routeProps}
+            <Route path="/inventory/:id" component={ProductModal} />
+            <Route path="/inventory" render={(routeProps) => (<AllInventoryList {...routeProps}
               inventory={this.state.inventory}
-              warehouses={this.state.warehouses}
             />)}
             />
             <Route path="/warehouse/:id" render={(routeProps) => (<InventoryList {...routeProps}
@@ -71,16 +70,17 @@ export default App;
 
 
 
+// import { Switch, Route, Link } from 'react-router-dom'
+
 // class App extends Component {
-  //   render() {
-  //     return (
-  //       <div className='App'>
-  //         <Navbar />
-  //         <ProductModal />
-  //         <Switch>
-  //           <Route path="/" exact component={WarehouseList} />
-  //           <Route path="/inventory" render={(routeProps) => (<InventoryList {...routeProps}
-  //           />)}
-  //           />
-  //           <Route path="/warehouse/:id" render={(routeProps) => (<InventoryList {...routeProps}
-  
+//   render() {
+//     return (
+//       <div className='App'>
+//         <Navbar />
+//         <Switch>
+//           <Route path="/inventory/:id" exact component={ProductModal} />
+//           <Route path="/" exact component={WarehouseList} />
+//           <Route path="/inventory" render={(routeProps) => (<InventoryList {...routeProps}
+//           />)}
+//           />
+//           <Route path="/warehouse/:id" render={(routeProps) => (<InventoryList {...routeProps}

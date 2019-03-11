@@ -47,6 +47,8 @@ class InventoryItem extends Component {
         {/* <button className="remove__item__button" onClick={() => this.togglePopUp()}></button> */}
         <tr className="inventoryItem__tableRow">
           <td className="item__title">ITEM</td>
+          <button className="remove__item__button" onClick={() => this.togglePopUp()}></button>
+          {pop}
           <td className="item__name">{name}</td>
           <td className="item__description">{description}</td>
           <td className="item__lastOrdered">LAST ORDERED</td>
@@ -57,8 +59,6 @@ class InventoryItem extends Component {
           <td className="item__quantity">{quantity}</td>
           <td className="item__statusTitle">STATUS</td>
           <td className="item__status">{status}</td>
-          <button className="remove__item__button" onClick={() => this.togglePopUp()}></button>
-          {pop}
         </tr>
       </div>
     )

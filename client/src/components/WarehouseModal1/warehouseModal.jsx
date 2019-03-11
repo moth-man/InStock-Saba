@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import "./Warehouse.css";
-
+import "./WarehouseModal.css";
 import axios from "axios";
-const url = 'http://localhost:8080/warehouses';
+const url = "http://localhost:8080/warehouses";
 
 class Warehouse extends Component {
   constructor() {
@@ -45,6 +44,7 @@ class Warehouse extends Component {
       categories: this.state.categories
     });
     onClick.preventDefault();
+    this.props.formSubmit();
     this.refs.modal.style.display = "none";
     this.refs.overlay.style.display = "none";
   };
@@ -81,7 +81,7 @@ class Warehouse extends Component {
                   onChange={this.update_input_state}
                 />
               </div>
-              <div className='flex-wrap'>
+              <div className='flex-column'>
                 <div className='flex-column'>
                   <h5>CONTACT NAME</h5>
                   <input
