@@ -116,6 +116,7 @@
 .modal-content select {
   width: 100%;
   height: 48px;
+  padding-left: 10px;
 }
 
 .modal-content h5 {
@@ -187,7 +188,7 @@
   .modal-content {
     width: 470px;
     margin-left: auto;
-    top: 25%;
+    top: 15%;
     margin-right: auto;
     border-radius: 4px;
     padding-left: 60px;
