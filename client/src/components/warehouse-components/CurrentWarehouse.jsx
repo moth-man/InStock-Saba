@@ -16,6 +16,7 @@ class CurrentWarehouse extends Component {
               </Link>
               <h1 className="currentWarehouseName">{data.warehouseName}</h1>
             </div>
+            <div className="divider" />
             <p className="currentWarehouse__address__title">ADDRESS</p>
             <td>{data.address}</td>
           </div>

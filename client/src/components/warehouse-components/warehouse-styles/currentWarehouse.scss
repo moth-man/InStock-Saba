@@ -9,7 +9,7 @@
     font-size: 0.8rem;
     margin: 2% 0 0% 0;
     padding-bottom: 8%;
-    
+
     .currentWarehouse__title__container {
       display: flex;
       flex-direction: row;
@@ -17,14 +17,13 @@
 
       .currentWarehouseName {
         padding-left: 15px;
-        padding-bottom: 5px;
+        padding-bottom: 15px;
         margin: 0;
         font-family: 'AvenierBold';
         font-size: 1.4rem;
       }
-
-      .current__arrow__mobile {
-        margin-right: 20px;
+      .divider {
+        display: none;
       }
     }
 
@@ -32,6 +31,7 @@
     .currentWarehouse__contact__title {
       color: $text-grey;
       font-family: 'AvenierBold';
+      margin: 0;
     }
 
     div {
@@ -53,11 +53,83 @@
       .current__arrow-mobile {
         position: relative;
         left: 0px;
-        bottom: 0px;
+        bottom: 4px;
       }
 
       .arrow-desktop {
         display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .currentWarehouse__container {
+    .current__table__row {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: flex-start;
+      width: 125%;
+      font-size: 0.8rem;
+      margin: 2% 0 0% 0;
+      padding-bottom: 8%;
+
+      .currentWarehouseMainInfo {
+        .currentWarehouse__title__container {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          .currentWarehouseName {
+            padding-left: 15px;
+            padding-bottom: 15px;
+            width: 92%;
+            margin: 0;
+            font-family: 'AvenierBold';
+            font-size: 1.4rem;
+          }
+          
+          .divider {
+            color: black;
+            border-bottom: 2px solid $default-alabaster;
+            height: 10%;
+            width: 95%;
+          }
+        }
+
+        .currentWarehouse__address__title,
+        .currentWarehouse__contact__title {
+          color: $text-grey;
+          font-family: 'AvenierBold';
+          margin: 0;
+        }
+      }
+
+      div {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: flex-start;
+        font-size: 0.8rem;
+        margin: 3% 0%;
+
+        .warehouseName {
+          font-weight: bold;
+          font-size: 0.9rem;
+        }
+
+        .contact {
+          font-style: italic;
+        }
+
+        .current__arrow-mobile {
+          position: relative;
+          left: 0px;
+          bottom: 4px;
+        }
+
+        .arrow-desktop {
+          display: none;
+        }
       }
     }
   }
