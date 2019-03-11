@@ -4,13 +4,14 @@
   font-family: Helvetica;
   background-color: rgba(128, 128, 128, 0.3);
   position: fixed;
+  display: flex;
+  justify-content: center;
   width: 110%;
   height: 110%;
   z-index: 8000;
 }
+
 .modal {
-  margin-left: auto;
-  margin-right: auto;
   display: flex;
   justify-content: center;
   z-index: 9000;
@@ -19,13 +20,12 @@
 
 .modal-content {
   z-index: 9001;
-  top: 20px;
-  left: 25px;
+  top: 10%;
   padding-left: 30px;
   padding-right: 30px;
   width: 370px;
   background-color: white;
-  position: fixed;
+  position: absolute;
   display: flex;
   align-content: flex-start;
   flex-direction: column;
@@ -96,6 +96,7 @@
   select {
     width: 100%;
     height: 48px;
+    padding-left: 10px;
   }
   h5 {
     width: auto;
@@ -143,9 +144,10 @@
 @media (min-width: 500px) {
   .modal-content {
     width: 470px;
-    border-radius: 4px;
+    margin-left: auto;
     top: 15%;
-    left: 25%;
+    margin-right: auto;
+    border-radius: 4px;
     padding-left: 60px;
     padding-right: 60px;
     padding-bottom: 50px;

@@ -48,20 +48,25 @@ class InventoryList extends Component {
   }
 
   render() {
-    console.log(this.props.inventory)
+    console.log(this.props.inventory);
     return (
-      <div className="inventoryList__container">
-        <h1 className="inventoryList__title">Inventory</h1>
-        <div className="searchBar__container">
-          <form className="searchBar">
-            <input
-              className="searchBar__input"
-              type="text"
-              placeholder="Search"
-            />
-          </form>
-        </div>
-        {this.state.showModal && <CreateNewInvModal />}
+      <div className='inventoryList__container'>
+        <button
+          className='add__inventoryItem__button add__inventoryItem__button__container'
+          onClick={() => this.addInventory()}
+        />
+        <section className='inventory-flex'>
+          <h1 className='inventoryList__title'>Inventory</h1>
+          <div className='searchBar__container'>
+            <form className='searchBar'>
+              <input
+                className='searchBar__input'
+                type='text'
+                placeholder='Search'
+              />
+            </form>
+          </div>
+        </section>
         <table className='inventoryList__table'>
           <thead className='table__head'>
             <tr className='table__head__row'>
@@ -74,12 +79,7 @@ class InventoryList extends Component {
           </thead>
           <tbody>{this.state.inventoryList}</tbody>
         </table>
-        <button
-          className="add__inventoryItem__button"
-          onClick={() => this.addInventory()}
-        >
-          <div className="add__inventoryItem__button__container" />
-        </button>
+        {this.state.showModal && <CreateNewInvModal />}
       </div>
     );
   }

@@ -2,7 +2,8 @@
 .overlay {
   font-family: Helvetica;
   background-color: rgba(128, 128, 128, 0.3);
-  position: fixed;
+  position: absolute;
+  margin-left: -3%;
   top: -10px;
   left: -10px;
   width: 110%;
@@ -10,31 +11,15 @@
   z-index: 8000;
 }
 
-.modal {
-  margin-left: auto;
-  margin-right: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  z-index: 9000;
-}
-
 /*Modal Container*/
 .modal-content {
   z-index: 9001;
-  top: 50px;
-  -ms-flex-item-align: center;
-      align-self: center;
-  margin-right: auto;
-  margin-left: auto;
+  top: 20px;
   padding-left: 30px;
   padding-right: 30px;
   width: 370px;
   background-color: white;
-  position: fixed;
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -173,13 +158,17 @@
 /*Media Query*/
 @media (min-width: 500px) {
   .modal-content {
-    width: 470px;
+    left: 0px;
+    right: 0px;
     border-radius: 4px;
-    top: 25%;
     padding-left: 60px;
     padding-right: 60px;
     padding-bottom: 50px;
     padding-top: 20px;
+    width: 470px;
+    top: 25%;
+    margin-left: auto;
+    margin-right: auto;
   }
   .modal-content input {
     width: 220px;
