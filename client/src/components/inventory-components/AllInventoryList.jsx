@@ -48,31 +48,40 @@ class InventoryList extends Component {
   }
 
   render() {
-    console.log(this.props.inventory)
+    console.log(this.props.inventory);
     return (
-      <div className="inventoryList__container">
-        <button className="add__inventoryItem__button" onClick={() => this.addInventory()}><div className="add__inventoryItem__button__container"></div></button>
-        <section className="inventory-flex">
-          <h1 className="inventoryList__title">Inventory</h1>
-          <div className="searchBar__container">
-            <form className="searchBar">
-              <input className="searchBar__input" type="text" placeholder="Search"></input>
+      <div className='inventoryList__container'>
+        <button
+          className='add__inventoryItem__button'
+          onClick={() => this.addInventory()}
+        >
+          <div className='add__inventoryItem__button__container' />
+        </button>
+        <section className='inventory-flex'>
+          <h1 className='inventoryList__title'>Inventory</h1>
+          <div className='searchBar__container'>
+            <form className='searchBar'>
+              <input
+                className='searchBar__input'
+                type='text'
+                placeholder='Search'
+              />
             </form>
           </div>
         </section>
-        <table className="inventoryList__table">
-          <thead className="table__head">
-            <tr className="table__head__row">
-              <th className="inventoryList__th item">ITEM</th>
-              <th className="inventoryList__th">LAST ORDERED</th>
-              <th className="inventoryList__th">LOCATION</th>
-              <th className="inventoryList__th">QUANTITY</th>
-              <th className="inventoryList__th">STATUS</th>
+        <table className='inventoryList__table'>
+          <thead className='table__head'>
+            <tr className='table__head__row'>
+              <th className='inventoryList__th item'>ITEM</th>
+              <th className='inventoryList__th'>LAST ORDERED</th>
+              <th className='inventoryList__th'>LOCATION</th>
+              <th className='inventoryList__th'>QUANTITY</th>
+              <th className='inventoryList__th'>STATUS</th>
             </tr>
           </thead>
           <tbody>{this.state.inventoryList}</tbody>
         </table>
-      
+        {this.state.showModal && <CreateNewInvModal />}
       </div>
     );
   }
