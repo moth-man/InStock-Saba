@@ -128,9 +128,8 @@
 
   .add__inventoryItem__button__container {
     position: fixed;
-    right: 0;
-    top: 400px;
-    margin-right: 20px;
+    right: 20px;
+    top: 500px;
     background-color: darkblue;
     border-radius: 50%;
     height: 60px;
@@ -299,9 +298,9 @@
 
   .add__inventoryItem__button__container {
     position: fixed;
-    right: 0;
-    top: 0;
-    margin: 900px 160px 0px 60px;
+    right: 50px;
+    top: 460px;
+    // margin: 500px 50px 0px 60px;
     background-color: darkblue;
     border-radius: 50%;
     height: 60px;
@@ -320,13 +319,10 @@
     margin: 0px 180px;
   }
 
-  // .inventoryItem__container {
-  //   .inventoryItem__tableRow {
-  //     td {
-
-  //     }
-  //   }
-  // }
+  .add__inventoryItem__button__container {
+    right: 100px;
+    top: 650px;
+  }
 
   
 
