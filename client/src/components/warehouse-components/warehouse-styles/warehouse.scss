@@ -1,119 +1,127 @@
-@import '../../../styles/variables';
+@import "../../../styles/variables";
 
 @font-face {
-  font-family: 'AvenierRegular';
-  src: url('../../../assets/fonts/regular.otf');
+  font-family: "AvenierRegular";
+  src: url("../../../assets/fonts/regular.otf");
 }
 
 @font-face {
-  font-family: 'AvenierBold';
-  src: url('../../../assets/fonts/bold.otf');
+  font-family: "AvenierBold";
+  src: url("../../../assets/fonts/bold.otf");
 }
 
 @font-face {
-  font-family: 'AvenierDemi';
-  src: url('../../../assets/fonts/demibold.otf');
+  font-family: "AvenierDemi";
+  src: url("../../../assets/fonts/demibold.otf");
 }
-
-
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  .arrow-mobile {
+    margin-top: 20px;
+  }
+}
 body {
   margin: 0;
   color: $default-black;
-  font-family: 'AvenierRegular';
+  font-family: "AvenierRegular";
 }
-  .WarehouseList {
+.WarehouseList {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 70%;
+  margin: 0 6%;
+  justify-content: center;
+
+  .WarehouseList__header {
     display: flex;
     flex-flow: column nowrap;
-    width: 70%;
-    margin: 0 6%;
-    justify-content: center;
+    align-items: flex-start;
 
-    .WarehouseList__header {
-      display: flex;
-      flex-flow: column nowrap;
-      align-items: flex-start;
-
-      .header__h1 {
-        font-family: 'AvenierBold';
-        font-size: 1.9rem;
-        margin: 10% 0;
-      }
-
-      .header__search {
-        background-image: url('../../../assets/logos/Icon-search.svg');
-        background-color: $default-alabaster;
-        background-size: 10%;
-        background-repeat: no-repeat;
-        background-position: left;
-        background-position-x: 15px;
-        margin: 0 0 10% 0;
-        height: 40px;
-        width: 200px;
-        padding: 2.5% 7%;
-        outline: none;
-        border: 2px solid $text-lightgrey;
-        border-radius: 3px;
-        text-indent: 30px;
-        font-size: 16px;
-        color: $default-black;
-      }
+    .header__h1 {
+      font-family: "AvenierBold";
+      font-size: 1.9rem;
+      margin: 10% 0;
     }
 
-    .WarehouseList__table {
-      display: flex;
-      flex-flow: column nowrap;
-  
-      .table__header {
-        display: none;
-      }
-  
-      tbody {
-        .table__row {
+    .header__search {
+      background-image: url("../../../assets/logos/Icon-search.svg");
+      background-color: $default-alabaster;
+      background-size: 10%;
+      background-repeat: no-repeat;
+      background-position: left;
+      background-position-x: 15px;
+      margin: 0 0 10% 0;
+      height: 40px;
+      width: 200px;
+      padding: 2.5% 7%;
+      outline: none;
+      border: 2px solid $text-lightgrey;
+      border-radius: 3px;
+      text-indent: 30px;
+      font-size: 16px;
+      color: $default-black;
+    }
+  }
+
+  .WarehouseList__table {
+    display: flex;
+    flex-flow: column nowrap;
+
+    .table__header {
+      display: none;
+    }
+
+    tbody {
+      .table__row {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: flex-start;
+        width: 125%;
+        font-size: 0.8rem;
+        margin: 2% 0 8% 0;
+        padding-bottom: 8%;
+        border-bottom: 2px solid $default-alabaster;
+
+        div {
           display: flex;
           flex-flow: column nowrap;
           align-items: flex-start;
-          width: 125%;
           font-size: 0.8rem;
-          margin: 2% 0 8% 0;
-          padding-bottom: 8%;
-          border-bottom: 2px solid $default-alabaster;
-  
-          div {
-            display: flex;
-            flex-flow: column nowrap;
-            align-items: flex-start;
-            font-size: 0.8rem;
-            margin: 3% 0%;
-  
-            .warehouseName {
-              font-weight: bold;
-              font-size: 0.9rem;
-            }
-  
-            .contact {
-              font-style: italic;
-            }
-  
-            .arrow-mobile {
-              position: relative;
-              left: 80px;
-              bottom: 20px;
-            }
-  
-            .arrow-desktop {
-              display: none;
-            }
+          margin: 3% 0%;
+
+          .warehouseName {
+            font-weight: bold;
+            font-size: 0.9rem;
+          }
+
+          .contact {
+            font-style: italic;
+          }
+
+          .arrow-mobile {
+            position: relative;
+            left: 80px;
+            bottom: 20px;
+            z-index: -10;
+          }
+
+          .arrow-desktop {
+            display: none;
           }
         }
       }
     }
-     .add__inventoryItem__button__container {
+  }
+  .add__inventoryItem__button__container {
     position: fixed;
+    z-index: 7000;
     right: 0;
     top: 0;
-    margin: 400px 16px 0px 0px;
+    margin: 550px 16px 0px 0px;
     background-color: darkblue;
     border-radius: 50%;
+    border: none;
     height: 60px;
     width: 60px;
     background-image: url("../../../assets/icons/Icon-add.svg");
@@ -121,11 +129,8 @@ body {
     background-position: center;
     float: right;
   }
-  }
-  
+}
 
- @import './warehouse-mediaqueries/warehouse-tablet-view';
- 
- @import './warehouse-mediaqueries/warehouse-desktop-view';
- 
+@import "./warehouse-mediaqueries/warehouse-tablet-view";
 
+@import "./warehouse-mediaqueries/warehouse-desktop-view";

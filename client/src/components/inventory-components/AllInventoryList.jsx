@@ -1,56 +1,55 @@
-import React, { Component } from 'react'
-import InventoryItem from './InventoryItem'
-import './Inventory.css'
+import React, { Component } from "react";
+import InventoryItem from "./InventoryItem";
+import "./Inventory.css";
+import CreateNewInvModal from "./CreateNewInvModal";
 
 class InventoryList extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      inventoryList: []
-    }
+      inventoryList: [],
+      showModal: false
+    };
   }
 
-  iList = (inventory) => {
+  iList = inventory => {
     if (inventory) {
-      let list = []
+      let list = [];
       inventory.map(i => {
         i.slice(1).map(iv => {
-          list.push(iv)
-        })
-      })
+          list.push(iv);
+        });
+      });
       let iList = list.map(item => {
         if (item.status === true) {
-          item.status = "In-Stock"
+          item.status = "In-Stock";
         } else {
-          item.status = "Not In-Stock"
+          item.status = "Not In-Stock";
         }
-        return (
-          <InventoryItem {...item} />
-        )
-      })
+        return <InventoryItem {...item} />;
+      });
       this.setState({
         inventoryList: iList
-      })
-      console.log(list)
+      });
+      console.log(list);
     }
-
-  }
-
-
+  };
 
   addInventory = () => {
-    console.log("clicked")
-  }
+    console.log("clicked");
+    this.setState({
+      showModal: !this.state.showModal
+    });
+  };
 
   componentDidMount() {
-    const { inventory } = this.props
-    this.iList(inventory)
+    const { inventory } = this.props;
+    this.iList(inventory);
   }
 
   render() {
-
+    console.log(this.props.inventory)
     return (
-
       <div className="inventoryList__container">
         <button className="add__inventoryItem__button" onClick={() => this.addInventory()}><div className="add__inventoryItem__button__container"></div></button>
         <section className="inventory-flex">
@@ -75,9 +74,8 @@ class InventoryList extends Component {
         </table>
       
       </div>
-    )
+    );
   }
 }
 
-
-export default InventoryList
+export default InventoryList;
