@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import InventoryItem from './InventoryItem'
+import CurrentWarehouse from '../warehouse-components/CurrentWarehouse'
 import './Inventory.css'
 
 const inventoryApi = 'http://localhost:8080/inventory'
@@ -9,8 +10,8 @@ class InventoryList extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      inventoryList: [],
-      data: []
+      currentWarehouse: [],
+      inventoryList: []
     }
   }
 
@@ -32,7 +33,7 @@ class InventoryList extends Component {
 
   iList = (inventory) => {
     if (inventory) {
-      const warehouseInventory = inventory.find((iv, i) => {
+      const warehouseInventory = inventory.find(iv => {
         return this.props.match.params.id === iv[0].id
       })
       var wh = warehouseInventory.slice(1)
@@ -40,15 +41,26 @@ class InventoryList extends Component {
         if (i.status === false) i.status = "Not In-Stock"
         else { i.status = "In-Stock" }
         return (
+
           <InventoryItem {...i} />
+
         )
       })
       this.setState({
         inventoryList: list,
-      }, () => list = this.state.inventoryList)
-      console.log("list: ", list)
-      console.log(this.state)
+      })
 
+    }
+  }
+
+  iWarehouse = (warehouses) => {
+    if (warehouses) {
+      const currentWarehouse = warehouses.find(warehouse => {
+        return this.props.match.params.id === warehouse.id
+      })
+      this.setState({
+        currentWarehouse: <CurrentWarehouse {...currentWarehouse} />
+      }, () => console.log(this.state.currentWarehouse))
     }
   }
 
@@ -57,26 +69,16 @@ class InventoryList extends Component {
   }
 
   componentDidMount() {
-    console.log(this.props.match.params.id)
-    axios
-      .get("http://localhost:8080/inventory")
-      .then(({ data }) => {
-        this.setState({
-          data: data
-        }, () => this.iList(data))
-      })
+    const { inventory, warehouses } = this.props
+    this.iList(inventory)
+    this.iWarehouse(warehouses)
   }
 
   render() {
+
     return (
 
       <div className="inventoryList__container">
-        <h1 className="inventoryList__title">Inventory</h1>
-        <div className="searchBar__container">
-          <form className="searchBar">
-            <input className="searchBar__input" type="text" placeholder="Search"></input>
-          </form>
-        </div>
         <table className="inventoryList__table">
           <thead className="table__head">
             <tr className="table__head__row">

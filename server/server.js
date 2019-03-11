@@ -4,11 +4,11 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const PORT = process.argv[2] || process.env.PORT || 8080;
 const warehouseRoutes = require("./routes/warehouse");
-const inventoryRoutes = require("./routes/inventory")
+const inventoryRoutes = require("./routes/inventory");
 
 app.use(bodyParser.json());
 app.use(cors());
-app.options('*', cors())
+app.options('*', cors());
 app.use("/warehouses", warehouseRoutes);
 app.use("/inventory", inventoryRoutes);
 
