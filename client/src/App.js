@@ -12,11 +12,11 @@ const inventoryURL = `http://localhost:8080/inventory`;
 
 class App extends Component {
   constructor() {
-    super();
+    super()
     this.state = {
       warehouses: [],
       inventory: []
-    };
+    }
   }
 
   componentDidMount() {
@@ -25,23 +25,22 @@ class App extends Component {
       .then(({ data }) => {
         this.setState({
           warehouses: data
-        });
+        })
       })
       .then(() => {
-        axios.get(inventoryURL).then(({ data }) => {
-          this.setState({
-            inventory: data
-          });
-        });
-      });
+        axios
+          .get(inventoryURL)
+          .then(({ data }) => {
+            this.setState({
+              inventory: data
+            })
+          })
+      })
   }
 
   render() {
-    if (
-      this.state.inventory.length === 0 ||
-      !this.state.warehouses.length === 0
-    ) {
-      return <h1>Loading</h1>;
+    if (this.state.inventory.length === 0 || !this.state.warehouses.length === 0) {
+      return <h1>Loading</h1>
     } else {
       return (
         <div className="App">
@@ -53,15 +52,10 @@ class App extends Component {
               inventory={this.state.inventory}
             />)}
             />
-            <Route
-              path="/warehouse/:id"
-              render={routeProps => (
-                <InventoryList
-                  {...routeProps}
-                  inventory={this.state.inventory}
-                  warehouses={this.state.warehouses}
-                />
-              )}
+            <Route path="/warehouse/:id" render={(routeProps) => (<InventoryList {...routeProps}
+              inventory={this.state.inventory}
+              warehouses={this.state.warehouses}
+            />)}
             />
           </Switch>
         </div>
