@@ -48,11 +48,11 @@
 
 .modal-content :-webkit-input-placeholder {
   font-family: Helvetica, sans-serif;
-  font-size: 0.75em;
+  font-size: 0.8em;
 }
 
 .modal-content select {
-  font-size: 1.3em;
+  font-size: 1em;
   margin-bottom: 24px;
   border: none;
   padding-right: 16px;
@@ -64,7 +64,7 @@
   padding-left: 10px;
   padding-top: 0px;
   padding-bottom: 0px;
-  font-size: 0.75em;
+  font-size: 0.8em;
   border-radius: 4px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;

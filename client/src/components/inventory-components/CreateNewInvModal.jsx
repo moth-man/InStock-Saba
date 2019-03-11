@@ -121,7 +121,7 @@ class CreateNewInvModal extends Component {
                 <div className='flex-column'>
                   <h5>STATUS</h5>
                   <div className='flex-row spacebetween'>
-                    <p>In Stock</p>
+                    <p className='instock'>In Stock</p>
                     <Switch
                       onChange={this.handleChange}
                       checked={this.state.instock}
