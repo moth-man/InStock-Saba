@@ -3,13 +3,13 @@ import './productmodal.css';
 import axios from 'axios';
 import backButton from '../../assets/icons/SVG/Icon-back-arrow.svg';
 import { Link } from "react-router-dom";
-
+// import InventoryList from '../inventory-components/InventoryList';
 
 //dynamic with axios call : SPAN TAGS, the product name
 //not dynamic: h4 tags with the product info
 
-// const inventoryId = id => `http://localhost:8080/inventory/${id}`
-// const inventoryList = 'http://localhost:8080/inventory'
+const inventoryId = id => `http://localhost:8080/inventory/${id}`
+const inventoryList = 'http://localhost:8080/inventory'
 
 class ProductModal extends React.Component {
   constructor (props) {
@@ -26,18 +26,22 @@ class ProductModal extends React.Component {
   }
   componentDidMount () {
     axios
-    .get(this.props.inventory)
+    .get(inventoryList)
     .then(response => {
       console.log(response.data)
-      // const map = response.data.map( m => {
-      //   console.log(m)
-      // })
-      // const products = []
-      //   response.data[0].map(product => {
-      //   product.slice(1).map 
-      // })
+      let products = [];
+      response.data.map(product => {
+        product.slice(1).map(product2 => {
+          products.push(product2)
+        });
+      });
+      console.log(products)  //outputs array of products
     })
+   
   }
+
+
+
 
 //   this.setState ({
 //     productName: response.data[0].name,
@@ -48,8 +52,11 @@ class ProductModal extends React.Component {
 //     productStatus: response.data[0].status
 // })
      
-
-
+  // const products = response.data.map( product => {
+      //   product.slice(1).map(product2 => {
+      //     products.push(product2)
+      //   });
+      // });
   
   
   render () {

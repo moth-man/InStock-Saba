@@ -46,7 +46,6 @@ class App extends Component {
       return (
         <div className="App">
           <Navbar />
-          <ProductModal />
           <Switch>
             <Route path="/" exact component={WarehouseList} />
             <Route path="/inventory/:id" component={ProductModal} />
