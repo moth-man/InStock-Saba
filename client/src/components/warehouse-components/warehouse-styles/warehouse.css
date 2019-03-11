@@ -374,7 +374,7 @@ body {
   }
   .WarehouseList .WarehouseList__table .table__header th:nth-of-type(4) {
     margin-left: 0;
-    padding-right: 7%;
+    padding-right: 13%;
   }
   .WarehouseList .WarehouseList__table tbody .table__row {
     display: -webkit-box;
