@@ -65,6 +65,7 @@
 .currentWarehouse__container .current__table__row .notgrey {
   color: black;
   margin-top: 20px;
+  font-style: italic;
 }
 
 .currentWarehouse__container .current__table__row div {

@@ -6,6 +6,9 @@ import { Link } from "react-router-dom";
 class CurrentWarehouse extends Component {
   render() {
     const { ...data } = this.props;
+    const wholeadd = data.address;
+    const stringparsed = wholeadd.split(", ", 3);
+    console.log(stringparsed);
     return (
       <div className='currentWarehouse__container'>
         <tr className='current__table__row'>
@@ -18,9 +21,14 @@ class CurrentWarehouse extends Component {
             </div>
           </div>
           <div className='flex'>
-            <div className='for-flex'>
-              <p className='currentWarehouse__address__title'>ADDRESS</p>
-              <div>{data.address}</div>
+            <div>
+              <div className='for-flex'>
+                <p className='currentWarehouse__address__title'>ADDRESS</p>
+                <div>{stringparsed[0]}</div>
+              </div>
+              <div className='notgrey'>
+                {stringparsed[1] + ", " + stringparsed[2]}
+              </div>
             </div>
             <div className='for-flex'>
               <div>
