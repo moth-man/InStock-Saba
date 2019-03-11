@@ -10,6 +10,24 @@ router.use(cors())
 router.use(bodyParser.json())
 
 router
+  .route('/:id')
+  .get((req, res) => {
+    res.json(iData)
+  })
+  .delete((req, res) => {
+    const productId = req.params.id
+
+  //   if {
+  //     res.send('Removed!')
+  //   } else {
+  //     res.send('There has been an error removing your item')
+  //   }
+  // } 
+
+  //   iData.pop(deletedItem)
+  })
+
+router
   .route('/')
   .get((req, res) => {
     res.json(iData)
