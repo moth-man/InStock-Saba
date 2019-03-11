@@ -142,6 +142,21 @@
 
 /*TABLET MEDIA QUERIES*/
 @media (min-width: 768px) {
+  .inventoryList__container {
+    margin: 0 24px;
+  }
+  .inventory-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-bottom: 30px;
+  }
   .inventoryItem__container .inventoryItem__tableRow .item__description, .inventoryItem__container .inventoryItem__tableRow .item__location, .inventoryItem__container .inventoryItem__tableRow .lastOrdered__date, .inventoryItem__container .inventoryItem__tableRow .item__quantity, .inventoryItem__container .inventoryItem__tableRow .item__status {
     font-size: 16px;
     line-height: 20px;
@@ -150,6 +165,9 @@
   }
   .searchBar__container {
     display: inline-block;
+  }
+  .searchBar__container .searchBar__input {
+    margin: 0;
   }
   .inventoryList__table {
     display: inline-block;

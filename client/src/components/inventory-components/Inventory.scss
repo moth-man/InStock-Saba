@@ -145,6 +145,17 @@
 /*TABLET MEDIA QUERIES*/
 
 @media (min-width: 768px) {
+  
+  .inventoryList__container {
+    margin: 0 24px;
+  }
+
+  .inventory-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30px;
+  }
 
   .inventoryItem__container .inventoryItem__tableRow .item__description, .inventoryItem__container .inventoryItem__tableRow .item__location, .inventoryItem__container .inventoryItem__tableRow .lastOrdered__date, .inventoryItem__container .inventoryItem__tableRow .item__quantity, .inventoryItem__container .inventoryItem__tableRow .item__status {
     font-size: 16px;
@@ -155,6 +166,9 @@
 
   .searchBar__container {
     display: inline-block;
+    .searchBar__input { 
+      margin: 0;
+    }
   }
 
   .inventoryList__table {
@@ -307,187 +321,3 @@
   }
 
 }
-
-// .inventoryList__container {
-//   color: #323232;
-//   background-color: white;
-//   margin: 0px 16px;
-  
-//   .inventoryList__title {
-//     font-size: 32px;
-//     line-height: 32px;
-//     text-align: left;
-//   }
-
-//   .searchBar__container {
-//     padding: 0px 0px;
-
-//     .searchBar {
-//         width: 288px;
-
-//         .searchBar__input {
-//             height: 48px;
-//             width: 240px;
-//             font-size: 15px;
-//             background-image: url("../../assets/icons/Icon-search.svg");
-//             background-repeat: no-repeat;
-//             background-origin: content-box;
-//             background-color: #FAFAFA;
-//             text-indent: 25px;
-//             float: left;
-            
-//             border-radius: 4px;
-//             box-sizing: border-box;
-
-//             padding: 10px;
-
-//         }
-//     }
-// }
-
-// .inventoryList__table {
-//   display: inline-block;
-
-//   .inventoryList__th {
-//     color: #AFAFAF;
-//     display: inline-block;
-//     float: left;
-//     padding-right: 40px;
-
-//   }
-
-//   .inventoryList__th.item {
-//     padding: 2px 175px 0px 5px;
-//   }
-
-//   .inventoryItem__container {
-//     display: block;
-//     background-color: white;
-//     border-bottom: 1px solid #E1E1E1;
-//     width: 720px;
-
-//     .inventoryItem__tableRow {
-
-//       .item__title {
-//         color: #AFAFAF;
-//         float: left;
-//         display: none;
-//       }
-
-//       .remove__item__button {
-//         background-image: url("../../assets/icons/Icon-kebab-default.svg");
-//         background-repeat: no-repeat;
-//         background-color: white;
-//         border: none;
-//         height: 30px;
-//         float: right;
-//         position: relative;
-//       }
-
-//       .popup__container {
-//         visibility: visible;
-//         position: relative;
-//         border: 1px solid #E1E1E1;
-//         height: 40px;
-//         width: 150px;
-//         text-align: center;
-//         float: left;
-//         margin-left: 80px;
-//         margin-top: 10px;
-//         border-radius: 4px;
-
-//         .popup__text {
-//           margin: 10px 0px 0px 10px;
-//           text-align: left
-//         }
-//       }
-
-//       .item__name {
-//         font-size: 18px;
-//         line-height: 24px;
-//         clear: both;
-//         text-align: left;
-//         display: inline-block;
-//         float: left;
-//         font-weight: bold;
-        
-//       }
-
-//       .item__description {
-//         font-size: 16px;
-//         line-height: 20px;
-//         text-align: left;
-//         width: 200px;
-//         display: block;
-//         //left: 0px;
-//         margin: 0;
-        
-//       }
-
-//       .item__lastOrdered {
-//         color: #AFAFAF;
-//         text-align: left;
-//         display: none;
-      
-//       }
-
-//       .lastOrdered__date {
-//         text-align: left;
-//         // padding: 0px 85px 0px 10px;
-//         overflow: hidden;
-      
-//       }
-
-//       .item__locationTitle {
-//         color: #AFAFAF;
-//         text-align: left;
-//         display: none;
-//       }
-
-//       .item__location {
-//         text-align: left;
-        
-//       }
-
-//       .item__quantityTitle {
-//         color: #AFAFAF;
-//         text-align: left;
-//         display: none;
-//       }
-
-//       .item__quantity {
-//         text-align: left;
-        
-//       }
-
-//       .item__statusTitle {
-//         color: #AFAFAF;
-//         text-align: left;
-//         display: none;
-        
-//       }
-
-//       .item__status {
-//         text-align: left;
-
-//       }
-//     }
-//   }
-// }
-
-//   .add__inventoryItem__button__container {
-//     position: fixed;
-//     right: 0;
-//     top: 0;
-//     margin: 400px 16px 0px 0px;
-//     background-color: darkblue;
-//     border-radius: 50%;
-//     height: 60px;
-//     width: 60px;
-//     background-image: url("../../assets/icons/Icon-add.svg");
-//     background-repeat: no-repeat;
-//     background-position: center;
-//     float: right;
-//   }
-// }
-// }
