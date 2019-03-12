@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './Inventory.css'
+import {Link } from 'react-router-dom'
 
 class InventoryItem extends Component {
   constructor() {
@@ -17,7 +18,7 @@ class InventoryItem extends Component {
   }
 
   render() {
-    const { name, description, ordered, location, quantity, status } = this.props
+    const { name, description, ordered, location, quantity, status, id } = this.props
     const isVisible = this.state.popup
     let pop
 
@@ -49,7 +50,9 @@ class InventoryItem extends Component {
           <td className="item__title">ITEM</td>
           <button className="remove__item__button" onClick={() => this.togglePopUp()}></button>
           {pop}
-          <td className="item__name">{name}</td>
+          <Link to={`/inventory/${id}`}>
+            <td className="item__name">{name}</td>
+          </Link>
           <td className="item__description">{description}</td>
           <td className="item__lastOrdered">LAST ORDERED</td>
           <td className="lastOrdered__date">{ordered}</td>

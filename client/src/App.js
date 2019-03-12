@@ -16,10 +16,11 @@ class App extends Component {
     super()
     this.state = {
       warehouses: [],
-      inventory: []
+      inventory: [],
+      products: [],
     }
   }
-
+  
   componentDidMount() {
     axios
       .get(warehouseURL)
@@ -40,18 +41,21 @@ class App extends Component {
         axios
         .get(inventoryURL)
         .then(response => {
-          console.log(response.data)
           let products = [];
           response.data.map(product => {
             product.slice(1).map(product2 => {
               products.push(product2)
             })
           })
-          console.log(products) //outputs array of products
-          return products
+          this.setState({
+            products: products
+          })
+          // console.log(products)
+          console.log(this.state.products)
         })
       })
   }
+
 
   render() {
     if (this.state.inventory.length === 0 || !this.state.warehouses.length === 0) {
@@ -62,11 +66,19 @@ class App extends Component {
           <Navbar />
           <Switch>
             <Route path="/" exact component={WarehouseList} />
-            <Route path="/inventory/:id" component={ProductModal} />
+            
+            <Route path="/inventory/:id" render={(routeProps) =>
+            (<ProductModal {...routeProps}
+                product={this.state.products}
+            />)} 
+            />
+
+
             <Route path="/inventory" render={(routeProps) => (<AllInventoryList {...routeProps}
               inventory={this.state.inventory}
             />)}
             />
+
             <Route path="/warehouse/:id" render={(routeProps) => (<InventoryList {...routeProps}
               inventory={this.state.inventory}
               warehouses={this.state.warehouses}
@@ -81,6 +93,7 @@ class App extends Component {
 
 export default App;
 
+// component={ProductModal}
 
 
 // import { Switch, Route, Link } from 'react-router-dom'
@@ -97,3 +110,32 @@ export default App;
 //           />)}
 //           />
 //           <Route path="/warehouse/:id" render={(routeProps) => (<InventoryList {...routeProps}
+
+
+
+// const product = this.state.products.find(product =>{
+//   return product.id == this.state.product.id
+// })
+// (<ProductModal {...routeProps}
+//   product={product}
+// /> 
+// )
+
+
+ // productsId = () => {
+  //   axios
+  //   .get(inventoryURL)
+  //   .then(response => {
+  //     let products = [];
+  //     response.data.map(product => {
+  //       product.slice(1).map(product2 => {
+  //         products.push(product2)
+  //       })
+  //     })
+      
+  //    let pId = products.map(productId => {
+  //       return productId.id
+  //     })
+  //     console.log(pId) //outputs array of products
+  //   })
+  // }
