@@ -9,13 +9,17 @@
   src: url("../../assets/fonts/demibold.otf");
 }
 
+.nostock {
+  display: inline;
+}
+
 .inventoryList__container {
   color: #323232;
   margin: 0px 16px;
 }
 
 .inventoryList__title {
-  font-size: 1.9rem;
+  font-size: 2.3rem;
   margin-top: 32px;
   margin-bottom: 10px;
   font-family: "AvenierBold";
@@ -51,7 +55,6 @@
 
 .inventoryItem__container {
   border-bottom: 1px solid #e1e1e1;
-  /*TABLET MEDIA QUERIES*/
 }
 
 .inventoryItem__container .inventoryItem__tableRow {
@@ -132,7 +135,7 @@
   padding: 20px 0 10px 0;
 }
 
-.inventoryItem__container .inventoryItem__tableRow .add__inventoryItem__button__container {
+.add__inventoryItem__button__container {
   position: fixed;
   right: 20px;
   top: 500px;
@@ -147,11 +150,14 @@
   z-index: 1;
 }
 
+/*TABLET MEDIA QUERIES*/
 @media (min-width: 768px) {
-  .inventoryItem__container .inventoryList__container {
-    margin: 0 24px;
+  .inventoryList__container {
+    width: 75%;
+    margin-left: calc(25% / 2);
+    margin-right: calc(25% / 2);
   }
-  .inventoryItem__container .inventory-flex {
+  .inventory-flex {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -163,116 +169,117 @@
             align-items: center;
     padding-bottom: 30px;
   }
-  .inventoryItem__container .inventoryItem__container .inventoryItem__tableRow .item__description,
-  .inventoryItem__container .inventoryItem__container .inventoryItem__tableRow .item__location,
-  .inventoryItem__container .inventoryItem__container .inventoryItem__tableRow .lastOrdered__date,
-  .inventoryItem__container .inventoryItem__container .inventoryItem__tableRow .item__quantity,
-  .inventoryItem__container .inventoryItem__container .inventoryItem__tableRow .item__status {
+  .inventoryItem__container .inventoryItem__tableRow .item__description,
+  .inventoryItem__container .inventoryItem__tableRow .item__location,
+  .inventoryItem__container .inventoryItem__tableRow .lastOrdered__date,
+  .inventoryItem__container .inventoryItem__tableRow .item__quantity,
+  .inventoryItem__container .inventoryItem__tableRow .item__status {
     font-size: 16px;
     line-height: 20px;
     text-align: left;
     display: inline-block;
   }
-  .inventoryItem__container .searchBar__container {
+  .searchBar__container {
     display: inline-block;
   }
-  .inventoryItem__container .searchBar__container .searchBar__input {
+  .searchBar__container .searchBar__input {
     margin: 0;
+    position: relative;
+    right: 40%;
   }
-  .inventoryItem__container .inventoryList__table {
+  .inventoryList__table {
     display: inline-block;
     width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
-  .inventoryItem__container .inventoryList__table .inventoryList__th {
+  .inventoryList__table .inventoryList__th {
     padding-right: 37px;
-    color: #AFAFAF;
+    color: #afafaf;
     text-align: left;
     display: inline-block;
     font-family: "AvenierDemi";
     font-size: 1rem;
   }
-  .inventoryItem__container .inventoryList__table .inventoryList__th.item {
+  .inventoryList__table .inventoryList__th.item {
     padding: 2px 175px 0px 5px;
   }
-  .inventoryItem__container .inventoryList__table .item__description {
+  .inventoryList__table .item__description {
     display: block;
   }
-  .inventoryItem__container .inventoryList__table .inventoryItem__container {
+  .inventoryList__table .inventoryItem__container {
     display: block;
     width: 100%;
+    height: 120px;
+    margin-top: -30px;
   }
-  .inventoryItem__container .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .item__title {
+  .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .item__title {
     display: none;
   }
-  .inventoryItem__container .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .remove__item__button {
+  .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .remove__item__button {
     background-image: url("../../assets/icons/Icon-kebab-default.svg");
-    background-repeat: no-repeat;
-    background-color: white;
-    border: none;
-    height: 30px;
-    float: right;
-    position: absolute;
-    right: 10px;
-    margin-top: 30px;
+    position: relative;
+    left: 50px;
+    top: 60px;
   }
-  .inventoryItem__container .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .popup__container {
+  .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .popup__container {
     text-align: center;
     float: right;
     position: absolute;
     right: 20px;
     top: 330px;
   }
-  .inventoryItem__container .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .item__name {
+  .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .item__name {
     font-size: 18px;
     line-height: 24px;
     clear: both;
     text-align: left;
     font-weight: bold;
   }
-  .inventoryItem__container .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .item__description {
+  .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .item__description {
     font-size: 16px;
     line-height: 20px;
     text-align: left;
     width: 200px;
     margin: 0;
   }
-  .inventoryItem__container .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .item__lastOrdered {
+  .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .item__lastOrdered {
     color: #afafaf;
     text-align: left;
     display: none;
   }
-  .inventoryItem__container .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .lastOrdered__date {
+  .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .lastOrdered__date {
     text-align: left;
     padding: 0px 85px 0px 10px;
     overflow: hidden;
   }
-  .inventoryItem__container .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .item__locationTitle {
+  .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .item__locationTitle {
     color: #afafaf;
     text-align: left;
     display: none;
   }
-  .inventoryItem__container .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .item__location {
+  .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .item__location {
     text-align: left;
   }
-  .inventoryItem__container .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .item__quantityTitle {
+  .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .item__quantityTitle {
     color: #afafaf;
     text-align: left;
     display: none;
   }
-  .inventoryItem__container .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .item__quantity {
+  .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .item__quantity {
     text-align: left;
     padding-left: 40px;
   }
-  .inventoryItem__container .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .item__statusTitle {
+  .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .item__statusTitle {
     color: #afafaf;
     text-align: left;
     display: none;
   }
-  .inventoryItem__container .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .item__status {
+  .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .item__status {
     text-align: left;
     padding-left: 80px;
   }
-  .inventoryItem__container .add__inventoryItem__button__container {
+  .add__inventoryItem__button__container {
     position: fixed;
     right: 50px;
     top: 460px;
@@ -288,10 +295,10 @@
 }
 
 @media (min-width: 1440px) {
-  .inventoryItem__container .inventoryList__container {
+  .inventoryList__container {
     margin: 0px 180px;
   }
-  .inventoryItem__container .add__inventoryItem__button__container {
+  .add__inventoryItem__button__container {
     right: 100px;
     top: 650px;
   }
