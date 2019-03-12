@@ -52,15 +52,26 @@ class InventoryList extends Component {
 
   componentDidMount() {
     const { inventory, warehouses } = this.props;
-    this.iList(inventory);
-    this.iWarehouse(warehouses);
+    // const wL = warehouses.length
+    // const iL = inventory.length
+    // const len = wL - iL
+    // if (warehouses.length !== inventory.length) {
+    //   for (let i = wL - len; i < wL; i++) {
+    //     this.iWarehouse(warehouses)
+    //   }
+    // } else {
+    //   this.iWarehouse(warehouses)
+    //   this.iList(inventory)
+    // }
+    this.iWarehouse(warehouses)
+    this.iList(inventory)
   }
 
   render() {
     // console.log(this.state.currentWarehouse.warehouseName)
     return (
       <div className="inventoryList__container">
-      <div>{this.state.currentWarehouse}</div>
+        <div>{this.state.currentWarehouse}</div>
         <table className="inventoryList__table">
           <thead className="table__head">
             <tr className="table__head__row">
