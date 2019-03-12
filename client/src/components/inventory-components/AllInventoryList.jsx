@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import InventoryItem from "./InventoryItem";
-import "./Inventory.css";
-import CreateNewInvModal from "./CreateNewInvModal";
+import React, { Component } from 'react';
+import InventoryItem from './InventoryItem';
+import './Inventory.css';
+import CreateNewInvModal from './CreateNewInvModal';
 
 class InventoryList extends Component {
   constructor(props) {
@@ -22,9 +22,9 @@ class InventoryList extends Component {
       });
       let iList = list.map(item => {
         if (item.status === true) {
-          item.status = "In-Stock";
+          item.status = 'In-Stock';
         } else {
-          item.status = "Not In-Stock";
+          item.status = 'Not In-Stock';
         }
         return <InventoryItem {...item} />;
       });
@@ -36,7 +36,7 @@ class InventoryList extends Component {
   };
 
   addInventory = () => {
-    console.log("clicked");
+    console.log('clicked');
     this.setState({
       showModal: !this.state.showModal
     });
@@ -50,36 +50,38 @@ class InventoryList extends Component {
   render() {
     console.log(this.props.inventory);
     return (
-      <div className='inventoryList__container'>
+      <div className="inventoryList__container">
         <button
-          className='add__inventoryItem__button add__inventoryItem__button__container'
+          className="add__inventoryItem__button add__inventoryItem__button__container"
           onClick={() => this.addInventory()}
         />
-        <section className='inventory-flex'>
-          <h1 className='inventoryList__title'>Inventory</h1>
-          <div className='searchBar__container'>
-            <form className='searchBar'>
+        <section className="inventory-flex">
+          <h1 className="inventoryList__title">Inventory</h1>
+          <div className="searchBar__container">
+            <form className="searchBar">
               <input
-                className='searchBar__input'
-                type='text'
-                placeholder='Search'
+                className="searchBar__input"
+                type="text"
+                placeholder="Search"
               />
             </form>
           </div>
         </section>
-        <table className='inventoryList__table'>
-          <thead className='table__head'>
-            <tr className='table__head__row'>
-              <th className='inventoryList__th item'>ITEM</th>
-              <th className='inventoryList__th'>LAST ORDERED</th>
-              <th className='inventoryList__th'>LOCATION</th>
-              <th className='inventoryList__th'>QUANTITY</th>
-              <th className='inventoryList__th'>STATUS</th>
+        <table className="inventoryList__table">
+          <thead className="table__head">
+            <tr className="table__head__row">
+              <th className="inventoryList__th item">ITEM</th>
+              <th className="inventoryList__th">LAST ORDERED</th>
+              <th className="inventoryList__th">LOCATION</th>
+              <th className="inventoryList__th">QUANTITY</th>
+              <th className="inventoryList__th">STATUS</th>
             </tr>
           </thead>
           <tbody>{this.state.inventoryList}</tbody>
         </table>
-        {this.state.showModal && <CreateNewInvModal />}
+        {this.state.showModal && (
+          <CreateNewInvModal formSubmit={this.props.formSubmit} />
+        )}
       </div>
     );
   }

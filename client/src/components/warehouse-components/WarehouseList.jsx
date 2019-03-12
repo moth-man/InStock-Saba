@@ -1,33 +1,24 @@
-import React, { Component } from "react";
-import Warehouse from "./Warehouse";
-import "./warehouse-styles/warehouse.css";
-import WarehouseModal from "../WarehouseModal1/warehouseModal";
-import axios from "axios";
-const URL = `http://localhost:8080/warehouses`;
+import React, { Component } from 'react';
+import Warehouse from './Warehouse';
+import './warehouse-styles/warehouse.css';
+import WarehouseModal from '../WarehouseModal1/warehouseModal';
 
 class WarehouseList extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      warehouses: [],
-      showModal: false,
-      formSubmitted: false
+      warehouses: this.props.warehouses,
+      showModal: false
     };
   }
 
-  componentDidMount() {
-    axios.get(URL).then(res => {
-      this.setState({
-        warehouses: res.data
-      });
-    });
-  }
-
-  formSubmit = () => {
-    this.setState({
-      formSubmitted: !this.state.formSubmitted
-    });
-  };
+  // componentDidMount() {
+  //   axios.get(URL).then(res => {
+  //     this.setState({
+  //       warehouses: res.data
+  //     });
+  //   });
+  // }
 
   modalToggle = () => {
     this.setState({
@@ -40,17 +31,19 @@ class WarehouseList extends Component {
       return <Warehouse {...warehouse} key={i} />;
     });
     return (
-      <div className='WarehouseList'>
-        <div className='WarehouseList__header'>
-          <h1 className='header__h1'>Locations</h1>
-          <input className='header__search' type='text' placeholder='Search' />
+      <div className="WarehouseList">
+        <div className="WarehouseList__header">
+          <h1 className="header__h1">Locations</h1>
+          <input className="header__search" type="text" placeholder="Search" />
         </div>
 
-        {this.state.showModal && <WarehouseModal formSubmit={() => this.formSubmit()}/>}
+        {this.state.showModal && (
+          <WarehouseModal formSubmit={ this.props.formSubmit} />
+        )}
 
-        <table className='WarehouseList__table'>
-          <thead className='thead'>
-            <tr className='table__header'>
+        <table className="WarehouseList__table">
+          <thead className="thead">
+            <tr className="table__header">
               <th>WAREHOUSE</th>
               <th>CONTACT</th>
               <th>CONTACT INFORMATION</th>
@@ -60,10 +53,10 @@ class WarehouseList extends Component {
           <tbody>{warehouseList}</tbody>
         </table>
         <button
-          ref='button'
-          className='add__inventoryItem__button__container'
+          ref="button"
+          className="add__inventoryItem__button__container"
           onClick={() => this.modalToggle()}
-          type='button'
+          type="button"
         />
       </div>
     );

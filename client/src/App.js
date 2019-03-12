@@ -4,7 +4,7 @@ import WarehouseList from './components/warehouse-components/WarehouseList';
 import InventoryList from './components/inventory-components/InventoryList';
 import AllInventoryList from './components/inventory-components/AllInventoryList';
 import ProductModal from './components/productmodal-components/ProductModal';
-import { Switch, Route, Link } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import axios from 'axios';
 
 const warehouseURL = `http://localhost:8080/warehouses`;
@@ -36,17 +36,12 @@ class App extends Component {
       });
   }
 
-  formSubmit = (inputData) => {
-    axios
-      .post(warehouseURL, {
-        inputData
-      })
-      .then(({data}) => {
-        console.log(data)
-        this.setState({
-          warehouses: data
-        });
+  formSubmit = (url, inputData) => {
+    axios.post(url, inputData).then(({ data }) => {
+      this.setState({
+        warehouses: data
       });
+    });
   };
 
   render() {
@@ -64,7 +59,10 @@ class App extends Component {
               path="/"
               exact
               render={() => (
-                <WarehouseList formSubmit={() => this.formSubmit()} />
+                <WarehouseList
+                  formSubmit={this.formSubmit}
+                  warehouses={this.state.warehouses}
+                />
               )}
             />
             <Route path="/inventory/:id" component={ProductModal} />
@@ -74,6 +72,7 @@ class App extends Component {
                 <AllInventoryList
                   {...routeProps}
                   inventory={this.state.inventory}
+                  formSubmit={this.formSubmit}
                 />
               )}
             />
@@ -95,18 +94,3 @@ class App extends Component {
 }
 
 export default App;
-
-// import { Switch, Route, Link } from 'react-router-dom'
-
-// class App extends Component {
-//   render() {
-//     return (
-//       <div className='App'>
-//         <Navbar />
-//         <Switch>
-//           <Route path="/inventory/:id" exact component={ProductModal} />
-//           <Route path="/" exact component={WarehouseList} />
-//           <Route path="/inventory" render={(routeProps) => (<InventoryList {...routeProps}
-//           />)}
-//           />
-//           <Route path="/warehouse/:id" render={(routeProps) => (<InventoryList {...routeProps}

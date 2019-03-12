@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import InventoryItem from './InventoryItem';
 import CurrentWarehouse from '../warehouse-components/CurrentWarehouse';
 import './Inventory.css';
