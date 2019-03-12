@@ -349,14 +349,5 @@
       "status": true,
       "id": "p9kag2ddl2gna"
     }
-  ],
-  {
-    "status": true,
-    "name": "asdf",
-    "ordered": "asdf",
-    "location": "asdf, CA",
-    "quantity_items": "23432",
-    "item_description": "",
-    "id": "3r57jm9im4t8"
-  }
+  ]
 ]
