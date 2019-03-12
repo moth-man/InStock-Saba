@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Navbar from './components/Navbar/Navbar';
+import Navbar from './components/Navbar/navbar';
 import WarehouseList from './components/warehouse-components/WarehouseList';
 import InventoryList from './components/inventory-components/InventoryList';
 import AllInventoryList from './components/inventory-components/AllInventoryList';
