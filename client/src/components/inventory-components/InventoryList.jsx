@@ -1,8 +1,7 @@
-import React, { Component } from "react";
-import axios from "axios";
-import InventoryItem from "./InventoryItem";
-import CurrentWarehouse from "../warehouse-components/CurrentWarehouse";
-import "./Inventory.css";
+import React, { Component } from 'react';
+import InventoryItem from './InventoryItem';
+import CurrentWarehouse from '../warehouse-components/CurrentWarehouse';
+import './Inventory.css';
 
 class InventoryList extends Component {
   constructor(props) {
