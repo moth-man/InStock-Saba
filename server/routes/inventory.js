@@ -6,6 +6,7 @@ const fs = require('fs')
 const randomize = require('randomatic')
 const iData = require('../data/inventory.json')
 
+
 router.use(cors())
 router.use(bodyParser.json())
 

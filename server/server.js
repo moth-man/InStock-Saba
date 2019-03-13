@@ -6,6 +6,7 @@ const PORT = process.argv[2] || process.env.PORT || 8080;
 const warehouseRoutes = require("./routes/warehouse");
 const inventoryRoutes = require("./routes/inventory");
 
+
 app.use(bodyParser.json());
 app.use(cors());
 app.options('*', cors());
