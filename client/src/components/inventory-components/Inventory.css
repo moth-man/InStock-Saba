@@ -146,6 +146,7 @@
   background-image: url("../../assets/icons/Icon-add.svg");
   background-repeat: no-repeat;
   background-position: center;
+  border: none;
   float: right;
   z-index: 1;
 }

@@ -42,5 +42,8 @@ router
     })
     fs.writeFileSync('./data/inventory.json', JSON.stringify(updatedList))
   })
+  .delete((req, res) => {
+
+  })
 
 module.exports = router

@@ -33,7 +33,7 @@ router
         });
 
         fs.writeFileSync("./data/warehouse.json", JSON.stringify(updatedList));
-        res.json(DATA);
+        res.json(updatedList);
     });
 
 module.exports = router;

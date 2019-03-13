@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import axios from "axios";
 import InventoryItem from "./InventoryItem";
 import CurrentWarehouse from "../warehouse-components/CurrentWarehouse";
 import "./Inventory.css";
@@ -7,11 +6,21 @@ import "./Inventory.css";
 class InventoryList extends Component {
   constructor(props) {
     super(props);
+    //this.removeItem = this.removeItem.bind(this)
     this.state = {
       currentWarehouse: [],
-      inventoryList: []
+      inventoryList: [],
+      visible: true
     };
   }
+
+  // removeItem = () => {
+  //   console.log("Remove clicked.")
+  //   console.log(this.props.index)
+  //   this.setState({
+  //     visible: false
+  //   })
+  // }
 
   iList = inventory => {
     if (inventory) {
@@ -22,12 +31,20 @@ class InventoryList extends Component {
         return;
       }
       var wh = warehouseInventory.slice(1);
-      var list = wh.map(i => {
+      var list = wh.map((i, index) => {
         if (i.status === false) i.status = "Not In-Stock";
         else {
           i.status = "In-Stock";
         }
-        return <InventoryItem {...i} />;
+        if (!this.state.visible) {
+          console.log("not visible")
+          this.setState({
+            visible: true
+          })
+        } else {
+          return <InventoryItem {...i} index={index} removeItem={() => this.props.removeItem(this.state.inventoryList[index])} />;
+          //removeItem={() => this.props.removeItem(this.state.inventoryList[index])} 
+        }
       });
       this.setState({
         inventoryList: list
@@ -43,9 +60,7 @@ class InventoryList extends Component {
       this.setState(
         {
           currentWarehouse: <CurrentWarehouse {...currentWarehouse} />
-        },
-        () => console.log(this.state.currentWarehouse)
-      );
+        });
     }
   };
 
@@ -75,6 +90,7 @@ class InventoryList extends Component {
   };
 
   render() {
+    console.log("PROPS: ", this.props)
     // console.log(this.state.currentWarehouse.warehouseName)
     return (
       <div className='inventoryList__container'>
