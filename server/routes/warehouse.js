@@ -21,10 +21,9 @@ router
             categories,
         } = req.body);
 
-        
         newWarehouse.id = id;
         const updatedList = [...DATA, newWarehouse];
-        
+
         //Checks if input from req.body contains any missing info
         Object.values(newWarehouse).forEach(warehouse => {
             if (warehouse == "" || undefined) {
