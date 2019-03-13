@@ -50,7 +50,7 @@ class InventoryItem extends Component {
           <td className="item__title">ITEM</td>
           <button className="remove__item__button" onClick={() => this.togglePopUp()}></button>
           {pop}
-          <Link to={`/inventory/${id}`} >
+          <Link className="link-decoration"to={`/inventory/${id}`} >
             <td className="item__name">{name}</td>
           </Link>
           <td className="item__description">{description}</td>

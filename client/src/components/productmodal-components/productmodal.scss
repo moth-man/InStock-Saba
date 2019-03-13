@@ -43,20 +43,14 @@ h4 {
 
 span {
   font-size: 0.8rem;
-  // display: inline-block;
 }
-
-// .row-1, .row-2 {
-//   display: flex;
-//   justify-content: space-between
-// }
 
 
 .blue-button {
   background-color: $default-blue;
   border-color: $default-blue;
   border-radius: 4px;
-  padding: 20px 0px;
+  padding: 15px 0px;
   text-align: center;
   margin-top: 48px;
   width: 288px;
@@ -68,15 +62,14 @@ span {
     }
 }
 
-//*MEDIA QUERIES*/
 
-/*TABLET*/
-
+/*TABLET QUERIES*/
 @media (min-width: 500px) {
   .productDetails {
     &__details {
       width: 500px;
     }
+
   }
   .category-name {
     width: 500px;
@@ -92,14 +85,20 @@ span {
     }
   }
 
+  .productDetails span{
+    margin-bottom: 30px;
+    display: block;
+  }
+  
+
   .grey-border {
     padding: 20px 0;
     border-top: 1px solid #E1E1E1;
     border-bottom: 1px solid #E1E1E1;
   }
- 
 }
 
+/*DESKTOP QUERIES*/
 @media (min-width: 1440px) {
   .productDetails {
     padding: 0 180px;
@@ -117,5 +116,4 @@ span {
     display: flex;
     justify-content: space-between;
   }
-
 }

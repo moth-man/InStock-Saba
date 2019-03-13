@@ -112,6 +112,11 @@
   font-family: "AvenierDemi";
 }
 
+.inventoryItem__container .inventoryItem__tableRow .link-decoration {
+  text-decoration: none;
+  color: #323232;
+}
+
 .inventoryItem__container .inventoryItem__tableRow .item__description,
 .inventoryItem__container .inventoryItem__tableRow .item__location,
 .inventoryItem__container .inventoryItem__tableRow .lastOrdered__date,

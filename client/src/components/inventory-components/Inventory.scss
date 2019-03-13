@@ -24,6 +24,7 @@
   font-family: "AvenierBold";
 }
 
+
 .searchBar__container {
   .searchBar__input {
     background-image: url("../../assets/icons/Icon-search.svg");
@@ -106,7 +107,13 @@
       text-align: left;
       display: block;
       font-family: "AvenierDemi";
-    }
+  }
+
+  .link-decoration {
+    text-decoration: none;
+    color: $default-black;
+  }
+
 
     .item__description,
     .item__location,
