@@ -9,18 +9,9 @@ const inventoryRoutes = require("./routes/inventory");
 
 app.use(bodyParser.json());
 app.use(cors());
-app.options('*', cors());
+app.options("*", cors());
 app.use("/warehouses", warehouseRoutes);
 app.use("/inventory", inventoryRoutes);
-
-//Temporarily redirecting to warehouseList route until home page is established
-// app.get("/", (req, res) => {
-//     // res.redirect("/warehouses");
-//     res.redirect(url.format({
-//         pathname: '/',
-//         query: req.query
-//     }))
-// });
 
 app.listen(PORT, () => {
     console.log(`Listening on Port ${PORT}...`);
