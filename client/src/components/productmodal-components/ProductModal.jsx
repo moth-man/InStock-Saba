@@ -56,7 +56,7 @@ class ProductModal extends React.Component {
       </section>
       <div className="category-name">
       <h4>CATEGORIES</h4>
-          <span>{currentProduct[0].description}</span>
+          <span>{currentProduct[0].categories}</span>
       </div>
     </div>
 
