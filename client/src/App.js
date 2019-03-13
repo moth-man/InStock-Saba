@@ -16,6 +16,7 @@ class App extends Component {
     super()
     this.state = {
       warehouses: [],
+      inventory: null,
       inventory: [],
       products: [],
     }
@@ -37,25 +38,28 @@ class App extends Component {
               inventory: data
             })
           })
-      }).then (() => {
-        axios
-        .get(inventoryURL)
-        .then(response => {
-          let products = [];
-          response.data.map(product => {
-            product.slice(1).map(product2 => {
-              products.push(product2)
-            })
-          })
-          this.setState({
-            products: products
-          })
-          // console.log(products)
-          console.log(this.state.products)
-        })
       })
+      
+      // .then (() => {
+      //   axios
+      //   .get(inventoryURL)
+      //   .then(response => {
+      //     let products = [];
+      //     response.data
+      //     .map(product => {
+      //       product.slice(1)
+      //       .map(product2 => {
+      //         products.push(product2)
+      //       })
+      //     })
+      //     this.setState({
+      //       products: products
+      //     })
+      //     // console.log(products)
+      //     console.log(this.state.products)
+      //   })
+      // })
   }
-
 
   render() {
     if (this.state.inventory.length === 0 || !this.state.warehouses.length === 0) {
@@ -67,13 +71,8 @@ class App extends Component {
           <Switch>
             <Route path="/" exact component={WarehouseList} />
             
-            <Route path="/inventory/:id" render={(routeProps) =>
-            (<ProductModal {...routeProps}
-                product={this.state.products}
-            />)} 
-            />
-
-
+            <Route path="/inventory/:id" component={ProductModal} />
+        
             <Route path="/inventory" render={(routeProps) => (<AllInventoryList {...routeProps}
               inventory={this.state.inventory}
             />)}
@@ -139,3 +138,10 @@ export default App;
   //     console.log(pId) //outputs array of products
   //   })
   // }
+
+
+      // <Route path="/inventory/:id" render={(routeProps) =>
+      //       (<ProductModal {...routeProps}
+      //           product={this.state.products}
+      //       />)} 
+      //       />

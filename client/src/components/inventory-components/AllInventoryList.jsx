@@ -6,6 +6,13 @@ import { Switch, Route, Link } from 'react-router-dom'
 
 
 class InventoryList extends Component {
+
+  singleInventory = onClick => {
+    if(this.props.product == undefined || []) {
+        return ('loading!'); 
+      }
+  }
+
   constructor(props) {
     super(props);
     this.state = {
@@ -29,8 +36,8 @@ class InventoryList extends Component {
           item.status = "Not In-Stock";
         }
         // <Link to={`/inventory/${item.id}`}>
-          return <InventoryItem {...item} />;
-        // </Link>
+          return <InventoryItem {...item}/>;
+      //  </Link>
       });
       this.setState({
         inventoryList: iList
