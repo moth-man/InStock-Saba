@@ -37,11 +37,18 @@ class App extends Component {
   }
 
   formSubmit = (url, inputData) => {
+    let location = '';
+    if (url === warehouseURL) {
+      location = 'warehouses';
+    } else {
+      location = 'inventory';
+    }
     axios.post(url, inputData).then(({ data }) => {
       this.setState({
-        warehouses: data
+        [location]: data
       });
     });
+    console.log(this.state.warehouses, this.state.inventory);
   };
 
   render() {

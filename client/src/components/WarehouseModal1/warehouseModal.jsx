@@ -26,8 +26,6 @@ class Warehouse extends Component {
       categories: this.categories.value
     };
 
-    console.log(formData);
-
     this.props.formSubmit(warehouseURL, formData);
 
     onClick.preventDefault();

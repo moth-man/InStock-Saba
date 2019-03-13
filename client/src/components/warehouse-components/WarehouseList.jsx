@@ -4,21 +4,12 @@ import './warehouse-styles/warehouse.css';
 import WarehouseModal from '../WarehouseModal1/warehouseModal';
 
 class WarehouseList extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
-      warehouses: this.props.warehouses,
       showModal: false
     };
   }
-
-  // componentDidMount() {
-  //   axios.get(URL).then(res => {
-  //     this.setState({
-  //       warehouses: res.data
-  //     });
-  //   });
-  // }
 
   modalToggle = () => {
     this.setState({
@@ -27,7 +18,7 @@ class WarehouseList extends Component {
   };
 
   render() {
-    const warehouseList = this.state.warehouses.map((warehouse, i) => {
+    const warehouseList = this.props.warehouses.map((warehouse, i) => {
       return <Warehouse {...warehouse} key={i} />;
     });
     return (
