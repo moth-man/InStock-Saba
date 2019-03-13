@@ -4,60 +4,25 @@ import './Inventory.css';
 import CreateNewInvModal from './CreateNewInvModal';
 
 class InventoryList extends Component {
-
-  singleInventory = onClick => {
-    if(this.props.product == undefined || []) {
-        return ('loading!'); 
-      }
-  }
-
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
-      inventoryList: [],
       showModal: false
     };
   }
 
-  iList = inventory => {
-    if (inventory) {
-      let list = [];
-      inventory.map(i => {
-        i.slice(1).map(iv => {
-          list.push(iv);
-        });
-      });
-      let iList = list.map(item => {
-        if (item.status === true) {
-          item.status = 'In-Stock';
-        } else {
-          item.status = 'Not In-Stock';
-        }
-        // <Link to={`/inventory/${item.id}`}>
-          return <InventoryItem {...item}/>;
-      //  </Link>
-      });
-      this.setState({
-        inventoryList: iList
-      });
-      console.log(list);
-    }
-  };
-
   addInventory = () => {
-    console.log('clicked');
     this.setState({
       showModal: !this.state.showModal
     });
   };
 
-  componentDidMount() {
-    const { inventory } = this.props;
-    this.iList(inventory);
-  }
-
   render() {
-    console.log(this.props.inventory);
+    const inventoryList = this.props.inventory.map(item => {
+      item.status = true ? 'In-Stock' : 'Not In-Stock';
+      return <InventoryItem {...item} />;
+    });
+
     return (
       <div className="inventoryList__container">
         <button
@@ -86,7 +51,7 @@ class InventoryList extends Component {
               <th className="inventoryList__th">STATUS</th>
             </tr>
           </thead>
-          <tbody>{this.state.inventoryList}</tbody>
+          <tbody>{inventoryList}</tbody>
         </table>
         {this.state.showModal && (
           <CreateNewInvModal formSubmit={this.props.formSubmit} />
