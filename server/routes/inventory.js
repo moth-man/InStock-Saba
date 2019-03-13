@@ -31,10 +31,10 @@ router
         Object.values(newItem).forEach(item => {
             if (
                 item.name == "" ||
-        item.description == "" ||
-        item.ordered == "" ||
-        item.location == "" ||
-        item.quantity_items == ""
+                item.description == "" ||
+                item.ordered == "" ||
+                item.location == "" ||
+                item.quantity_items == ""
             ) {
                 res.status(400).send("Error! Missing fields!");
                 return;
