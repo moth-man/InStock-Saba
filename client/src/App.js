@@ -51,6 +51,16 @@ class App extends Component {
     console.log(this.state.warehouses, this.state.inventory);
   };
 
+  deleteItem = (item) => {
+    console.log(item)
+    // axios
+    //   .delete(`/inventory/${item.id}`)
+
+    // .then(({ data }) => {
+    //   console.log(item)
+    // })
+  }
+
   render() {
     if (
       this.state.inventory.length === 0 ||
@@ -90,6 +100,7 @@ class App extends Component {
                   {...routeProps}
                   inventory={this.state.inventory}
                   warehouses={this.state.warehouses}
+                  deleteItem={this.deleteItem}
                 />
               )}
             />

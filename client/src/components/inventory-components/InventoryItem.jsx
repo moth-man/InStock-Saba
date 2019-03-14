@@ -68,7 +68,7 @@ class InventoryItem extends Component {
 class Popup extends Component {
   render() {
     return (
-      <div className="popup__container"><p className="popup__text">Remove</p></div>
+      <div className="popup__container"><p className="popup__text" onClick={() => this.props.deleteItem(this.item)}>Remove</p></div>
     )
   }
 }
