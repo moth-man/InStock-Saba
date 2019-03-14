@@ -21,6 +21,7 @@ class InventoryList extends Component {
 
   render() {
     console.log(this.props.warehouses);
+    console.log(this.props.deleteItem)
 
     const currentWarehouse = this.props.warehouses
       .filter(warehouse => {
@@ -38,7 +39,7 @@ class InventoryList extends Component {
         })
         .map(item => {
           item.status = true ? 'In-Stock' : 'Not In-Stock';
-          return <InventoryItem {...item} deleteItem={() => this.props.deleteItem(item)} />
+          return <InventoryItem {...item} removeItem={() => this.props.removeItem(item)} />
 
         })
 
