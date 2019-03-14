@@ -20,7 +20,7 @@ class InventoryList extends Component {
   render() {
     const inventoryList = this.props.inventory.map(item => {
       item.status = true ? 'In-Stock' : 'Not In-Stock';
-      return <InventoryItem {...item} />;
+      return <InventoryItem {...item} removeItem={() => this.props.removeItem(item)} />;
     });
 
     return (
