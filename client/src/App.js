@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import Navbar from './components/Navbar/Navbar';
+import Navbar from './components/Navbar/navbar';
 import WarehouseList from './components/warehouse-components/WarehouseList';
 import InventoryList from './components/inventory-components/InventoryList';
 import AllInventoryList from './components/inventory-components/AllInventoryList';
 import ProductModal from './components/productmodal-components/ProductModal';
 import { Switch, Route } from 'react-router-dom';
 import axios from 'axios';
+
 
 const warehouseURL = `http://localhost:8080/warehouses`;
 const inventoryURL = `http://localhost:8080/inventory`;
@@ -15,31 +16,10 @@ class App extends Component {
     super();
     this.state = {
       warehouses: [],
-      inventory: []
+      inventory: [],
     };
   }
-
-  removeItem = (item) => {
-    axios
-      .delete(`${inventoryURL}/${item.id}`)
-      .then(() => {
-        axios
-          .get(inventoryURL)
-          .then(({ data }) => {
-            this.setState({
-              inventory: data
-            });
-            //window.location.reload(true)
-          });
-        //window.location.reload(true)
-      })
-    if (this.state.inventory.length !== 0) {
-      setTimeout(() => {
-        window.location.reload(true)
-      }, 500)
-    }
-  }
-
+  
   componentDidMount() {
     axios
       .get(warehouseURL)
@@ -73,6 +53,27 @@ class App extends Component {
     });
     console.log(this.state.warehouses, this.state.inventory);
   };
+  
+  removeItem = (item) => {
+    axios
+      .delete(`${inventoryURL}/${item.id}`)
+      .then(() => {
+        axios
+          .get(inventoryURL)
+          .then(({ data }) => {
+            this.setState({
+              inventory: data
+            });
+            //window.location.reload(true)
+          });
+        //window.location.reload(true)
+      })
+    if (this.state.inventory.length !== 0) {
+      setTimeout(() => {
+        window.location.reload(true)
+      }, 500)
+    }
+  }
 
 
 
@@ -97,7 +98,16 @@ class App extends Component {
                 />
               )}
             />
-            <Route path="/inventory/:id" component={ProductModal} />
+            <Route
+              path="/inventory/:id" 
+              render={routeProps => (
+                <ProductModal 
+                {...routeProps}
+                inventory={this.state.inventory}
+                />
+              )} 
+             />
+
             <Route
               path="/inventory"
               render={routeProps => (
@@ -128,3 +138,4 @@ class App extends Component {
 }
 
 export default App;
+

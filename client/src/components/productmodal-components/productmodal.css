@@ -53,7 +53,7 @@ span {
   background-color: #004892;
   border-color: #004892;
   border-radius: 4px;
-  padding: 20px 0px;
+  padding: 15px 0px;
   text-align: center;
   margin-top: 48px;
   width: 288px;
@@ -65,7 +65,7 @@ span {
   color: white;
 }
 
-/*TABLET*/
+/*TABLET QUERIES*/
 @media (min-width: 500px) {
   .productDetails__details {
     width: 500px;
@@ -80,6 +80,10 @@ span {
   .productDetails .header__h1 {
     font-size: 1.9rem;
   }
+  .productDetails span {
+    margin-bottom: 30px;
+    display: block;
+  }
   .grey-border {
     padding: 20px 0;
     border-top: 1px solid #E1E1E1;
@@ -87,6 +91,7 @@ span {
   }
 }
 
+/*DESKTOP QUERIES*/
 @media (min-width: 1440px) {
   .productDetails {
     padding: 0 180px;

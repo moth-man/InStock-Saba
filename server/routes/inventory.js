@@ -9,6 +9,7 @@ const iData = require('../data/inventory.json')
 router.use(cors())
 router.use(bodyParser.json())
 
+
 router
   .route('/')
   .get((req, res) => {
@@ -53,4 +54,14 @@ router
     fs.writeFileSync('./data/inventory.json', JSON.stringify(newInventoryList))
   })
 
-module.exports = router
+router
+.delete('/:id', (req, res) => {
+    console.log(req.params)
+    const newInventoryList = iData.filter(item => {
+    return req.params.id !== item.id
+    })
+    console.log(newInventoryList)
+    fs.writeFileSync('./data/inventory.json', JSON.stringify(newInventoryList))
+})
+
+module.exports = router;

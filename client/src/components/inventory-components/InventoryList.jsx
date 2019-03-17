@@ -21,34 +21,25 @@ class InventoryList extends Component {
 
   render() {
     console.log(this.props.warehouses);
-<<<<<<< HEAD
-=======
-    console.log(this.props.deleteItem)
->>>>>>> feature/remove-inventory
 
     const currentWarehouse = this.props.warehouses
       .filter(warehouse => {
-        return this.props.match.params.id === warehouse.id;
-      })
+      return this.props.match.params.id === warehouse.id;
+    })
       .map(warehouse => {
-        return <CurrentWarehouse {...warehouse} />
+        return <CurrentWarehouse {...warehouse}/>
       })
 
-    const warehouseInventory =
+      const warehouseInventory = 
       this.props.inventory
-        .filter(item => {
-          return this.props.match.params.id ===
-            item.warehouseId
-        })
-        .map(item => {
-          item.status = true ? 'In-Stock' : 'Not In-Stock';
-<<<<<<< HEAD
-          return <InventoryItem {...item} />
-=======
-          return <InventoryItem {...item} removeItem={() => this.props.removeItem(item)} />
->>>>>>> feature/remove-inventory
-
-        })
+      .filter(item => {
+        return this.props.match.params.id ===
+        item.warehouseId
+      })
+      .map(item => {
+        item.status = true ? 'In-Stock' : 'Not In-Stock';
+        return <InventoryItem {...item} removeItem={() => this.props.removeItem(item)} />
+      })
 
     return (
       <div className="inventoryList__container">
