@@ -103,6 +103,10 @@
   text-align: left;
 }
 
+.inventoryItem__container .inventoryItem__tableRow .popup__container .popup__text:hover {
+  cursor: pointer;
+}
+
 .inventoryItem__container .inventoryItem__tableRow .item__name {
   font-size: 16px;
   line-height: 24px;
@@ -229,11 +233,8 @@
     top: 60px;
   }
   .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .popup__container {
-    text-align: center;
-    float: right;
-    position: absolute;
-    right: 20px;
-    top: 330px;
+    right: 50px;
+    margin-top: 90px;
   }
   .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .item__name {
     font-size: 18px;

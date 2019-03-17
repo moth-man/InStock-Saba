@@ -98,6 +98,11 @@
         margin: 10px 0px 0px 10px;
         text-align: left;
       }
+
+      .popup__text:hover {
+        cursor: pointer;
+      }
+
     }
 
     .item__name {
@@ -233,11 +238,8 @@
         }
 
         .popup__container {
-          text-align: center;
-          float: right;
-          position: absolute;
-          right: 20px;
-          top: 330px;
+          right: 50px;
+          margin-top: 90px;
         }
 
         .item__name {
