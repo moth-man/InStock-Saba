@@ -51,6 +51,27 @@ class App extends Component {
     });
     console.log(this.state.warehouses, this.state.inventory);
   };
+  
+  removeItem = (item) => {
+    axios
+      .delete(`${inventoryURL}/${item.id}`)
+      .then(() => {
+        axios
+          .get(inventoryURL)
+          .then(({ data }) => {
+            this.setState({
+              inventory: data
+            });
+            //window.location.reload(true)
+          });
+        //window.location.reload(true)
+      })
+    if (this.state.inventory.length !== 0) {
+      setTimeout(() => {
+        window.location.reload(true)
+      }, 500)
+    }
+  }
 
   render() {
     if (
@@ -90,6 +111,7 @@ class App extends Component {
                   {...routeProps}
                   inventory={this.state.inventory}
                   formSubmit={this.formSubmit}
+                  removeItem={this.removeItem}
                 />
               )}
             />
@@ -100,6 +122,7 @@ class App extends Component {
                   {...routeProps}
                   inventory={this.state.inventory}
                   warehouses={this.state.warehouses}
+                  removeItem={this.removeItem}
                 />
               )}
             />

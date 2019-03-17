@@ -23,7 +23,7 @@ class InventoryItem extends Component {
     let pop
 
     if (isVisible) {
-      pop = <Popup />
+      pop = <Popup removeItem={this.props.removeItem} />
     } else {
       pop = null
     }
@@ -71,7 +71,8 @@ class InventoryItem extends Component {
 class Popup extends Component {
   render() {
     return (
-      <div className="popup__container"><p className="popup__text">Remove</p></div>
+      <div className="popup__container"><button className="popup__text" onClick={() => this.props.removeItem()}>Remove</button></div>
+
     )
   }
 }

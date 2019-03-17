@@ -38,8 +38,8 @@ class InventoryList extends Component {
       })
       .map(item => {
         item.status = true ? 'In-Stock' : 'Not In-Stock';
-        return <InventoryItem {...item}/>
-
+        // return <InventoryItem {...item}/>
+        return <InventoryItem {...item} removeItem={() => this.props.removeItem(item)} />
       })
 
     return (

@@ -78,35 +78,5 @@
 		"contactEmail": "bloom@instock.com",
 		"categories": "Industrial, Electronics, Human Hair",
 		"id": "bd3id6db73h"
-	},
-	{
-		"warehouseName": "sdasd",
-		"address": "asdasd",
-		"contact": "asd",
-		"contactTitle": "Manager",
-		"contactNum": "asdd",
-		"contactEmail": "asdasd",
-		"categories": "asdasd",
-		"id": "71u235qf40ly"
-	},
-	{
-		"warehouseName": "sadasd",
-		"address": "asdasd",
-		"contact": "asdasd",
-		"contactTitle": "Manager",
-		"contactNum": "asdasd",
-		"contactEmail": "asdasd",
-		"categories": "asdasd",
-		"id": "spxcw4ym8lvu"
-	},
-	{
-		"warehouseName": "Hello",
-		"address": "its me",
-		"contact": "hi",
-		"contactTitle": "Manager",
-		"contactNum": "94859",
-		"contactEmail": "@gmail",
-		"categories": "tech",
-		"id": "ucp163042inb"
 	}
 ]
