@@ -17,4 +17,3 @@ app.listen(PORT, () => {
     console.log(`Listening on Port ${PORT}...`);
 });
 
-//installed : cors, body-parser, express-router, express
