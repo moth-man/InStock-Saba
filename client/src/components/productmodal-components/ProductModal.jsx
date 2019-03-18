@@ -5,13 +5,9 @@ import { Link } from 'react-router-dom';
 
 class ProductModal extends React.Component {
   render() {
-    console.log(this.props.inventory);
-
     const currentProduct = this.props.inventory.filter(item => {
       return this.props.match.params.id === item.id;
     });
-
-    console.log(currentProduct[0]);
 
     return (
       <section className="productDetails">

@@ -7,7 +7,6 @@ import ProductModal from './components/productmodal-components/ProductModal';
 import { Switch, Route } from 'react-router-dom';
 import axios from 'axios';
 
-
 const warehouseURL = `http://localhost:8080/warehouses`;
 const inventoryURL = `http://localhost:8080/inventory`;
 
@@ -16,10 +15,10 @@ class App extends Component {
     super();
     this.state = {
       warehouses: [],
-      inventory: [],
+      inventory: []
     };
   }
-  
+
   componentDidMount() {
     axios
       .get(warehouseURL)
@@ -37,8 +36,6 @@ class App extends Component {
       });
   }
 
-
-
   formSubmit = (url, inputData) => {
     let location = '';
     if (url === warehouseURL) {
@@ -51,31 +48,22 @@ class App extends Component {
         [location]: data
       });
     });
-    console.log(this.state.warehouses, this.state.inventory);
   };
-  
-  removeItem = (item) => {
-    axios
-      .delete(`${inventoryURL}/${item.id}`)
-      .then(() => {
-        axios
-          .get(inventoryURL)
-          .then(({ data }) => {
-            this.setState({
-              inventory: data
-            });
-            //window.location.reload(true)
-          });
-        //window.location.reload(true)
-      })
+
+  removeItem = item => {
+    axios.delete(`${inventoryURL}/${item.id}`).then(() => {
+      axios.get(inventoryURL).then(({ data }) => {
+        this.setState({
+          inventory: data
+        });
+      });
+    });
     if (this.state.inventory.length !== 0) {
       setTimeout(() => {
-        window.location.reload(true)
-      }, 500)
+        window.location.reload(true);
+      }, 500);
     }
-  }
-
-
+  };
 
   render() {
     if (
@@ -99,14 +87,14 @@ class App extends Component {
               )}
             />
             <Route
-              path="/inventory/:id" 
+              path="/inventory/:id"
               render={routeProps => (
-                <ProductModal 
-                {...routeProps}
-                inventory={this.state.inventory}
+                <ProductModal
+                  {...routeProps}
+                  inventory={this.state.inventory}
                 />
-              )} 
-             />
+              )}
+            />
 
             <Route
               path="/inventory"
@@ -138,4 +126,3 @@ class App extends Component {
 }
 
 export default App;
-

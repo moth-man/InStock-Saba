@@ -1,11 +1,11 @@
 /*VARIABLES*/
 @font-face {
-  font-family: "AvenierBold";
+  font-family: 'AvenierBold';
   src: url("../../assets/fonts/bold.otf");
 }
 
 @font-face {
-  font-family: "AvenierDemi";
+  font-family: 'AvenierDemi';
   src: url("../../assets/fonts/demibold.otf");
 }
 
@@ -22,7 +22,7 @@
   font-size: 2.3rem;
   margin-top: 32px;
   margin-bottom: 10px;
-  font-family: "AvenierBold";
+  font-family: 'AvenierBold';
 }
 
 .searchBar__container .searchBar__input {
@@ -67,7 +67,7 @@
 .inventoryItem__container .inventoryItem__tableRow .item__title {
   color: #afafaf;
   float: left;
-  font-family: "AvenierDemi";
+  font-family: 'AvenierDemi';
   font-size: 0.8rem;
   height: 30px;
 }
@@ -113,7 +113,7 @@
   clear: both;
   text-align: left;
   display: block;
-  font-family: "AvenierDemi";
+  font-family: 'AvenierDemi';
 }
 
 .inventoryItem__container .inventoryItem__tableRow .link-decoration {
@@ -139,7 +139,7 @@
   color: #afafaf;
   text-align: left;
   display: block;
-  font-family: "AvenierDemi";
+  font-family: 'AvenierDemi';
   font-size: 0.8rem;
   padding: 20px 0 10px 0;
 }
@@ -208,7 +208,7 @@
     color: #afafaf;
     text-align: left;
     display: inline-block;
-    font-family: "AvenierDemi";
+    font-family: 'AvenierDemi';
     font-size: 1rem;
   }
   .inventoryList__table .inventoryList__th.item {
@@ -304,6 +304,28 @@
 @media (min-width: 1440px) {
   .inventoryList__container {
     margin: 0px 180px;
+  }
+  .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .remove__item__button {
+    background-image: url("../../assets/icons/Icon-kebab-default.svg");
+    background-repeat: no-repeat;
+    background-color: white;
+    border: none;
+    height: 30px;
+    float: right;
+    position: relative;
+  }
+  .inventoryList__table .inventoryItem__container .inventoryItem__tableRow .popup__container {
+    visibility: visible;
+    position: absolute;
+    right: 300px;
+    border: 1px solid #e1e1e1;
+    height: 40px;
+    background-color: white;
+    width: 150px;
+    text-align: center;
+    float: left;
+    margin-left: 120px;
+    margin-top: 48px;
   }
   .add__inventoryItem__button__container {
     right: 100px;

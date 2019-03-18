@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import InventoryItem from './InventoryItem';
-import './Inventory.css';
 import CreateNewInvModal from './CreateNewInvModal';
+import './Inventory.css';
 
 class InventoryList extends Component {
   constructor() {
@@ -20,7 +20,12 @@ class InventoryList extends Component {
   render() {
     const inventoryList = this.props.inventory.map(item => {
       item.status = true ? 'In-Stock' : 'Not In-Stock';
-      return <InventoryItem {...item} removeItem={() => this.props.removeItem(item)} />;
+      return (
+        <InventoryItem
+          {...item}
+          removeItem={() => this.props.removeItem(item)}
+        />
+      );
     });
 
     return (
